@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sundays Nail Polish | TONYMOLY</title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="js/tonymoly.js"></script>
+    <link rel="shortcut icon" href="images/ico_favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/import.css">
+</head>
+<body>
+    <div id="cartPopup" class="defaultPopup">
+        <button type="button" class="closeBtn">btn close</button>
+        <p class="roboS14W2">Successfully store goods in a shopping cart!</p>
+        <div class="default__actions">
+            <a href="cart.html">Check the cart</a>
+            <button type="button" class="closeBtn">Continue shopping</button>
+        </div>
+    </div>
+    <header class="site-header">
+        <div class="site-header__inner px-global">
+            <h1 class="site-header__logo">
+                <a href="index_after.html">
+                    <img src="images/logo_header.svg" alt="Welcome Tonymoly">
+                </a>
+            </h1>
+            <div class="site-header__main-controls">
+                <form action="search.html" class="search-form">
+                    <input type="search" name="query" id="searchInput" class="search-form__input roboS14W1" placeholder="Aloe" title="Enter product name">
+                    <button type="submit" class="search-form__submit-button" aria-label="Search">Search bar btn</button>
+                </form>
+                <ul class="site-header__actions">
+                    <li class="site-header__action-item"><a href="cart.html" aria-label="Cart List"><img src="images/btn_cart.svg" alt="cart btn"></a></li>
+                    <li class="site-header__action-item"><a href="orders.html"aria-label="Orders page"><img src="images/btn_account.svg" alt="my account btn"></a></li>
+                    <li class="site-header__action-item"><button type="button" id="mnav" class="site-header__mobile-menu-trigger mui">mobile user interface</button></li>
+                </ul>
+            </div>
+        </div>
+        <nav class="main-nav" aria-label="Main">
+            <div class="main-nav__inner">
+                <ul class="main-nav__primary-list godamS16W3" id="mnavList">
+                    <li class="main-nav__item px-global">
+                        <a class="main-nav__link" href="list_new_01.html">NEW</a>
+                    </li> 
+                    <li class="main-nav__item px-global">
+                        <a class="main-nav__link" href="list_best_01.html">BEST</a>
+                    </li>
+                    <li class="main-nav__item main-nav__item--has-dropdown px-global">
+                        <button type="button" class="main-nav__link active" aria-expanded="false">SKINCARE</button>
+                        <div class="main-nav__dropdown">
+                            <div class="main-nav__dropdown-inner">
+                                <h2 class="main-nav__dropdown-title godamS32W3">
+                                    SKINCARE
+                                    <a href="list_skin_01.html" class="main-nav__dropdown-view-all godamS14W2">View All Products</a>
+                                </h2>
+                                <ol class="main-nav__sublist">
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_skin_01.html">View All Products</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_skin_clean_01.html">Cleansing</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_skin_toner_01.html">Toner</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_skin_treat_01.html">Treatments</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_skin_eye_01.html">Eye Care</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_skin_lip_01.html">Lip Care</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_skin_body_01.html">Body</a></li>
+                                </ol>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="main-nav__item main-nav__item--has-dropdown px-global">
+                        <button type="button" class="main-nav__link" aria-expanded="false">MAKEUP</button>
+                        <div class="main-nav__dropdown">
+                            <div class="main-nav__dropdown-inner">
+                                <h2 class="main-nav__dropdown-title godamS32W3">
+                                    MAKEUP
+                                    <a href="list_make_01.html" class="main-nav__dropdown-view-all godamS14W2">View All Products</a>
+                                </h2>
+                                <ol class="main-nav__sublist">
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_make_01.html">View All Products</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_make_eye_01.html">Eyes</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_make_lip_01.html">Lips</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_make_face_01.html">Face</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_make_tool_01.html">Tools</a></li>
+                                </ol>    
+                            </div>
+                        </div>
+                    </li>
+                    <li class="main-nav__item main-nav__item--has-dropdown px-global">
+                        <button type="button" class="main-nav__link" aria-expanded="false">MASK BAR</button>
+                        <div class="main-nav__dropdown">
+                            <div class="main-nav__dropdown-inner">
+                                <h2 class="main-nav__dropdown-title godamS32W3">
+                                    MASK BAR
+                                    <a href="list_mask_01.html" class="main-nav__dropdown-view-all godamS14W2">View All Products</a>
+                                </h2>
+                                <ol class="main-nav__sublist">
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_mask_01.html">View All Products</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_mask_sheet_01.html">Sheet Masks</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_mask_wash_01.html">Wash Off Masks</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_mask_sleep_01.html">Sleeping Masks</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_mask_eye_01.html">Eye Masks</a></li>
+                                </ol>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="main-nav__item px-global">
+                        <a class="main-nav__link" href="list_bun_01.html">BUNDLES</a>
+                    </li>
+                </ul>
+                <ul class="main-nav__secondary-list">
+                    <li class="main-nav__item px-global"><a class="main-nav__link" href="rewards.html">Rewards</a></li>
+                    <li class="main-nav__item px-global"><a class="main-nav__link" href="ourstory.html">Our Story</a></li>
+                    <li class="main-nav__item px-global"><a class="main-nav__link" href="https://tony-moly.gorgias.help/en-US/articles/shipping-delivery-92434" target="_blank">Shipping &amp; Delivery</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main class="product-detail-page" id="top">
+        <div class="product-detail-page__main-content px-global">
+            <section class="product-gallery">
+                <img class="product-gallery__main-image mb-20" src="images/skin_product_101.jpg" alt="skin product 101 detail img">
+                <ul class="product-gallery__thumbnails">
+                    <li class="active"><img src="images/skin_product_101.jpg" alt="skin product detail img 01"></li>
+                    <li><img src="images/skin_product_101_dt_01.jpg" alt="skin product detail img 02"></li>
+                    <li><img src="images/skin_product_101_dt_02.jpg" alt="skin product detail img 03"></li>
+                    <li><img src="images/skin_product_101_dt_03.jpg" alt="skin product detail img 04"></li>
+                    <li><img src="images/skin_product_101_dt_04.jpg" alt="skin product detail img 05"></li>
+                </ul>
+            </section>
+            <section class="product-info">
+                <header class="product-info__header mb-20 border-bottom pb-20">
+                    <button type="button" class="product-info__wishlist-button wishlist-button toggleBtn">Add to wish list btn</button>
+                    <small class="product-info__category godamS14W2 mb-5 block">SKINCARE</small>
+                    <h3 class="product-info__title godamS20W2 mb-10">Sundays Nail Polish</h3>
+                    <div class="product-info__meta">
+                        <ol class="review-star star3">
+                            <li>icon star filled</li>
+                            <li>icon star filled</li>
+                            <li>icon star filled</li>
+                            <li>icon star empty</li>
+                            <li>icon star empty</li>
+                        </ol>
+                        <b class="product-info__review-number godamS14W1 ml-10">2&nbsp;</b>
+                        <strong class="product-info__price godamS22W3 block">$18.00</strong>
+                    </div>
+                </header>
+                <div class="product-info__description-group mb-20 relative">
+                    <div id="afterpayPopup" class="afterpay-popup roboS12W2">
+                        <button type="button" class="afterpay-popup__close-button closeBtn">btn close</button>
+                        <h2 class="afterpay-popup__logo">afterPay logo</h2>
+                        <b class="afterpay-popup__tagline">Shop now. Pay later. Always interest-free.</b>
+                        <ul class="afterpay-popup__steps godamS14W2">
+                            <li class="afterpay-popup__step">
+                                <p>Log into or create your Afterpay account, instant approval decision</p>
+                            </li>
+                            <li class="afterpay-popup__step">
+                                <p>Your purchase will be split into 4 payments, payable every 2 weeks</p>
+                            </li>
+                            <li class="afterpay-popup__step">
+                                <p>Add your favorites to cart</p>
+                            </li>
+                            <li class="afterpay-popup__step">
+                                <p>Select Afterpay at checkout</p>
+                            </li>
+                        </ul>
+                        <p class="afterpay-popup__legal-notice">You must be over 18, a resident of the U.S. and meet additional eligibility criteria to qualify. Late fees may apply. Estimated payment amounts shown on product pages exclude taxes and shipping charges, which are added at checkout.</p>
+                        <p class="afterpay-popup__legal-notice">Loans to California residents made or arranged pursuant to a California Finance Lenders Law license. ©&copy; 2020 Afterpay</p>
+                    </div>
+                    <div class="product-info__payment-option mb-20 pb-20 border-bottom">
+                        <button type="button" class="product-info__payment-option-trigger" data-popName="afterpay">afterpay</button>
+                    </div>
+                    <p class="product-info__description roboS14W1 mb-20">We're celebrating AAPI Heritage Month by partnering with some of our favorite AAPI-owned brands to bring you a special assortment of products we love! Shop them individually or in our limited-edition AAPI Heritage Month Bundle Set to get nearly 30% off!</p>
+                    <p class="roboS14W1">Sunday's products are formulated with your well-being in mind, which means that not only is this professional-grade nail polish vegan and cruelty-free, but it also features a non-toxic formula that's free from the big 10, which are chemicals that are commonly found in other polishes. This color is called L01 and is a natural powder pink color with an opaque gloss finish that's perfect for all springtime!</p>
+                    <dl class="product-info__specs godamS14W1">
+                        <dt class="product-info__specs-key">size</dt>
+                        <dd class="product-info__specs-value ml-10">0.47 fl oz</dd>
+                    </dl>
+                </div>
+                <div class="product-info__purchase-section border-bottom">
+                    <div class="product-info__actions">
+                        <button type="button" data-popName="cart" class="btn btn-darkline">ADD TO BAG</button>
+                        <a href="information.html" class="btn btn-mainfill">SHOP NOW</a>
+                    </div>
+                </div>
+                <div id="ingreAccordion" class="accordion ingredient-accordion">
+                    <h4 class="ingredient-accordion__title godamS14W2">
+                        <button type="button" id="ingredient-trigger" class="accordion-trigger" aria-expanded="false" aria-controls="ingredient-panel">
+                            INGREDIENTS
+                        </button>
+                    </h4>
+                    <ul id="ingredient-panel" class="accordion-panel" role="region" aria-labelledby="ingredient-trigger">
+                        <li>
+                            <p class="roboS12W2">Butyl Acetate, Ethyl Acetate, Nitrocellulose, Adipic Acid/Neopentyl, Glycol/Trimellitic Anhydride, Copolymer, Acetyl Tributyl Citrate, Isopropyl Alcohol, Stearalkonium Bentonite, Acrylates Copolymer, Styrene/Acrylates Copolymer, Silica, Benzophenone-1, Trimethylpentanediyl Dibenzoate, Mica, Calcium Aluminum BoroboSilicate, Calcium Sodium BoroboSilicate, Synthetic Fluorphlogopite, Polyethylene Terephthalate, Polybutylene Terephthalate, Etylene/VA Copolymer, Acrylates Copolymer, Aluminum Powder, Titanium Dioxide, Red 6 BA Lake, Red 7 CA Lake, Red 34 CA Lake, Yellow 5 All. Lake, Red Iron Oxide, Black Iron Oxide, Bismuth Oxychloride, Manganese Violet, Chromium Oxide Greens, Ultramarines, Ferric Ammonium Ferrocyanide, Black 2, Blue 1 Lake, Aluminum Hydroxide, Tin Oxide, Calcium Oxide, Polyacrylate-4</p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+        <div class="product-detail-page__detail-content">
+            <nav class="content-tabs godamS16W3 px-global text-center" id="descriptBar">
+                <a class="content-tabs__link active" href="#descriptBar">DESCRIPTION</a>
+                <a class="content-tabs__link" href="#moreBox">MORE IN ALL</a>
+            </nav>
+            <section class="promo-banner px-global mb-center172 text-center">
+                <div class="promo-banner__content">
+                    <span class="promo-banner__inner mb-center">
+                        <strong class="promo-banner__value-badge">
+                            <em>$20!</em>
+                            <b>VALUE</b>
+                        </strong>
+                        <em class="promo-banner__tagline godamS18W3 bg-gray15">THIS WEEKEND ONLY!</em>
+                        <h3 class="promo-banner__title">Strawberry Launched!</h3>
+                        <b class="promo-banner__subtitle roboS18W1 color-gray1">Our brand new Strawberry Hand Cream is back!</b>
+                    </span>
+                </div>
+                <span class="promo-banner__cta-wrap"><a href="dt_skin_122.html" class="promo-banner__cta-link godamS16W3 mb-center">SHOP NOW</a></span>
+            </section>
+            <section class="info-section whatBox text-center">
+                <h3 class="info-section__title godamS32W3">WHAT MAKES IT GOOD!</h3>
+                <p class="info-section__text roboS14W2"><span>This special polish provides long-lasting, high-shine color with a non-toxic formula so you can feel as good as you look!  The formula is vegan and free from TPHP, dibutyl phthalate, toluene, xylene, ethyl tosylamide, camphor, formaldehyde, formaldehyde resin, parabens, and tert-butyl hydroperoxide.</span></p>
+            </section>
+            <section class="usage-guide useBox px-global mb-center86">
+                <h3 class="usage-guide__title godamS32W3 mb-32 text-center">HOW TO USE?</h3>
+                <div class="usage-guide__steps-wrap">
+                    <ol class="usage-guide__steps">
+                        <li>
+                            <b class="godamS24W4">01</b>
+                            <p class="roboS14W2">Start with clean nails and cuticles.</p>
+                        </li>
+                        <li>
+                            <b class="godamS24W4">02</b>
+                            <p class="roboS14W2">Roll the bottle between your palms to ensure to color is evenly mixed before applying.</p>
+                        </li>
+                        <li>
+                            <b class="godamS24W4">03</b>
+                            <p class="roboS14W2">Carefully apply 2 coats to your nails, allowing each coat to try before adding the next.</p>
+                        </li>
+                        <li>
+                            <b class="godamS24W4">FINISH</b>
+                            <p class="roboS14W2">Finish with a top coat, if desired!</p>
+                        </li>
+                    </ol>
+                </div>
+                <div class="usage-guide__tips useTip py-20 mb-center">
+                    <b class="usage-guide__tips__title godamS22W3">TIPS!</b>
+                    <ul class="usage-guide__tips__list roboS14W2">
+                        <li>Get this nail polish (and more!) in our limited edition AAPI Heritage Month Bundle for a discounted price!</li>
+                    </ul>
+                </div>
+            </section>
+            <section id="moreBox" class="more-products">
+                <h3 class="more-products__title godamS32W3 mb-32 text-center">MORE IN ALL</h3>
+                <ul class="product-grid product-grid--more productList">
+                    <li class="product-card">
+                        <figure>
+                            <img src="images/img_more_skin_01.png" alt="skin img 26">
+                            <figcaption>
+                                <a href="dt_skin_26.html">skin 26 detail btn</a>
+                                <div>
+                                    <span>SKINCARE</span>
+                                    <b>I'm Rice Exfoliating Enzyme Cleanser</b>
+                                    <strong>$14.00</strong>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li class="product-card">
+                        <figure>
+                            <img src="images/img_more_skin_02.png" alt="skin img 20">
+                            <figcaption>
+                                <a href="dt_skin_20.html">skin 20 detail btn</a>
+                                <div>
+                                    <span>SKINCARE</span>
+                                    <b>Peach Punch Sherbet Cleansing Balm</b>
+                                    <strong>$26.00</strong>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li class="product-card">
+                        <figure>
+                            <img src="images/img_more_skin_03.png" alt="skin img 40">
+                            <figcaption>
+                                <a href="dt_skin_40.html">skin 40 detail btn</a>
+                                <div>
+                                    <span>SKINCARE</span>
+                                    <b>Vital Vita 12 Ampoules - FIRMING</b>
+                                    <strong>$20.00</strong>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li class="product-card">
+                        <figure>
+                            <img src="images/img_more_skin_04.png" alt="skin img 63">
+                            <figcaption>
+                                <a href="dt_skin_63.html">skin 02 detail btn</a>
+                                <div>
+                                    <span>SKINCARE</span>
+                                    <b>Wonder Ceramide Mochi Water Cream - 100ml</b>
+                                    <strong>$13.00</strong>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </li>
+                </ul>
+                <a href="#descriptBar" class="more-products__view-description-button btn btn-mainline">VIEW DESCRIPTION</a>
+            </section>
+        </div>
+    </main>
+    <a href="#top">TOP btn</a>
+    <footer class="site-footer">
+        <div class="site-footer__inner px-global">
+            <div class="site-footer__top">
+                <h2 class="site-footer__logo mb-25"><img src="images/logo_footer.svg" alt="Goodbye, TONYMOLY!"></h2>
+                <ul class="site-footer__social-list flex">
+                    <li class="site-footer__social-item"><a href="https://www.instagram.com/tonymoly.us_official/" target="_blank">Instargram</a></li>
+                    <li class="site-footer__social-item"><a href="https://kr.pinterest.com/tonymolyusa/" target="_blank">Pinterest</a></li>
+                    <li class="site-footer__social-item"><a href="https://www.tiktok.com/@tonymolyusa" target="_blank">TikTok</a></li>
+                </ul>
+            </div>
+            <div class="site-footer__main mb-60">
+                <nav class="site-footer__nav-column" aria-label="About us">
+                    <h3 class="site-footer__nav-title godamS22W3 mb-24">ABOUT US</h3>
+                    <ul class="site-footer__nav-list roboS14W2">
+                        <li class="site-footer__nav-item"><a href="stock.html">Stockists</a></li>
+                        <li class="site-footer__nav-item"><a href="whole.html">Wholesale</a></li>
+                        <li class="site-footer__nav-item"><a href="https://kr.pinterest.com/tonymolyusa/tonymoly-press/" target="_blank">Press</a></li>
+                    </ul>
+                </nav>
+                <nav class="site-footer__nav-column" aria-label="Support">
+                    <h3 class="site-footer__nav-title godamS22W3 mb-24">SUPPORT</h3>
+                    <ul class="site-footer__nav-list roboS14W2">
+                        <li class="site-footer__nav-item"><a href="https://tony-moly.gorgias.help/en-US" target="_blank">F.A.Q.</a></li>
+                        <li class="site-footer__nav-item"><a href="https://tonymoly.us/apps/redo/returns-portal/login" target="_blank">Returns &amp; Exchanges</a></li>
+                        <li class="site-footer__nav-item"><a href="https://tony-moly.gorgias.help/en-US/contact" target="_blank">Contact Us</a></li>
+                        <li class="site-footer__nav-item"><a href="promotion.html">Promotion Details</a></li>
+                        <li class="site-footer__nav-item"><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </nav>
+                <section class="newsletter-form">
+                    <div id="emailInvalidPopup">
+                        <p class="godamS14W1">Invalid email address</p>
+                        <button type="button" class="closeBtn">btn close</button>
+                    </div>
+                    <div class="emailAlert" id="emailPopup">
+                        <button type="button" class="closeBtn">btn close</button>
+                        <em class="godamS16W4">Thank you for subscribing!</em>
+                        <span class="roboS16W1">You can receive various news about TonyMoly.</span>
+                    </div>
+                    <h3 class="newsletter-form__title godamS22W3 mb-24">JOIN OUR MAILING LIST</h3>
+                    <form class="newsletter-form__form" novalidate>
+                        <input type="email" id="inputEmail" class="newsletter-form__input roboS14W1" placeholder="Enter your email" title="input ur email" required>
+                        <button type="submit" id="btnSend" class="newsletter-form__submit-button roboS14W1" aria-label="Subscribe">Subscribe button</button>
+                    </form>
+                    <span class="roboS12W2">Unlock 15% off your next order!</span>
+                </section>
+            </div>
+            <div class="site-footer__bottom">
+                <hr class="site-footer__divider">
+                <p class="site-footer__copyright roboS14W2">&copy; 2024 TONYMOLY USA. ALL RIGHTS RESERVED.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

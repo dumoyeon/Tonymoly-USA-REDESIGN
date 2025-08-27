@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SKINCARE All Products 04 - TONYMOLY</title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="js/tonymoly.js"></script>
+    <link rel="shortcut icon" href="images/ico_favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/import.css">
+</head>
+<body>
+    <div id="cartPopup" class="defaultPopup">
+        <button type="button" class="closeBtn">btn close</button>
+        <p class="roboS14W2">Successfully store goods in a shopping cart!</p>
+        <div class="default__actions">
+            <a href="cart.html">Check the cart</a>
+            <button type="button" class="closeBtn">Continue shopping</button>
+        </div>
+    </div>
+    <header class="site-header">
+        <div class="site-header__inner px-global">
+            <h1 class="site-header__logo">
+                <a href="index_after.html">
+                    <img src="images/logo_header.svg" alt="Welcome Tonymoly">
+                </a>
+            </h1>
+            <div class="site-header__main-controls">
+                <form action="search.html" class="search-form">
+                    <input type="search" name="query" id="searchInput" class="search-form__input roboS14W1" placeholder="Aloe" title="Enter product name">
+                    <button type="submit" class="search-form__submit-button" aria-label="Search">Search bar btn</button>
+                </form>
+                <ul class="site-header__actions">
+                    <li class="site-header__action-item"><a href="cart.html" aria-label="Cart List"><img src="images/btn_cart.svg" alt="cart btn"></a></li>
+                    <li class="site-header__action-item"><a href="orders.html"aria-label="Orders page"><img src="images/btn_account.svg" alt="my account btn"></a></li>
+                    <li class="site-header__action-item"><button type="button" id="mnav" class="site-header__mobile-menu-trigger mui">mobile user interface</button></li>
+                </ul>
+            </div>
+        </div>
+        <nav class="main-nav" aria-label="Main">
+            <div class="main-nav__inner">
+                <ul class="main-nav__primary-list godamS16W3" id="mnavList">
+                    <li class="main-nav__item px-global">
+                        <a class="main-nav__link" href="list_new_01.html">NEW</a>
+                    </li> 
+                    <li class="main-nav__item px-global">
+                        <a class="main-nav__link" href="list_best_01.html">BEST</a>
+                    </li>
+                    <li class="main-nav__item main-nav__item--has-dropdown px-global">
+                        <button type="button" class="main-nav__link active" aria-expanded="false">SKINCARE</button>
+                        <div class="main-nav__dropdown">
+                            <div class="main-nav__dropdown-inner">
+                                <h2 class="main-nav__dropdown-title godamS32W3">
+                                    SKINCARE
+                                    <a href="list_skin_01.html" class="main-nav__dropdown-view-all godamS14W2">View All Products</a>
+                                </h2>
+                                <ol class="main-nav__sublist">
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_skin_01.html">View All Products</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_skin_clean_01.html">Cleansing</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_skin_toner_01.html">Toner</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_skin_treat_01.html">Treatments</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_skin_eye_01.html">Eye Care</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_skin_lip_01.html">Lip Care</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_skin_body_01.html">Body</a></li>
+                                </ol>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="main-nav__item main-nav__item--has-dropdown px-global">
+                        <button type="button" class="main-nav__link" aria-expanded="false">MAKEUP</button>
+                        <div class="main-nav__dropdown">
+                            <div class="main-nav__dropdown-inner">
+                                <h2 class="main-nav__dropdown-title godamS32W3">
+                                    MAKEUP
+                                    <a href="list_make_01.html" class="main-nav__dropdown-view-all godamS14W2">View All Products</a>
+                                </h2>
+                                <ol class="main-nav__sublist">
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_make_01.html">View All Products</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_make_eye_01.html">Eyes</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_make_lip_01.html">Lips</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_make_face_01.html">Face</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_make_tool_01.html">Tools</a></li>
+                                </ol>    
+                            </div>
+                        </div>
+                    </li>
+                    <li class="main-nav__item main-nav__item--has-dropdown px-global">
+                        <button type="button" class="main-nav__link" aria-expanded="false">MASK BAR</button>
+                        <div class="main-nav__dropdown">
+                            <div class="main-nav__dropdown-inner">
+                                <h2 class="main-nav__dropdown-title godamS32W3">
+                                    MASK BAR
+                                    <a href="list_mask_01.html" class="main-nav__dropdown-view-all godamS14W2">View All Products</a>
+                                </h2>
+                                <ol class="main-nav__sublist">
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_mask_01.html">View All Products</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_mask_sheet_01.html">Sheet Masks</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_mask_wash_01.html">Wash Off Masks</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_mask_sleep_01.html">Sleeping Masks</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_mask_eye_01.html">Eye Masks</a></li>
+                                </ol>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="main-nav__item px-global">
+                        <a class="main-nav__link" href="list_bun_01.html">BUNDLES</a>
+                    </li>
+                </ul>
+                <ul class="main-nav__secondary-list">
+                    <li class="main-nav__item px-global"><a class="main-nav__link" href="rewards.html">Rewards</a></li>
+                    <li class="main-nav__item px-global"><a class="main-nav__link" href="ourstory.html">Our Story</a></li>
+                    <li class="main-nav__item px-global"><a class="main-nav__link" href="https://tony-moly.gorgias.help/en-US/articles/shipping-delivery-92434" target="_blank">Shipping &amp; Delivery</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="product-listing-layout listContainer" id="top">
+        <aside class="product-listing-layout__sidebar">
+            <nav class="category-nav">
+                <ul class="category-nav__list">
+                    <li class="category-nav__item">
+                        <a href="list_new_01.html" class="category-nav__link godamS18W3">NEW</a>
+                    </li>
+                    <li class="category-nav__item">
+                        <a href="list_best_01.html" class="category-nav__link godamS18W3">BEST</a>
+                    </li>
+                    <li class="category-nav__item">
+                        <a href="list_skin_01.html" class="category-nav__link godamS32W3 active">SKINCARE</a>
+                        <ol class="category-nav__sublist godamS14W1 active">
+                            <li class="category-nav__subitem"><a class="category-nav__sublink godamS14W4 active" href="list_skin_01.html">View All Products</a></li>
+                            <li class="category-nav__subitem"><a class="category-nav__sublink" href="list_skin_clean_01.html">Cleansing</a></li>
+                            <li class="category-nav__subitem"><a class="category-nav__sublink" href="list_skin_toner_01.html">Toner</a></li>
+                            <li class="category-nav__subitem"><a class="category-nav__sublink" href="list_skin_treat_01.html">Treatments</a></li>
+                            <li class="category-nav__subitem"><a class="category-nav__sublink" href="list_skin_eye_01.html">Eye Care</a></li>
+                            <li class="category-nav__subitem"><a class="category-nav__sublink" href="list_skin_lip_01.html">Lip Care</a></li>
+                            <li class="category-nav__subitem"><a class="category-nav__sublink" href="list_skin_body_01.html">Body</a></li>
+                        </ol>
+                    </li>
+                    <li class="category-nav__item">
+                        <a href="list_make_01.html" class="category-nav__link godamS18W3">MAKEUP</a>
+                        <ol class="category-nav__sublist godamS14W1">
+                            <li class="category-nav__subitem"><a class="category-nav__sublink" href="list_make_01.html">View All Products</a></li>
+                            <li class="category-nav__subitem"><a class="category-nav__sublink" href="list_make_eye_01.html">Eyes</a></li>
+                            <li class="category-nav__subitem"><a class="category-nav__sublink" href="list_make_lip_01.html">Lips</a></li>
+                            <li class="category-nav__subitem"><a class="category-nav__sublink" href="list_make_face_01.html">Face</a></li>
+                            <li class="category-nav__subitem"><a class="category-nav__sublink" href="list_make_tool_01.html">Tools</a></li>
+                        </ol>
+                    </li>
+                    <li class="category-nav__item">
+                        <a href="list_mask_01.html" class="category-nav__link godamS18W3">MASK BAR</a>
+                        <ol class="category-nav__sublist godamS14W1">
+                            <li class="category-nav__subitem"><a class="category-nav__sublink" href="list_mask_01.html">View All Products</a></li>
+                            <li class="category-nav__subitem"><a class="category-nav__sublink" href="list_mask_sheet_01.html">Sheet Masks</a></li>
+                            <li class="category-nav__subitem"><a class="category-nav__sublink" href="list_mask_wash_01.html">Wash Off Masks</a></li>
+                            <li class="category-nav__subitem"><a class="category-nav__sublink" href="list_mask_sleep_01.html">Sleeping Masks</a></li>
+                            <li class="category-nav__subitem"><a class="category-nav__sublink" href="list_mask_eye_01.html">Eye Masks</a></li>
+                        </ol>
+                    </li>
+                    <li class="category-nav__item">
+                        <a href="list_bun_01.html" class="category-nav__link godamS18W3">BUNDLES</a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="product-listing-layout__main px-global">
+            <header class="product-grid-header mb-20">
+                <div class="product-grid-header__count">
+                    <mark class="godamS14W4">131</mark>
+                    <span class="godamS14W2">products</span>
+                </div>
+                <form class="product-grid-header__sort-form">
+                    <label for="featSelect" class="godamS14W2">Sort by</label>
+                    <span class="selectListComponent">
+                        <select id="featSelect">
+                            <option selected>Featured</option>
+                            <option>Best Selling</option>
+                            <option>Price, low to high</option>
+                            <option>Price, high to low</option>
+                            <option>Date, new to old</option>
+                            <option>Date, old to new</option>
+                        </select>
+                    </span>
+                </form>
+            </header>
+            <ul class="product-grid productList mb-60">
+                <li class="product-card">
+                    <figure>
+                        <img src="images/list_skin_37.png" alt="list skin img 37">
+                        <figcaption>
+                            <span>
+                                <mark class="bestBg">BEST</mark>
+                            </span>
+                            <a href="dt_skin_37.html">skin 37 detail btn</a>
+                            <div>
+                                <span>SKINCARE</span>
+                                <b>Vital Vita 12 Ampoules - PORESOL</b>
+                                <strong>$20.00</strong>
+                            </div>
+                            <div>
+                                <div>
+                                    <ol class="review-star star5">
+                                        <li>icon star filled</li>
+                                        <li>icon star filled</li>
+                                        <li>icon star filled</li>
+                                        <li>icon star filled</li>
+                                        <li>icon star filled</li>
+                                    </ol>
+                                    <b>1648</b>
+                                </div>
+                                <span>
+                                    <button type="button" class="product-card__add-to-cart-button toggleBtn">Add to bag btn</button>
+                                    <button type="button" class="product-card-wishlist-button wishlist-button toggleBtn">Add to wish list btn</button>
+                                </span>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card">
+                    <figure>
+                        <img src="images/list_skin_38.png" alt="list skin img 38">
+                        <figcaption>
+                            <a href="dt_skin_38.html">skin 38 detail btn</a>
+                            <div>
+                                <span>SKINCARE</span>
+                                <b>Vital Vita 12 Ampoules - CALMING</b>
+                                <strong>$20.00</strong>
+                            </div>
+                            <div>
+                                <div>
+                                    <ol class="review-star star5">
+                                        <li>icon star filled</li>
+                                        <li>icon star filled</li>
+                                        <li>icon star filled</li>
+                                        <li>icon star filled</li>
+                                        <li>icon star filled</li>
+                                    </ol>
+                                    <b>1648</b>
+                                </div>
+                                <span>
+                                    <button type="button" class="product-card__add-to-cart-button toggleBtn">Add to bag btn</button>
+                                    <button type="button" class="product-card-wishlist-button wishlist-button toggleBtn">Add to wish list btn</button>
+                                </span>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card">
+                    <figure>
+                        <img src="images/list_skin_39.png" alt="list skin img 39">
+                        <figcaption>
+                            <a href="dt_skin_39.html">skin 39 detail btn</a>
+                            <div>
+                                <span>SKINCARE</span>
+                                <b>Vital Vita 12 Ampoules - MOISTURE</b>
+                                <strong>$20.00</strong>
+                            </div>
+                            <div>
+                                <div>
+                                    <ol class="review-star star5">
+                                        <li>icon star filled</li>
+                                        <li>icon star filled</li>
+                                        <li>icon star filled</li>
+                                        <li>icon star filled</li>
+                                        <li>icon star filled</li>
+                                    </ol>
+                                    <b>1648</b>
+                                </div>
+                                <span>
+                                    <button type="button" class="product-card__add-to-cart-button toggleBtn">Add to bag btn</button>
+                                    <button type="button" class="product-card-wishlist-button wishlist-button toggleBtn">Add to wish list btn</button>
+                                </span>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card">
+                    <figure>
+                        <img src="images/list_skin_40.png" alt="list skin img 40">
+                        <figcaption>
+                            <span>
+                                <mark class="bestBg">BEST</mark>
+                            </span>
+                            <a href="dt_skin_40.html">skin 40 detail btn</a>
+                            <div>
+                                <span>SKINCARE</span>
+                                <b>Vital Vita 12 Ampoules - FIRMING </b>
+                                <strong>$20.00</strong>
+                            </div>
+                            <div>
+                                <div>
+                                    <ol class="review-star star5">
+                                        <li>icon star filled</li>
+                                        <li>icon star filled</li>
+                                        <li>icon star filled</li>
+                                        <li>icon star filled</li>
+                                        <li>icon star filled</li>
+                                    </ol>
+                                    <b>1648</b>
+                                </div>
+                                <span>
+                                    <button type="button" class="product-card__add-to-cart-button toggleBtn">Add to bag btn</button>
+                                    <button type="button" class="product-card-wishlist-button wishlist-button toggleBtn">Add to wish list btn</button>
+                                </span>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card">
+                    <figure>
+                        <img src="images/list_skin_41.png" alt="list skin img 41">
+                        <figcaption>
+                            <a href="dt_skin_41.html">skin 41 detail btn</a>
+                            <div>
+                                <span>SKINCARE</span>
+                                <b>Watermelon Dew All Over Serum</b>
+                                <strong>$15.00</strong>
+                            </div>
+                            <div>
+                                <div>
+                                    <ol class="review-star star5">
+                                        <li>icon star filled</li>
+                                        <li>icon star filled</li>
+                                        <li>icon star filled</li>
+                                        <li>icon star filled</li>
+                                        <li>icon star filled</li>
+                                    </ol>
+                                    <b>362</b>
+                                </div>
+                                <span>
+                                    <button type="button" class="product-card__add-to-cart-button toggleBtn">Add to bag btn</button>
+                                    <button type="button" class="product-card-wishlist-button wishlist-button toggleBtn">Add to wish list btn</button>
+                                </span>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card">
+                    <figure>
+                        <img src="images/list_skin_42.png" alt="list skin img 42">
+                        <figcaption>
+                            <span>
+                                <mark class="veganBg">VEGAN</mark>
+                            </span>
+                            <a href="dt_skin_42.html">skin 42 detail btn</a>
+                            <div>
+                                <span>SKINCARE</span>
+                                <b>Moisture Boost Cooling Algae Eye Serum</b>
+                                <strong>$22.00</strong>
+                            </div>
+                            <div>
+                                <div>
+                                    <ol class="review-star star5">
+                                        <li>icon star filled</li>
+                                        <li>icon star filled</li>
+                                        <li>icon star filled</li>
+                                        <li>icon star filled</li>
+                                        <li>icon star filled</li>
+                                    </ol>
+                                    <b>416</b>
+                                </div>
+                                <span>
+                                    <button type="button" class="product-card__add-to-cart-button toggleBtn">Add to bag btn</button>
+                                    <button type="button" class="product-card-wishlist-button wishlist-button toggleBtn">Add to wish list btn</button>
+                                </span>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card">
+                    <figure>
+                        <img src="images/list_skin_43.png" alt="list skin img 43">
+                        <figcaption>
+                            <a href="dt_skin_43.html">skin 43 detail btn</a>
+                            <div>
+                                <span>SKINCARE</span>
+                                <b>Moisture Boost Cooling Marine Concentrate Serum</b>
+                                <strong>$25.00</strong>
+                            </div>
+                            <div>
+                                <div>
+                                    <ol class="review-star star5">
+                                        <li>icon star filled</li>
+                                        <li>icon star filled</li>
+                                        <li>icon star filled</li>
+                                        <li>icon star filled</li>
+                                        <li>icon star filled</li>
+                                    </ol>
+                                    <b>336</b>
+                                </div>
+                                <span>
+                                    <button type="button" class="product-card__add-to-cart-button toggleBtn">Add to bag btn</button>
+                                    <button type="button" class="product-card-wishlist-button wishlist-button toggleBtn">Add to wish list btn</button>
+                                </span>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card">
+                    <figure>
+                        <img src="images/list_skin_44.png" alt="list skin img 44">
+                        <figcaption>
+                            <span>
+                                <mark class="veganBg">VEGAN</mark>
+                            </span>
+                            <a href="dt_skin_44.html">skin 44 detail btn</a>
+                            <div>
+                                <span>SKINCARE</span>
+                                <b>Wonder Ceramide Mochi Ampoule</b>
+                                <strong>$19.00</strong>
+                            </div>
+                            <div>
+                                <div>
+                                    <ol class="review-star star5">
+                                        <li>icon star filled</li>
+                                        <li>icon star filled</li>
+                                        <li>icon star filled</li>
+                                        <li>icon star filled</li>
+                                        <li>icon star filled</li>
+                                    </ol>
+                                    <b>11</b>
+                                </div>
+                                <span>
+                                    <button type="button" class="product-card__add-to-cart-button toggleBtn">Add to bag btn</button>
+                                    <button type="button" class="product-card-wishlist-button wishlist-button toggleBtn">Add to wish list btn</button>
+                                </span>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card">
+                    <figure>
+                        <img src="images/list_skin_45.png" alt="list skin img 45">
+                        <figcaption>
+                            <a href="dt_skin_45.html">skin 45 detail btn</a>
+                            <div>
+                                <span>SKINCARE</span>
+                                <b>2X Collagen Ampoule</b>
+                                <strong>$30.00</strong>
+                            </div>
+                            <div>
+                                <div>
+                                    <ol class="review-star star5">
+                                        <li>icon star filled</li>
+                                        <li>icon star filled</li>
+                                        <li>icon star filled</li>
+                                        <li>icon star filled</li>
+                                        <li>icon star filled</li>
+                                    </ol>
+                                    <b>1</b>
+                                </div>
+                                <span>
+                                    <button type="button" class="product-card__add-to-cart-button toggleBtn">Add to bag btn</button>
+                                    <button type="button" class="product-card-wishlist-button wishlist-button toggleBtn">Add to wish list btn</button>
+                                </span>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card">
+                    <figure>
+                        <img src="images/list_skin_46.png" alt="list skin img 46">
+                        <figcaption>
+                            <span>
+                                <mark class="newBg">NEW</mark>
+                                <mark class="veganBg">VEGAN</mark>
+                            </span>
+                            <a href="dt_skin_46.html">skin 46 detail btn</a>
+                            <div>
+                                <span>SKINCARE</span>
+                                <b>Pure Dew Tea Tree &amp; Yuja C Essence</b>
+                                <strong>$20.00</strong>
+                            </div>
+                            <div>
+                                <div>
+                                    <ol class="review-star star5">
+                                        <li>icon star filled</li>
+                                        <li>icon star filled</li>
+                                        <li>icon star filled</li>
+                                        <li>icon star filled</li>
+                                        <li>icon star filled</li>
+                                    </ol>
+                                    <b>1</b>
+                                </div>
+                                <span>
+                                    <button type="button" class="product-card__add-to-cart-button toggleBtn">Add to bag btn</button>
+                                    <button type="button" class="product-card-wishlist-button wishlist-button toggleBtn">Add to wish list btn</button>
+                                </span>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card">
+                    <figure>
+                        <img src="images/list_skin_47.png" alt="list skin img 47">
+                        <figcaption>
+                            <span>
+                                <mark class="newBg">NEW</mark>
+                            </span>
+                            <a href="dt_skin_47.html">skin 47 detail btn</a>
+                            <div>
+                                <span>SKINCARE</span>
+                                <b>24K Snail Hydrating Serum Mist</b>
+                                <strong>$18.00</strong>
+                            </div>
+                            <div>
+                                <div>
+                                    <ol class="review-star star5">
+                                        <li>icon star filled</li>
+                                        <li>icon star filled</li>
+                                        <li>icon star filled</li>
+                                        <li>icon star filled</li>
+                                        <li>icon star filled</li>
+                                    </ol>
+                                    <b>6</b>
+                                </div>
+                                <span>
+                                    <button type="button" class="product-card__add-to-cart-button toggleBtn">Add to bag btn</button>
+                                    <button type="button" class="product-card-wishlist-button wishlist-button toggleBtn">Add to wish list btn</button>
+                                </span>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card">
+                    <figure>
+                        <img src="images/list_skin_48.png" alt="list skin img 48">
+                        <figcaption>
+                            <span>
+                                <mark class="newBg">NEW</mark>
+                            </span>
+                            <a href="dt_skin_48.html">skin 48 detail btn</a>
+                            <div>
+                                <span>SKINCARE</span>
+                                <b>Intense Care Gold 24K Snail Eye Serum</b>
+                                <strong>$30.00</strong>
+                            </div>
+                            <div>
+                                <div>
+                                    <ol class="review-star star5">
+                                        <li>icon star filled</li>
+                                        <li>icon star filled</li>
+                                        <li>icon star filled</li>
+                                        <li>icon star filled</li>
+                                        <li>icon star filled</li>
+                                    </ol>
+                                    <b>3</b>
+                                </div>
+                                <span>
+                                    <button type="button" class="product-card__add-to-cart-button toggleBtn">Add to bag btn</button>
+                                    <button type="button" class="product-card-wishlist-button wishlist-button toggleBtn">Add to wish list btn</button>
+                                </span>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+            </ul>
+            <nav class="pagination">
+                <div class="pagination__controls pagination__controls--prev">
+                    <a class="pagination__control pagination__control--first" aria-label="First page" href="list_skin_01.html"><img src="images/btn_chevrons_left.svg" alt="cheveron left btn"></a>
+                    <a class="pagination__control pagination__control--prev" aria-label="Previous page" href="list_skin_03.html"><img src="images/btn_chevron_left.svg" alt="cheverons left btn"></a>
+                </div>
+                <ol class="pagination__list godamS14W1 flex-wrap justify-center">
+                    <li class="pagination__item"><a class="pagination__link" href="list_skin_01.html">1</a></li>
+                    <li class="pagination__item"><a class="pagination__link" href="list_skin_02.html">2</a></li>
+                    <li class="pagination__item"><a class="pagination__link" href="list_skin_03.html">3</a></li>
+                    <li class="pagination__item godamS14W4"><a class="pagination__link active" href="list_skin_04.html">4</a></li>
+                    <li class="pagination__item"><a class="pagination__link" href="list_skin_05.html">5</a></li>
+                    <li class="pagination__item"><a class="pagination__link" href="list_skin_06.html">6</a></li>
+                </ol>
+                <div class="pagination__controls pagination__controls--next">
+                    <a class="pagination__control pagination__control--next" aria-label="Next page" href="list_skin_05.html"><img src="images/btn_chevron_right.svg" alt="btn cheveron right"></a>
+                    <a class="pagination__control pagination__control--last" aria-label="Last page" href="list_skin_11.html"><img src="images/btn_chevrons_right.svg" alt="btn cheverons right"></a>
+                </div>
+            </nav>
+        </main>
+    </div>
+    <a href="#top">TOP btn</a>
+    <footer class="site-footer">
+        <div class="site-footer__inner px-global">
+            <div class="site-footer__top">
+                <h2 class="site-footer__logo mb-25"><img src="images/logo_footer.svg" alt="Goodbye, TONYMOLY!"></h2>
+                <ul class="site-footer__social-list flex">
+                    <li class="site-footer__social-item"><a href="https://www.instagram.com/tonymoly.us_official/" target="_blank">Instargram</a></li>
+                    <li class="site-footer__social-item"><a href="https://kr.pinterest.com/tonymolyusa/" target="_blank">Pinterest</a></li>
+                    <li class="site-footer__social-item"><a href="https://www.tiktok.com/@tonymolyusa" target="_blank">TikTok</a></li>
+                </ul>
+            </div>
+            <div class="site-footer__main mb-60">
+                <nav class="site-footer__nav-column" aria-label="About us">
+                    <h3 class="site-footer__nav-title godamS22W3 mb-24">ABOUT US</h3>
+                    <ul class="site-footer__nav-list roboS14W2">
+                        <li class="site-footer__nav-item"><a href="stock.html">Stockists</a></li>
+                        <li class="site-footer__nav-item"><a href="whole.html">Wholesale</a></li>
+                        <li class="site-footer__nav-item"><a href="https://kr.pinterest.com/tonymolyusa/tonymoly-press/" target="_blank">Press</a></li>
+                    </ul>
+                </nav>
+                <nav class="site-footer__nav-column" aria-label="Support">
+                    <h3 class="site-footer__nav-title godamS22W3 mb-24">SUPPORT</h3>
+                    <ul class="site-footer__nav-list roboS14W2">
+                        <li class="site-footer__nav-item"><a href="https://tony-moly.gorgias.help/en-US" target="_blank">F.A.Q.</a></li>
+                        <li class="site-footer__nav-item"><a href="https://tonymoly.us/apps/redo/returns-portal/login" target="_blank">Returns &amp; Exchanges</a></li>
+                        <li class="site-footer__nav-item"><a href="https://tony-moly.gorgias.help/en-US/contact" target="_blank">Contact Us</a></li>
+                        <li class="site-footer__nav-item"><a href="promotion.html">Promotion Details</a></li>
+                        <li class="site-footer__nav-item"><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </nav>
+                <section class="newsletter-form">
+                    <div id="emailInvalidPopup">
+                        <p class="godamS14W1">Invalid email address</p>
+                        <button type="button" class="closeBtn">btn close</button>
+                    </div>
+                    <div class="emailAlert" id="emailPopup">
+                        <button type="button" class="closeBtn">btn close</button>
+                        <em class="godamS16W4">Thank you for subscribing!</em>
+                        <span class="roboS16W1">You can receive various news about TonyMoly.</span>
+                    </div>
+                    <h3 class="newsletter-form__title godamS22W3 mb-24">JOIN OUR MAILING LIST</h3>
+                    <form class="newsletter-form__form" novalidate>
+                        <input type="email" id="inputEmail" class="newsletter-form__input roboS14W1" placeholder="Enter your email" title="input ur email" required>
+                        <button type="submit" id="btnSend" class="newsletter-form__submit-button roboS14W1" aria-label="Subscribe">Subscribe button</button>
+                    </form>
+                    <span class="roboS12W2">Unlock 15% off your next order!</span>
+                </section>
+            </div>
+            <div class="site-footer__bottom">
+                <hr class="site-footer__divider">
+                <p class="site-footer__copyright roboS14W2">&copy; 2024 TONYMOLY USA. ALL RIGHTS RESERVED.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

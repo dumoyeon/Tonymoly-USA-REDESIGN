@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders | TONYMOLY</title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="js/tonymoly.js"></script>
+    <link rel="shortcut icon" href="images/ico_favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/import.css">
+</head>
+<body>
+    <div id="reviewPopup" class="reviewPopup">
+        <button type="button" class="closeBtn">btn close</button>
+        <img class="mb-center10 block" src="images/make_product_67.jpg" alt="makeup product img">
+        <dl class="mb-24">
+            <dt class="roboS16W3 mb-5">Jelly Lip Melt</dt>
+            <dd class="roboS14W2">Green Grape</dd>
+        </dl>
+        <b class="roboS16W3 mb-10 block">Rating Product</b>
+        <form>
+            <ol class="review-star review-star--popup" id="reviewProduct">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+            </ol>
+            <div class="mb-center flex-wrap">
+                <button type="button" class="btn btn-mainline closeBtn">later</button>
+                <button type="submit" class="btn btn-mainfill closeBtn">Submit</button>
+            </div>
+        </form>
+    </div>
+    <div id="trackingPopup" class="trackPopup">
+        <button type="button" class="closeBtn">btn close</button>
+        <dl>
+            <dt class="godamS16W2">Shipment Number</dt>
+            <dd class="godamS16W3">OJI202407020124</dd>
+        </dl>
+        <ul class="godamS14W1">
+            <li class="active">
+                <span class="mb-5 block">Order Confirmed</span>
+                <b class="block"><time datetime="2024-07-25 11:20">11:20 am, 25 Jul, 2024</time></b>
+            </li>
+            <li class="active">
+                <span class="mb-5 block">Packed</span>
+                <b class="block"><time datetime="2024-07-26 15:33">05:33 pm, 26 Jul, 2024</time></b>
+            </li>
+            <li class="active">
+                <span class="mb-5 block">Shipping<mark class="pinkS12Bedge ml-10">Tracking</mark></span>
+                <b class="block"><time datetime="2024-07-27 10:03">10:03 am, 27 Jul, 2024</time></b>
+            </li>
+            <li>
+                <span class="mb-5 block">Completed</span>
+                <b class="block">It's not in progress yet.</b>
+            </li>
+        </ul>
+        <button type="button" class="btn btn-mainfill closeBtn mb-center">ok</button>
+    </div>
+    <header class="site-header">
+        <div class="site-header__inner px-global">
+            <h1 class="site-header__logo">
+                <a href="index_after.html">
+                    <img src="images/logo_header.svg" alt="Welcome Tonymoly">
+                </a>
+            </h1>
+            <div class="site-header__main-controls">
+                <form action="search.html" class="search-form">
+                    <input type="search" name="query" id="searchInput" class="search-form__input roboS14W1" placeholder="Aloe" title="Enter product name">
+                    <button type="submit" class="search-form__submit-button" aria-label="Search">Search bar btn</button>
+                </form>
+                <ul class="site-header__actions">
+                    <li class="site-header__action-item"><a href="cart.html" aria-label="Cart List"><img src="images/btn_cart.svg" alt="cart btn"></a></li>
+                    <li class="site-header__action-item"><a href="orders.html"aria-label="Orders page"><img src="images/btn_account.svg" alt="my account btn"></a></li>
+                    <li class="site-header__action-item"><button type="button" id="mnav" class="site-header__mobile-menu-trigger mui">mobile user interface</button></li>
+                </ul>
+            </div>
+        </div>
+        <nav class="main-nav" aria-label="Main">
+            <div class="main-nav__inner">
+                <ul class="main-nav__primary-list godamS16W3" id="mnavList">
+                    <li class="main-nav__item px-global">
+                        <a class="main-nav__link" href="list_new_01.html">NEW</a>
+                    </li> 
+                    <li class="main-nav__item px-global">
+                        <a class="main-nav__link" href="list_best_01.html">BEST</a>
+                    </li>
+                    <li class="main-nav__item main-nav__item--has-dropdown px-global">
+                        <button type="button" class="main-nav__link" aria-expanded="false">SKINCARE</button>
+                        <div class="main-nav__dropdown">
+                            <div class="main-nav__dropdown-inner">
+                                <h2 class="main-nav__dropdown-title godamS32W3">
+                                    SKINCARE
+                                    <a href="list_skin_01.html" class="main-nav__dropdown-view-all godamS14W2">View All Products</a>
+                                </h2>
+                                <ol class="main-nav__sublist">
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_skin_01.html">View All Products</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_skin_clean_01.html">Cleansing</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_skin_toner_01.html">Toner</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_skin_treat_01.html">Treatments</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_skin_eye_01.html">Eye Care</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_skin_lip_01.html">Lip Care</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_skin_body_01.html">Body</a></li>
+                                </ol>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="main-nav__item main-nav__item--has-dropdown px-global">
+                        <button type="button" class="main-nav__link" aria-expanded="false">MAKEUP</button>
+                        <div class="main-nav__dropdown">
+                            <div class="main-nav__dropdown-inner">
+                                <h2 class="main-nav__dropdown-title godamS32W3">
+                                    MAKEUP
+                                    <a href="list_make_01.html" class="main-nav__dropdown-view-all godamS14W2">View All Products</a>
+                                </h2>
+                                <ol class="main-nav__sublist">
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_make_01.html">View All Products</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_make_eye_01.html">Eyes</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_make_lip_01.html">Lips</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_make_face_01.html">Face</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_make_tool_01.html">Tools</a></li>
+                                </ol>    
+                            </div>
+                        </div>
+                    </li>
+                    <li class="main-nav__item main-nav__item--has-dropdown px-global">
+                        <button type="button" class="main-nav__link" aria-expanded="false">MASK BAR</button>
+                        <div class="main-nav__dropdown">
+                            <div class="main-nav__dropdown-inner">
+                                <h2 class="main-nav__dropdown-title godamS32W3">
+                                    MASK BAR
+                                    <a href="list_mask_01.html" class="main-nav__dropdown-view-all godamS14W2">View All Products</a>
+                                </h2>
+                                <ol class="main-nav__sublist">
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_mask_01.html">View All Products</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_mask_sheet_01.html">Sheet Masks</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_mask_wash_01.html">Wash Off Masks</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_mask_sleep_01.html">Sleeping Masks</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_mask_eye_01.html">Eye Masks</a></li>
+                                </ol>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="main-nav__item px-global">
+                        <a class="main-nav__link" href="list_bun_01.html">BUNDLES</a>
+                    </li>
+                </ul>
+                <ul class="main-nav__secondary-list">
+                    <li class="main-nav__item px-global"><a class="main-nav__link" href="rewards.html">Rewards</a></li>
+                    <li class="main-nav__item px-global"><a class="main-nav__link" href="ourstory.html">Our Story</a></li>
+                    <li class="main-nav__item px-global"><a class="main-nav__link" href="https://tony-moly.gorgias.help/en-US/articles/shipping-delivery-92434" target="_blank">Shipping &amp; Delivery</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="account-layout orderMyaccountContainer" id="top">
+        <aside class="account-layout__sidebar px-global">
+            <nav class="account-nav">
+                <ul class="account-nav__list godamS14W2">
+                    <li class="account-nav__item active"><a class="account-nav__link" href="orders.html">Orders</a></li>
+                    <li class="account-nav__item"><a class="account-nav__link" href="wish.html">Wishlist</a></li>
+                    <li class="account-nav__item"><a class="account-nav__link" href="account.html">Account detail</a></li>
+                    <li class="account-nav__item"><a class="account-nav__link" href="addresses.html">Addresses</a></li>
+                </ul>
+            </nav>
+            <div class="account-nav__logout-form">
+                <form action="index.html">
+                    <button type="submit" class="btn btn-darkline">LOGOUT</button>
+                </form>
+            </div>
+        </aside>
+        <main class="account-layout__main orders-page px-global">
+            <h2 class="orders-page__title godamS32W3">Orders</h2>
+            <div class="order-status-summary">
+                <ul class="order-status-summary__list mb-10 flex-wrap justify-center bg-gray12 text-center">
+                    <li class="order-status-summary__item order-status-summary__item--active relative">
+                        <em class="order-status-summary__count godamS28W3 block">1</em>
+                        <b class="order-status-summary__label goW4 color-gray4">Ordered</b>
+                    </li>
+                    <li class="order-status-summary__item relative">
+                        <em class="order-status-summary__count godamS28W3 block">0</em>
+                        <b class="order-status-summary__label goW2 color-gray4">Packed</b>
+                    </li>
+                    <li class="order-status-summary__item relative">
+                        <em class="order-status-summary__count godamS28W3 block">0</em>
+                        <b class="order-status-summary__label goW2 color-gray4">Shipping</b>
+                    </li>
+                    <li class="order-status-summary__item order-status-summary__item--active relative"order-card__status-badge>
+                        <em class="order-status-summary__count godamS28W3 block">1</em>
+                        <b class="order-status-summary__label goW4 color-gray4">Completed</b>
+                    </li>
+                </ul>
+                <p class="roboS14W1 text-right">* Order details for the last 3 months</p>
+            </div>
+            <ul class="orders-page__list">
+                <li class="order-card mb-60">
+                    <div class="order-card__header">
+                        <mark class="order-card__status-badge order-card__status-badge--confirmed pinkS14Bedge mb-10">Order Confirmed</mark>
+                        <h3 class="order-card__number roboS22W3 mb-20">#001</h3>
+                        <time datetime="2024-07-10" class="order-card__date roboS14W4 py-20 block">2024.7.10</time>
+                    </div>
+                    <div class="order-card__item-summary py-20 flex-wrap">
+                        <img class="order-card__img" src="images/ex_order.png" alt="order img">
+                        <div class="order-card__info">
+                            <dl class="order-card__product-details">
+                                <dt class="order-card__product-name roboS16W3">Jelly Lip Melt</dt>
+                                <dd class="order-card__product-option roboS14W2">Green Grape</dd>
+                            </dl>
+                            <dl class="order-card__price-details">
+                                <dt class="order-card__price roboS16W3">$24.00</dt>
+                                <dd class="order-card__quantity roboS14W2">1</dd>
+                            </dl>
+                        </div>
+                        <div class="order-card__actions">
+                            <a href="https://tonymoly.us/apps/redo/returns-portal/login" target="_blank" class="btn btn-mainline">REFUND</a>
+                        </div>
+                    </div>
+                    <button type="button" class="order-card__toggle-details accordion-trigger py-20 block color-gray1 roboS14W2" id="trigger2">View order details</button>
+                    <div class="order-card__details accordion-panel bg-gray12" id="panel2" role="region" aria-labelledby="trigger2">
+                        <table class="order-card__customer-section">
+                            <caption class="roboS22W3 mb-20">Customer Detail</caption>
+                            <tbody class="bg-gray15">
+                                <tr>
+                                    <th>Contact</th>
+                                    <td>leej119898@naver.com</td>
+                                </tr>
+                                <tr>
+                                    <th>Ship to</th>
+                                    <td>Apple Computer Inc. 1 infinite, 1600 Amphitheatre parkway, CUPERTINO Manitoba 915014-2083. United States</td>
+                                </tr>
+                                <tr>
+                                    <th>Shipping method</th>
+                                    <td>Standard Shipping (5~7days) - $7.50</td>
+                                </tr>
+                                <tr>
+                                    <th>Payment</th>
+                                    <td>Credit Card</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="order-card__help-section">
+                            <h4 class="roboS22W3 mb-20">Need Help?</h4>
+                            <ul class="flex-wrap justify-center border-bottom bg-gray15 text-center">
+                                <li><a class="roboS14W3 w100" href="https://tony-moly.gorgias.help/en-US/contact" target="_blank">Contact Us</a></li>
+                                <li><a class="roboS14W3 w100" href="https://tonymoly.us/apps/redo/returns-portal/login" target="_blank">Returns &amp; Exchanges</a></li>
+                                <li><a class="roboS14W3 w100" href="https://tony-moly.gorgias.help/en-US/articles/shipping-delivery-92434" target="_blank">Shipping &amp; Delivery</a></li>
+                            </ul>
+                            <p class="roboS14W1 text-center bg-gray15">Do you need help? Once an order is placed, we are unable to change addresses or other order details.</p>
+                        </div>
+                        <table class="order-card__summary-section summaryBox">
+                            <caption class="roboS22W3 mb-20">Order Summary</caption>
+                            <tbody>
+                                <tr>
+                                    <th>Subtotal</th>
+                                    <td>$39.99</td>
+                                </tr>
+                                <tr>
+                                    <th>Shipping</th>
+                                    <td>$7.50</td>
+                                </tr>
+                                <tr>
+                                    <th>Estimated taxes</th>
+                                    <td>$3.66</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th>Total</th>
+                                    <td>USD <strong class="roboS24W4">$51.15</strong></td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </li>
+                <li class="order-card mb-60">
+                    <div class="order-card__header">
+                        <mark class="order-card__status-badge order-card__status-badge--completed greenS14Bedge mb-10">Order Completed</mark>
+                        <h3 class="order-card__number roboS22W3 mb-20">#001</h3>
+                        <time datetime="2024-07-10" class="order-card__date roboS14W4 py-20 block">2024.7.10</time>
+                    </div>
+                    <div class="order-card__item-summary py-20 flex-wrap">
+                        <img class="order-card__img" src="images/ex_order.png" alt="order img">
+                        <div class="order-card__info">
+                            <dl class="order-card__product-details">
+                                <dt class="order-card__product-name roboS16W3">Jelly Lip Melt</dt>
+                                <dd class="order-card__product-option roboS14W2">Green Grape</dd>
+                            </dl>
+                            <dl class="order-card__price-details">
+                                <dt class="order-card__price roboS16W3">$24.00</dt>
+                                <dd class="order-card__quantity roboS14W2">1</dd>
+                            </dl>
+                        </div>
+                        <div class="order-card__actions">
+                            <button type="button" data-popName="tracking" class="btn btn-mainline">Tracking the delivery</button>
+                            <button type="button" data-popName="review" class="btn btn-mainfill">REVIEW</button>
+                        </div>
+                    </div>
+                    <button type="button" class="order-card__toggle-details accordion-trigger py-20 block color-gray1 roboS14W2" id="trigger1">View order details</button>
+                    <div class="order-card__details accordion-panel bg-gray12" id="panel1" role="region" aria-labelledby="trigger1">
+                        <table class="order-card__customer-section">
+                            <caption class="roboS22W3 mb-20">Customer Detail</caption>
+                            <tbody class="bg-gray15">
+                                <tr>
+                                    <th>Contact</th>
+                                    <td>leej119898@naver.com</td>
+                                </tr>
+                                <tr>
+                                    <th>Ship to</th>
+                                    <td>Apple Computer Inc. 1 infinite, 1600 Amphitheatre parkway, CUPERTINO Manitoba 915014-2083. United States</td>
+                                </tr>
+                                <tr>
+                                    <th>Shipping method</th>
+                                    <td>Standard Shipping (5~7days) - $7.50</td>
+                                </tr>
+                                <tr>
+                                    <th>Payment</th>
+                                    <td>Credit Card</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="order-card__help-section">
+                            <h4 class="roboS22W3 mb-20">Need Help?</h4>
+                            <ul class="flex-wrap justify-center border-bottom bg-gray15 text-center">
+                                <li><a class="roboS14W3 w100" href="https://tony-moly.gorgias.help/en-US/contact" target="_blank">Contact Us</a></li>
+                                <li><a class="roboS14W3 w100" href="https://tonymoly.us/apps/redo/returns-portal/login" target="_blank">Returns &amp; Exchanges</a></li>
+                                <li><a class="roboS14W3 w100" href="https://tony-moly.gorgias.help/en-US/articles/shipping-delivery-92434" target="_blank">Shipping &amp; Delivery</a></li>
+                            </ul>
+                            <p class="roboS14W1 text-center bg-gray15">Do you need help? Once an order is placed, we are unable to change addresses or other order details.</p>
+                        </div>
+                        <table class="order-card__summary-section summaryBox">
+                            <caption class="roboS22W3 mb-20">Order Summary</caption>
+                            <tbody>
+                                <tr>
+                                    <th>Subtotal</th>
+                                    <td>$39.99</td>
+                                </tr>
+                                <tr>
+                                    <th>Shipping</th>
+                                    <td>$7.50</td>
+                                </tr>
+                                <tr>
+                                    <th>Estimated taxes</th>
+                                    <td>$3.66</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th>Total</th>
+                                    <td>USD <strong class="roboS24W4">$51.15</strong></td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </li>
+            </ul>
+        </main>
+    </div>
+    <a href="#top">TOP btn</a>
+    <footer class="site-footer">
+        <div class="site-footer__inner px-global">
+            <div class="site-footer__top">
+                <h2 class="site-footer__logo mb-25"><img src="images/logo_footer.svg" alt="Goodbye, TONYMOLY!"></h2>
+                <ul class="site-footer__social-list flex">
+                    <li class="site-footer__social-item"><a href="https://www.instagram.com/tonymoly.us_official/" target="_blank">Instargram</a></li>
+                    <li class="site-footer__social-item"><a href="https://kr.pinterest.com/tonymolyusa/" target="_blank">Pinterest</a></li>
+                    <li class="site-footer__social-item"><a href="https://www.tiktok.com/@tonymolyusa" target="_blank">TikTok</a></li>
+                </ul>
+            </div>
+            <div class="site-footer__main mb-60">
+                <nav class="site-footer__nav-column" aria-label="About us">
+                    <h3 class="site-footer__nav-title godamS22W3 mb-24">ABOUT US</h3>
+                    <ul class="site-footer__nav-list roboS14W2">
+                        <li class="site-footer__nav-item"><a href="stock.html">Stockists</a></li>
+                        <li class="site-footer__nav-item"><a href="whole.html">Wholesale</a></li>
+                        <li class="site-footer__nav-item"><a href="https://kr.pinterest.com/tonymolyusa/tonymoly-press/" target="_blank">Press</a></li>
+                    </ul>
+                </nav>
+                <nav class="site-footer__nav-column" aria-label="Support">
+                    <h3 class="site-footer__nav-title godamS22W3 mb-24">SUPPORT</h3>
+                    <ul class="site-footer__nav-list roboS14W2">
+                        <li class="site-footer__nav-item"><a href="https://tony-moly.gorgias.help/en-US" target="_blank">F.A.Q.</a></li>
+                        <li class="site-footer__nav-item"><a href="https://tonymoly.us/apps/redo/returns-portal/login" target="_blank">Returns &amp; Exchanges</a></li>
+                        <li class="site-footer__nav-item"><a href="https://tony-moly.gorgias.help/en-US/contact" target="_blank">Contact Us</a></li>
+                        <li class="site-footer__nav-item"><a href="promotion.html">Promotion Details</a></li>
+                        <li class="site-footer__nav-item"><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </nav>
+                <section class="newsletter-form">
+                    <div id="emailInvalidPopup">
+                        <p class="godamS14W1">Invalid email address</p>
+                        <button type="button" class="closeBtn">btn close</button>
+                    </div>
+                    <div class="emailAlert" id="emailPopup">
+                        <button type="button" class="closeBtn">btn close</button>
+                        <em class="godamS16W4">Thank you for subscribing!</em>
+                        <span class="roboS16W1">You can receive various news about TonyMoly.</span>
+                    </div>
+                    <h3 class="newsletter-form__title godamS22W3 mb-24">JOIN OUR MAILING LIST</h3>
+                    <form class="newsletter-form__form" novalidate>
+                        <input type="email" id="inputEmail" class="newsletter-form__input roboS14W1" placeholder="Enter your email" title="input ur email" required>
+                        <button type="submit" id="btnSend" class="newsletter-form__submit-button roboS14W1" aria-label="Subscribe">Subscribe button</button>
+                    </form>
+                    <span class="roboS12W2">Unlock 15% off your next order!</span>
+                </section>
+            </div>
+            <div class="site-footer__bottom">
+                <hr class="site-footer__divider">
+                <p class="site-footer__copyright roboS14W2">&copy; 2024 TONYMOLY USA. ALL RIGHTS RESERVED.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart | TONYMOLY</title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="js/tonymoly.js"></script>
+    <link rel="shortcut icon" href="images/ico_favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/import.css">
+</head>
+<body>
+    <div id="clearCompletePopup"  class="defaultPopup">
+        <button type="button" class="closeBtn">btn close</button>
+        <p class="roboS14W2">Clear successfully completed.</p>
+        <button type="button" class="closeBtn default__action">OK</button>
+    </div>
+    <div id="removeProductPopup" class="defaultPopup">
+        <button type="button" class="closeBtn">btn close</button>
+        <b class="roboS18W3">Are you sure?</b>
+        <p class="roboS14W2">Do you want to clear products from my shopping cart</p>
+        <div class="default__actions">
+            <button type="button" class="closeBtn">Don't remove</button>
+            <button type="button" data-popName="clearComplete" class="closeBtn">Remove product</button>
+        </div>
+    </div>
+    <div id="removeAllProductPopup" class="defaultPopup">
+        <button type="button" class="closeBtn">btn close</button>
+        <b class="roboS18W3">Are you sure?</b>
+        <p class="roboS14W2">Do you want to clear all products from my shopping cart</p>
+        <div class="default__actions">
+            <button type="button" class="closeBtn">Don't remove</button>
+            <button type="button" data-popName="clearAllCartComplete" class="closeBtn">Remove all product</button>
+        </div>
+    </div>
+    <header class="site-header">
+        <div class="site-header__inner px-global">
+            <h1 class="site-header__logo">
+                <a href="index_after.html">
+                    <img src="images/logo_header.svg" alt="Welcome Tonymoly">
+                </a>
+            </h1>
+            <div class="site-header__main-controls">
+                <form action="search.html" class="search-form">
+                    <input type="search" name="query" id="searchInput" class="search-form__input roboS14W1" placeholder="Aloe" title="Enter product name">
+                    <button type="submit" class="search-form__submit-button" aria-label="Search">Search bar btn</button>
+                </form>
+                <ul class="site-header__actions">
+                    <li class="site-header__action-item"><a href="cart.html" aria-label="Cart List"><img src="images/btn_cart.svg" alt="cart btn"></a></li>
+                    <li class="site-header__action-item"><a href="orders.html"aria-label="Orders page"><img src="images/btn_account.svg" alt="my account btn"></a></li>
+                    <li class="site-header__action-item"><button type="button" id="mnav" class="site-header__mobile-menu-trigger mui">mobile user interface</button></li>
+                </ul>
+            </div>
+        </div>
+        <nav class="main-nav" aria-label="Main">
+            <div class="main-nav__inner">
+                <ul class="main-nav__primary-list godamS16W3" id="mnavList">
+                    <li class="main-nav__item px-global">
+                        <a class="main-nav__link" href="list_new_01.html">NEW</a>
+                    </li> 
+                    <li class="main-nav__item px-global">
+                        <a class="main-nav__link" href="list_best_01.html">BEST</a>
+                    </li>
+                    <li class="main-nav__item main-nav__item--has-dropdown px-global">
+                        <button type="button" class="main-nav__link" aria-expanded="false">SKINCARE</button>
+                        <div class="main-nav__dropdown">
+                            <div class="main-nav__dropdown-inner">
+                                <h2 class="main-nav__dropdown-title godamS32W3">
+                                    SKINCARE
+                                    <a href="list_skin_01.html" class="main-nav__dropdown-view-all godamS14W2">View All Products</a>
+                                </h2>
+                                <ol class="main-nav__sublist">
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_skin_01.html">View All Products</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_skin_clean_01.html">Cleansing</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_skin_toner_01.html">Toner</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_skin_treat_01.html">Treatments</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_skin_eye_01.html">Eye Care</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_skin_lip_01.html">Lip Care</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_skin_body_01.html">Body</a></li>
+                                </ol>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="main-nav__item main-nav__item--has-dropdown px-global">
+                        <button type="button" class="main-nav__link" aria-expanded="false">MAKEUP</button>
+                        <div class="main-nav__dropdown">
+                            <div class="main-nav__dropdown-inner">
+                                <h2 class="main-nav__dropdown-title godamS32W3">
+                                    MAKEUP
+                                    <a href="list_make_01.html" class="main-nav__dropdown-view-all godamS14W2">View All Products</a>
+                                </h2>
+                                <ol class="main-nav__sublist">
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_make_01.html">View All Products</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_make_eye_01.html">Eyes</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_make_lip_01.html">Lips</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_make_face_01.html">Face</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_make_tool_01.html">Tools</a></li>
+                                </ol>    
+                            </div>
+                        </div>
+                    </li>
+                    <li class="main-nav__item main-nav__item--has-dropdown px-global">
+                        <button type="button" class="main-nav__link" aria-expanded="false">MASK BAR</button>
+                        <div class="main-nav__dropdown">
+                            <div class="main-nav__dropdown-inner">
+                                <h2 class="main-nav__dropdown-title godamS32W3">
+                                    MASK BAR
+                                    <a href="list_mask_01.html" class="main-nav__dropdown-view-all godamS14W2">View All Products</a>
+                                </h2>
+                                <ol class="main-nav__sublist">
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_mask_01.html">View All Products</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_mask_sheet_01.html">Sheet Masks</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_mask_wash_01.html">Wash Off Masks</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_mask_sleep_01.html">Sleeping Masks</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_mask_eye_01.html">Eye Masks</a></li>
+                                </ol>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="main-nav__item px-global">
+                        <a class="main-nav__link" href="list_bun_01.html">BUNDLES</a>
+                    </li>
+                </ul>
+                <ul class="main-nav__secondary-list">
+                    <li class="main-nav__item px-global"><a class="main-nav__link" href="rewards.html">Rewards</a></li>
+                    <li class="main-nav__item px-global"><a class="main-nav__link" href="ourstory.html">Our Story</a></li>
+                    <li class="main-nav__item px-global"><a class="main-nav__link" href="https://tony-moly.gorgias.help/en-US/articles/shipping-delivery-92434" target="_blank">Shipping &amp; Delivery</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main class="cart-page px-global cartlistContainer" id="top">
+        <h2 class="cart-page__title godamS32W3 mb-48">MY CART</h2>
+        <section class="cart-items">
+            <div class="cart-items__header border-bottom">
+                <ul class="godamS16W2">
+                    <li>Product</li>
+                    <li>Quantity</li>
+                    <li>Total</li>
+                </ul>
+                <button type="button" data-popName="removeAllProduct" class="godamS14W2">Remove all</button>
+            </div>
+            <ul class="cart-items__list mb-86">
+                <li class="cart-items__item js-active">
+                    <div class="cart-items__item-wrapper flex-wrap justify-between">
+                        <div class="cart-items__product-info flex-wrap">
+                            <img src="images/skin_product_89.jpg" alt="skin product 89" class="cart-items__product-image">
+                            <dl class="cart-items__product-details">
+                                <dt class="cart-items__product-name godamS16W1">Jelly Lip Melt</dt>
+                                <dd class="cart-items__product-option godamS14W1 color-gray4">Green Grape</dd>
+                                <dd class="cart-items__product-price godamS16W3 color-gray1" data-cart-price="productPrice">12</dd>
+                            </dl>
+                        </div>
+                        <div class="cart-items__quantity-selector flex-wrap justify-center">
+                            <button type="button" data-cart-price="quantSub" class="cart-items__quantity-selector-button cart-items__quantity-selector-button--sub">Subtract one product button</button>
+                            <span data-cart-price="quantValue" class="goW2">1</span>
+                            <button type="button" data-cart-price="quantAdd" class="cart-items__quantity-selector-button cart-items__quantity-selector-button--add">Add one product button</button>
+                        </div>
+                        <strong class="cart-items__subtotal-price godamS20W3" data-cart-price="subTotalPrice">12</strong>
+                        <button type="button" data-popName="removeProduct" class="cart-items__remove-item-button">remove product</button>
+                    </div>
+                </li>
+                <li class="cart-items__empty-message cartListempty">
+                    <strong class="cart-items__empty-title godamS18W3">Your cart is empty</strong>
+                    <p class="cart-items__empty-text roboS14W1">Looks like you have not added anything to you cart.</p>
+                    <a href="index_after.html" class="cart-items__empty-link btn btn-mainfill">CONTINUE SHOPPING</a>
+                </li>
+            </ul>
+        </section>
+        <div class="cart-page__main-content flex-wrap">
+            <section class="product-recommendations">
+                <h3 class="product-recommendations__title godamS22W3 pb-20 mb-20 border-bottom">YOU MAY NEED</h3>
+                <ul class="product-recommendations__list">
+                    <li class="product-recommendations__item flex-wrap justify-between">
+                        <div class="product-recommendations__info flex-wrap">
+                            <img class="product-recommendations__item-img w100" src="images/mask_product_69.jpg" alt="need product 01">
+                            <dl>
+                                <dt class="product-recommendations__item-title godamS16W1">I'm Hand Cream</dt>
+                                <dd class="product-recommendations__item-detail godamS14W1 color-gray4">LAVENDER</dd>
+                                <dd class="product-recommendations__item-quant"><strong class="godamS18W3">6</strong></dd>
+                            </dl>
+                        </div>
+                        <button type="button" class="product-recommendations__item-add-button btn btn-greenline addProduct">ADD</button>
+                    </li>
+                    <li class="product-recommendations__item flex-wrap justify-between">
+                        <div class="flex-wrap">
+                            <img class="w100" src="images/skin_product_83.jpg" alt="need product 02">
+                            <dl>
+                                <dt class="product-recommendations__item-title godamS16W1">Peach Hand Cream</dt>
+                                <dd class="product-recommendations__item-quant"><strong class="godamS18W3">12</strong></dd>
+                            </dl>
+                        </div>
+                        <button type="button" class="product-recommendations__item-add-button btn btn-greenline addProduct">ADD</button>
+                    </li>
+                    <li class="product-recommendations__item flex-wrap justify-between">
+                        <div class="flex-wrap">
+                            <img class="w100" src="images/skin_product_35.jpg" alt="need product 01">
+                            <dl>
+                                <dt class="product-recommendations__item-title godamS16W1">Vital Vita 12 Ampoules</dt>
+                                <dd class="product-recommendations__item-detail godamS14W1 color-gray4">BRIGHTENING</dd>
+                                <dd class="product-recommendations__item-quant"><strong class="godamS18W3">20</strong></dd>
+                            </dl>
+                        </div>
+                        <button type="button" class="product-recommendations__item-add-button btn btn-greenline addProduct">ADD</button>
+                    </li>
+                    <li class="product-recommendations__item flex-wrap justify-between">
+                        <div class="flex-wrap">
+                            <img class="w100" src="images/skin_product_99.jpg" alt="need product 01">
+                            <dl>
+                                <dt class="product-recommendations__item-title godamS16W1">I'm Hand Cream</dt>
+                                <dd class="product-recommendations__item-quant"><strong class="godamS18W3">12</strong></dd>
+                            </dl>
+                        </div>
+                        <button type="button" class="product-recommendations__item-add-button btn btn-greenline addProduct">ADD</button>
+                    </li>
+                </ul>
+            </section>
+            <section class="cart-order-summary relative">
+                <div id="afterpayPopup" class="afterpay-popup roboS12W2">
+                    <button type="button" class="afterpay-popup__close-button closeBtn">btn close</button>
+                    <h2 class="afterpay-popup__logo">afterPay logo</h2>
+                    <b class="afterpay-popup__tagline">Shop now. Pay later. Always interest-free.</b>
+                    <ul class="afterpay-popup__steps godamS14W2">
+                        <li class="afterpay-popup__step">
+                            <p>Log into or create your Afterpay account, instant approval decision</p>
+                        </li>
+                        <li class="afterpay-popup__step">
+                            <p>Your purchase will be split into 4 payments, payable every 2 weeks</p>
+                        </li>
+                        <li class="afterpay-popup__step">
+                            <p>Add your favorites to cart</p>
+                        </li>
+                        <li class="afterpay-popup__step">
+                            <p>Select Afterpay at checkout</p>
+                        </li>
+                    </ul>
+                    <p class="afterpay-popup__legal-notice">You must be over 18, a resident of the U.S. and meet additional eligibility criteria to qualify. Late fees may apply. Estimated payment amounts shown on product pages exclude taxes and shipping charges, which are added at checkout.</p>
+                    <p class="afterpay-popup__legal-notice">Loans to California residents made or arranged pursuant to a California Finance Lenders Law license. ©&copy; 2020 Afterpay</p>
+                </div>
+                <h3 class="cart-order-summary__title godamS22W3 pb-20 mb-20 border-bottom">SUMMARY</h3>
+                <div class="cart-order-summary__content">
+                    <div class="cart-order-summary__discount-wrap mb-20">
+                        <div id="sumInvalidPopup" class="cart-order-summary__invalid-code-popup">
+                            <p class="godamS14W1">Invalid sum code</p>
+                            <button type="button" class="cart-order-summary__popup-close-button closeBtn">btn close</button>
+                        </div>
+                        <form class="cart-order-summary__discount-form flex-wrap">
+                            <input type="text" id="sumText" class="cart-order-summary__discount-input roboS14W1" placeholder="Discount code or gift card">
+                            <button type="submit" class="cart-order-summary__discount-apply-button btn btn-greenline" id="sumDiscount">Apply</button>
+                        </form>
+                    </div>  
+                    <form action="information.html" class="cart-order-summary__checkout-form">
+                        <div class="cart-order-summary__price-details mb-20">
+                            <dl class="cart-order-summary__price-line">
+                                <dt class="cart-order-summary__price-label godamS16W2">Shipping</dt>
+                                <dd class="cart-order-summary__price-value godamS16W1" id="discountApply">Caculated at next step</dd>
+                            </dl>
+                            <dl class="cart-order-summary__price-line border-bottom pb-20 mb-20">
+                                <dt class="cart-order-summary__price-label godamS16W2">Subtotal</dt>
+                                <dd class="cart-order-summary__price-value"><strong class="godamS24W4" id="totalPrice">12</strong></dd>
+                            </dl>
+                            <div class="cart-order-summary__payment-line pb-20 border-bottom flex-wrap">
+                                <p class="cart-order-summary__payment-text godamS12W1">or 4 interest-free installments of $51.50 by</p>
+                                <button type="button" data-popName="afterpay" class="cart-order-summary__payment-button">afterpay</button>
+                            </div>
+                        </div>
+                        <div class="cart-order-summary__policy">
+                            <label for="policyCheck" class="cart-order-summary__policy-label roW2">I agree with TONYMOLY terms and conditions and return policy</label>
+                            <input type="checkbox" id="policyCheck" class="cart-order-summary__policy-checkbox">
+                        </div>
+                        <p class="cart-order-summary__notice roboS14W1 mb-86">Once an order is placed, we are unable to change addresses or other order details.</p>
+                        <button type="submit" class="cart-order-summary__checkout-button color-gray15">checkout</button>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </main>
+    <a href="#top">TOP btn</a>
+    <footer class="site-footer">
+        <div class="site-footer__inner px-global">
+            <div class="site-footer__top">
+                <h2 class="site-footer__logo mb-25"><img src="images/logo_footer.svg" alt="Goodbye, TONYMOLY!"></h2>
+                <ul class="site-footer__social-list flex">
+                    <li class="site-footer__social-item"><a href="https://www.instagram.com/tonymoly.us_official/" target="_blank">Instargram</a></li>
+                    <li class="site-footer__social-item"><a href="https://kr.pinterest.com/tonymolyusa/" target="_blank">Pinterest</a></li>
+                    <li class="site-footer__social-item"><a href="https://www.tiktok.com/@tonymolyusa" target="_blank">TikTok</a></li>
+                </ul>
+            </div>
+            <div class="site-footer__main mb-60">
+                <nav class="site-footer__nav-column" aria-label="About us">
+                    <h3 class="site-footer__nav-title godamS22W3 mb-24">ABOUT US</h3>
+                    <ul class="site-footer__nav-list roboS14W2">
+                        <li class="site-footer__nav-item"><a href="stock.html">Stockists</a></li>
+                        <li class="site-footer__nav-item"><a href="whole.html">Wholesale</a></li>
+                        <li class="site-footer__nav-item"><a href="https://kr.pinterest.com/tonymolyusa/tonymoly-press/" target="_blank">Press</a></li>
+                    </ul>
+                </nav>
+                <nav class="site-footer__nav-column" aria-label="Support">
+                    <h3 class="site-footer__nav-title godamS22W3 mb-24">SUPPORT</h3>
+                    <ul class="site-footer__nav-list roboS14W2">
+                        <li class="site-footer__nav-item"><a href="https://tony-moly.gorgias.help/en-US" target="_blank">F.A.Q.</a></li>
+                        <li class="site-footer__nav-item"><a href="https://tonymoly.us/apps/redo/returns-portal/login" target="_blank">Returns &amp; Exchanges</a></li>
+                        <li class="site-footer__nav-item"><a href="https://tony-moly.gorgias.help/en-US/contact" target="_blank">Contact Us</a></li>
+                        <li class="site-footer__nav-item"><a href="promotion.html">Promotion Details</a></li>
+                        <li class="site-footer__nav-item"><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </nav>
+                <section class="newsletter-form">
+                    <div id="emailInvalidPopup">
+                        <p class="godamS14W1">Invalid email address</p>
+                        <button type="button" class="closeBtn">btn close</button>
+                    </div>
+                    <div class="emailAlert" id="emailPopup">
+                        <button type="button" class="closeBtn">btn close</button>
+                        <em class="godamS16W4">Thank you for subscribing!</em>
+                        <span class="roboS16W1">You can receive various news about TonyMoly.</span>
+                    </div>
+                    <h3 class="newsletter-form__title godamS22W3 mb-24">JOIN OUR MAILING LIST</h3>
+                    <form class="newsletter-form__form" novalidate>
+                        <input type="email" id="inputEmail" class="newsletter-form__input roboS14W1" placeholder="Enter your email" title="input ur email" required>
+                        <button type="submit" id="btnSend" class="newsletter-form__submit-button roboS14W1" aria-label="Subscribe">Subscribe button</button>
+                    </form>
+                    <span class="roboS12W2">Unlock 15% off your next order!</span>
+                </section>
+            </div>
+            <div class="site-footer__bottom">
+                <hr class="site-footer__divider">
+                <p class="site-footer__copyright roboS14W2">&copy; 2024 TONYMOLY USA. ALL RIGHTS RESERVED.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

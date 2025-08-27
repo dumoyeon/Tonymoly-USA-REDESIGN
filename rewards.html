@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rewards | TONYMOLY</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="js/jquery.bxslider.js"></script>
+    <script src="js/tonymoly.js"></script>
+    <link rel="shortcut icon" href="images/ico_favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/import.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="site-header__inner px-global">
+            <h1 class="site-header__logo">
+                <a href="index_after.html">
+                    <img src="images/logo_header.svg" alt="Welcome Tonymoly">
+                </a>
+            </h1>
+            <div class="site-header__main-controls">
+                <form action="search.html" class="search-form">
+                    <input type="search" name="query" id="searchInput" class="search-form__input roboS14W1" placeholder="Aloe" title="Enter product name">
+                    <button type="submit" class="search-form__submit-button" aria-label="Search">Search bar btn</button>
+                </form>
+                <ul class="site-header__actions">
+                    <li class="site-header__action-item"><a href="cart.html" aria-label="Cart List"><img src="images/btn_cart.svg" alt="cart btn"></a></li>
+                    <li class="site-header__action-item"><a href="orders.html"aria-label="Orders page"><img src="images/btn_account.svg" alt="my account btn"></a></li>
+                    <li class="site-header__action-item"><button type="button" id="mnav" class="site-header__mobile-menu-trigger mui">mobile user interface</button></li>
+                </ul>
+            </div>
+        </div>
+        <nav class="main-nav" aria-label="Main">
+            <div class="main-nav__inner">
+                <ul class="main-nav__primary-list godamS16W3" id="mnavList">
+                    <li class="main-nav__item px-global">
+                        <a class="main-nav__link" href="list_new_01.html">NEW</a>
+                    </li> 
+                    <li class="main-nav__item px-global">
+                        <a class="main-nav__link" href="list_best_01.html">BEST</a>
+                    </li>
+                    <li class="main-nav__item main-nav__item--has-dropdown px-global">
+                        <button type="button" class="main-nav__link" aria-expanded="false">SKINCARE</button>
+                        <div class="main-nav__dropdown">
+                            <div class="main-nav__dropdown-inner">
+                                <h2 class="main-nav__dropdown-title godamS32W3">
+                                    SKINCARE
+                                    <a href="list_skin_01.html" class="main-nav__dropdown-view-all godamS14W2">View All Products</a>
+                                </h2>
+                                <ol class="main-nav__sublist">
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_skin_01.html">View All Products</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_skin_clean_01.html">Cleansing</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_skin_toner_01.html">Toner</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_skin_treat_01.html">Treatments</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_skin_eye_01.html">Eye Care</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_skin_lip_01.html">Lip Care</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_skin_body_01.html">Body</a></li>
+                                </ol>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="main-nav__item main-nav__item--has-dropdown px-global">
+                        <button type="button" class="main-nav__link" aria-expanded="false">MAKEUP</button>
+                        <div class="main-nav__dropdown">
+                            <div class="main-nav__dropdown-inner">
+                                <h2 class="main-nav__dropdown-title godamS32W3">
+                                    MAKEUP
+                                    <a href="list_make_01.html" class="main-nav__dropdown-view-all godamS14W2">View All Products</a>
+                                </h2>
+                                <ol class="main-nav__sublist">
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_make_01.html">View All Products</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_make_eye_01.html">Eyes</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_make_lip_01.html">Lips</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_make_face_01.html">Face</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_make_tool_01.html">Tools</a></li>
+                                </ol>    
+                            </div>
+                        </div>
+                    </li>
+                    <li class="main-nav__item main-nav__item--has-dropdown px-global">
+                        <button type="button" class="main-nav__link" aria-expanded="false">MASK BAR</button>
+                        <div class="main-nav__dropdown">
+                            <div class="main-nav__dropdown-inner">
+                                <h2 class="main-nav__dropdown-title godamS32W3">
+                                    MASK BAR
+                                    <a href="list_mask_01.html" class="main-nav__dropdown-view-all godamS14W2">View All Products</a>
+                                </h2>
+                                <ol class="main-nav__sublist">
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_mask_01.html">View All Products</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_mask_sheet_01.html">Sheet Masks</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_mask_wash_01.html">Wash Off Masks</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_mask_sleep_01.html">Sleeping Masks</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_mask_eye_01.html">Eye Masks</a></li>
+                                </ol>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="main-nav__item px-global">
+                        <a class="main-nav__link" href="list_bun_01.html">BUNDLES</a>
+                    </li>
+                </ul>
+                <ul class="main-nav__secondary-list">
+                    <li class="main-nav__item px-global"><a class="main-nav__link" href="rewards.html">Rewards</a></li>
+                    <li class="main-nav__item px-global"><a class="main-nav__link" href="ourstory.html">Our Story</a></li>
+                    <li class="main-nav__item px-global"><a class="main-nav__link" href="https://tony-moly.gorgias.help/en-US/articles/shipping-delivery-92434" target="_blank">Shipping &amp; Delivery</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main class="rewards-page rewardContainer" id="top">
+        <section class="hero-banner hero-banner--rewards">
+            <div class="hero-banner__content">
+                <button type="button" class="backBtn">back</button>
+                <span class="hero-banner__subtitle godamS22W3">TEAM TONYMOLY</span>
+                <h2 class="hero-banner__title fugaS78 px-global">Rewards!</h2>
+                <p class="hero-banner__tagline godamS18W3">Earn points and redeem for exclusive rewards!</p>
+            </div>
+        </section>
+        <section class="call-to-action grayleafBox mb-172">
+            <p class="call-to-action__text roboS16W1">Join Team TONYMOLY and get rewarded while you shop.<mark class="call-to-action__highlight">You'll get 150 points</mark> for signing up.</p>
+            <a href="sign_up.html" class="call-to-action__button btn btn-mainfill mb-center">JOIN NOW</a>
+        </section>
+        <section class="point-guide px-global mb-172">
+            <h3 class="point-guide__title godamS32W3 titleText">How to Earn Points</h3>
+            <ul class="point-guide__list flex-wrap justify-center bg-gray12 text-center">
+                <li class="point-guide__item">
+                    <b class="godamS16W3 mb-10">Make a purchase</b>
+                    <strong class="godamS16W3 color-main3">3</strong>
+                </li>
+                <li class="point-guide__item">
+                    <b class="godamS16W3 mb-10">Create an account</b>
+                    <strong class="godamS16W3 color-main3">150</strong>
+                </li>
+                <li class="point-guide__item">
+                    <b class="godamS16W3 mb-10">Refer friends!</b>
+                    <strong class="godamS16W3 color-main3">300</strong>
+                </li>
+                <li class="point-guide__item">
+                    <b class="godamS16W3 mb-10">Follow us on TIKTOK</b>
+                    <strong class="godamS16W3 color-main3">20</strong>
+                </li>
+                <li class="point-guide__item">
+                    <b class="godamS16W3 mb-10">Follow us on Instagram</b>
+                    <strong class="godamS16W3 color-main3">20</strong>
+                </li>
+                <li class="point-guide__item">
+                    <b class="godamS16W3 mb-10">Happy Birthday</b>
+                    <strong class="godamS16W3 color-main3">100</strong>
+                </li>
+                <li class="point-guide__item">
+                    <b class="godamS16W3 mb-10">Download the app</b>
+                    <strong class="godamS16W3 color-main3">20</strong>
+                </li>
+                <li class="point-guide__item">
+                    <b class="godamS16W3 mb-10">Shop Bundel</b>
+                    <strong class="godamS16W3 color-main3">100</strong>
+                </li>
+            </ul>
+        </section>
+        <section class="product-carousel product-carousel--reward carouselrewardBox bx-wrapper px-global mb-172">
+            <h3 class="product-carousel__title godamS32W3 titleText">Rewards</h3>
+            <ul class="product-carousel__slider sliderImgBox moveList">
+                <li class="product-carousel-card">
+                    <figure>
+                        <img src="images/list_bun_18.png" alt="reward list 01">
+                        <figcaption>
+                            <a href="dt_bun_16.html">Deluxe Sampler Set detail btn</a>
+                            <b class="godamS14W2">Deluxe Sampler Set</b>
+                            <strong class="godamS16W3">1,200</strong>
+                        </figcaption>
+                    </figure>
+                </li> 
+                <li class="product-carousel-card">
+                    <figure>
+                        <img src="images/list_skin_11.png" alt="reward list 02">
+                        <figcaption>
+                            <a href="dt_skin_11.html">Wonder Apricotx Deep Cleansing Oil detail btn</a>
+                            <b class="godamS14W2">Wonder Apricotx Deep Cleansing Oil</b>
+                            <strong class="godamS16W3">400</strong>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-carousel-card">
+                    <figure>
+                        <img src="images/list_skin_49.png" alt="reward list 03">
+                        <figcaption>
+                            <a href="dt_skin_49.html">The Chok Chok Green Tea Ampoule Mist detail btn</a>
+                            <b class="godamS14W2">The Chok Chok Green Tea Ampoule Mist</b>
+                            <strong class="godamS16W3">300</strong>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-carousel-card">
+                    <figure>
+                        <img src="images/list_skin_65.png" alt="reward list 04">
+                        <figcaption>
+                            <a href="dt_skin_65.html">Pure Dew Tea Tree &amp; Yuja C Cream detail btn</a>
+                            <b class="godamS14W2">Pure Dew Tea Tree &amp; Yuja C Cream</b>
+                            <strong class="godamS16W3">500</strong>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-carousel-card">
+                    <figure>
+                        <img src="images/list_skin_72.png" alt="reward list 05">
+                        <figcaption>
+                            <a href="dt_skin_72.html">Plump-kin Retinol Eye Cream detail btn</a>
+                            <b class="godamS14W2">Plump-kin Retinol Eye Cream</b>
+                            <strong class="godamS16W3">1,000</strong>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-carousel-card">
+                    <figure>
+                        <img src="images/list_make_04.png" alt="reward list 06">
+                        <figcaption>
+                            <a href="dt_mask_04.html">Egg Pore Nose Pack detail btn</a>
+                    <b class="godamS14W2">Egg Pore Nose Pack</b>
+                    <strong class="godamS16W3">200</strong>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-carousel-card">
+                    <figure>
+                        <img src="images/list_mask_59.png" alt="reward list 07">
+                        <figcaption>
+                            <a href="dt_mask_59.html">Cat's Purrfect Night Mask detail btn</a>
+                            <b class="godamS14W2">Cat's Purrfect Night Mask</b>
+                            <strong class="godamS16W3">500</strong>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-carousel-card">
+                    <figure>
+                        <img src="images/list_mask_71.png" alt="reward list 08">
+                        <figcaption>
+                            <a href="dt_mask_71.html">Timeless Ferment Snail Lip Sleeping Mask detail btn</a>
+                            <b class="godamS14W2">Timeless Ferment Snail Lip Sleeping Mask</b>
+                            <strong class="godamS16W3">800</strong>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-carousel-card">
+                    <figure>
+                        <img src="images/list_mask_83.png" alt="reward list 09">
+                        <figcaption>
+                            <a href="dt_mask_83.html">Pride Moisture Boost Cooling Hydrogel Eye Patches detail btn</a>
+                            <b class="godamS14W2">Pride Moisture Boost Cooling Hydrogel Eye Patches</b>
+                            <strong class="godamS16W3">1,000</strong>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-carousel-card">
+                    <figure>
+                        <img src="images/list_make_91.png" alt="reward list 10">
+                        <figcaption>
+                            <a href="dt_make_91.html">White Jade Heart Gua Sha detail btn</a>
+                            <b class="godamS14W2">White Jade Heart Gua Sha</b>
+                            <strong class="godamS16W3">650</strong>
+                        </figcaption>
+                    </figure>
+                </li>
+            </ul>
+            <div class="product-carousel__pager product-carousel__pager--reward">
+            </div>
+        </section>
+        <section class="loyalty-tiers px-global mb-172">
+            <h3 class="loyalty-tiers__title godamS32W3 titleText">Tiers</h3>
+            <ul class="loyalty-tiers__tier-list flex">
+                <li class="loyalty-tiers__tier">
+                    <mark class="greenS14Bedge">Start Here</mark>
+                    <b class="godamS14W2">Warm Up</b>
+                </li>
+                <li class="loyalty-tiers__tier">
+                    <mark class="skyS14Bedge">Spend $100</mark>
+                    <b class="godamS14W2">Championship</b>
+                </li>
+                <li class="loyalty-tiers__tier">
+                    <mark class="pinkS14Bedge">Spend $350+</mark>
+                    <b class="godamS14W2">MVP</b>
+                </li>
+            </ul>
+            <div class="loyalty-tiers__benefit-comparison">
+                <b class="loyalty-tiers__benefit-comparison-title godamS14W3 block color-main2">Lifestyle</b>
+                <ul class="loyalty-tiers__benefit-comparison-list godamS16W1 flex-wrap text-center">
+                    <li class="loyalty-tiers__benefit-comparison-item">3 points per $1</li>
+                    <li class="loyalty-tiers__benefit-comparison-item">5 points per $1</li>
+                    <li class="loyalty-tiers__benefit-comparison-item">7 points per $1</li>
+                </ul>
+            </div>
+            <ul class="loyalty-tiers__benefit-grid">
+                <li class="loyalty-tiers__benefit">
+                    <b class="godamS14W3 block color-main2">Redeem Points for Free Products, Coupons &amp; More</b>
+                    <ul class="loyalty-tiers__tier-availability flex-wrap">
+                        <li class="loyalty-tiers__tier-checkmark loyalty-tiers__tier-checkmark--included">Warm-up tier gets this benefit</li>
+                        <li class="loyalty-tiers__tier-checkmark loyalty-tiers__tier-checkmark--included">Championship tier gets this benefit</li>
+                        <li class="loyalty-tiers__tier-checkmark loyalty-tiers__tier-checkmark--included">MVP tier gets this benefit</li>
+                    </ul>
+                </li>
+                <li class="loyalty-tiers__benefit">
+                    <b class="godamS14W3 block color-main2">Free Shipping on Orders $50+</b>
+                    <ul class="loyalty-tiers__tier-availability flex-wrap">
+                        <li class="loyalty-tiers__tier-checkmark loyalty-tiers__tier-checkmark--included">Warm-up tier gets this benefit</li>
+                        <li class="loyalty-tiers__tier-checkmark loyalty-tiers__tier-checkmark--included">Championship tier gets this benefit</li>
+                        <li class="loyalty-tiers__tier-checkmark loyalty-tiers__tier-checkmark--included">MVP tier gets this benefit</li>
+                    </ul>
+                </li>
+                <li class="loyalty-tiers__benefit">
+                    <b class="godamS14W3 block color-main2">Double Point Events</b>
+                    <ul class="loyalty-tiers__tier-availability flex-wrap">
+                        <li class="loyalty-tiers__tier-checkmark loyalty-tiers__tier-checkmark--included">Warm-up tier gets this benefit</li>
+                        <li class="loyalty-tiers__tier-checkmark loyalty-tiers__tier-checkmark--included">Championship tier gets this benefit</li>
+                        <li class="loyalty-tiers__tier-checkmark loyalty-tiers__tier-checkmark--included">MVP tier gets this benefit</li>
+                    </ul>
+                </li>
+                <li class="loyalty-tiers__benefit">
+                    <b class="godamS14W3 block color-main2">Birthday Points</b>
+                    <ul class="loyalty-tiers__tier-availability flex-wrap">
+                        <li class="loyalty-tiers__tier-checkmark loyalty-tiers__tier-checkmark--included">Warm-up tier gets this benefit</li>
+                        <li class="loyalty-tiers__tier-checkmark loyalty-tiers__tier-checkmark--included">Championship tier gets this benefit</li>
+                        <li class="loyalty-tiers__tier-checkmark loyalty-tiers__tier-checkmark--included">MVP tier gets this benefit</li>
+                    </ul>
+                </li>
+                <li class="loyalty-tiers__benefit">
+                    <b class="godamS14W3 block color-main2">Bonus Birthday Points</b>
+                    <ul class="loyalty-tiers__tier-availability flex-wrap">
+                        <li class="loyalty-tiers__tier-checkmark">Warm-up tier gets this benefit</li>
+                        <li class="loyalty-tiers__tier-checkmark loyalty-tiers__tier-checkmark--included">Championship tier gets this benefit</li>
+                        <li class="loyalty-tiers__tier-checkmark loyalty-tiers__tier-checkmark--included">MVP tier gets this benefit</li>
+                    </ul>
+                </li>
+                <li class="loyalty-tiers__benefit">
+                    <b class="godamS14W3 block color-main2">Early Access to Sales</b>
+                    <ul class="loyalty-tiers__tier-availability flex-wrap">
+                        <li class="loyalty-tiers__tier-checkmark">Warm-up tier gets this benefit</li>
+                        <li class="loyalty-tiers__tier-checkmark loyalty-tiers__tier-checkmark--included">Championship tier gets this benefit</li>
+                        <li class="loyalty-tiers__tier-checkmark loyalty-tiers__tier-checkmark--included">MVP tier gets this benefit</li>
+                    </ul>
+                </li>
+                <li class="loyalty-tiers__benefit">
+                    <b class="godamS14W3 block color-main2">Exclusive Rewards</b>
+                    <ul class="loyalty-tiers__tier-availability flex-wrap">
+                        <li class="loyalty-tiers__tier-checkmark">Warm-up tier gets this benefit</li>
+                        <li class="loyalty-tiers__tier-checkmark">Championship tier gets this benefit</li>
+                        <li class="loyalty-tiers__tier-checkmark loyalty-tiers__tier-checkmark--included">MVP tier gets this benefit</li>
+                    </ul>
+                </li>
+                <li class="loyalty-tiers__benefit">
+                    <b class="godamS14W3 block color-main2">Annual MVP Gift</b>
+                    <ul class="loyalty-tiers__tier-availability flex-wrap">
+                        <li class="loyalty-tiers__tier-checkmark">Warm-up tier gets this benefit</li>
+                        <li class="loyalty-tiers__tier-checkmark">Championship tier gets this benefit</li>
+                        <li class="loyalty-tiers__tier-checkmark loyalty-tiers__tier-checkmark--included">MVP tier gets this benefit</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <section class="question-accordion px-global">
+            <h3 class="question-accordion__title godamS32W3 titleText">Q&amp;A</h3>
+            <ul id="setAccordion" class="question-accordion__list">
+                <li class="accordion question-accordion__item">
+                    <h4 class="question-accordion__question">
+                        <button type="button" id="trigger1" class="accordion-trigger question-accordion__trigger" aria-expanded="false" aria-controls="panel1">
+                            What is Team TONYMOLY?
+                        </button>
+                    </h4>
+                    <div id="panel1" class="question-accordion__panel roboS12W2" role="region" aria-labelledby="trigger1">
+                        Team TONYMOLY is our loyalty program, designed to reward you with exclusive perks like free products, discounts, early access to sales and more!
+                    </div>
+                </li>
+                <li class="accordion question-accordion__item">
+                    <h4 class="question-accordion__question">
+                        <button type="button" id="trigger2" class="accordion-trigger question-accordion__trigger" aria-expanded="false" aria-controls="panel2">
+                            How do I join?
+                        </button>
+                    </h4>
+                    <div id="panel2" class="question-accordion__panel roboS12W2" role="region" aria-labelledby="trigger2">
+                        To join the team, all you need to do is make an account on tonymoly.us, which automatically enrolls you into our rewards program. If you already have an account with us, you’re all signed up and can start earning points right away!
+                    </div>
+                </li>
+                <li class="accordion question-accordion__item">
+                    <h4 class="question-accordion__question">
+                        <button type="button" id="trigger3" class="accordion-trigger question-accordion__trigger" aria-expanded="false" aria-controls="panel3">
+                            Do I get anything for joining?
+                        </button>
+                    </h4>
+                    <div id="panel3" class="question-accordion__panel roboS12W2" role="region" aria-labelledby="trigger3">
+                        You’ll earn 150 points just for creating an account. Once you’re on the team, you can earn even more points by following us on social media, downloading our app, making a purchase and more!
+                    </div>
+                </li>
+                <li class="accordion question-accordion__item">
+                    <h4 class="question-accordion__question">
+                        <button type="button" id="trigger4" class="accordion-trigger question-accordion__trigger" aria-expanded="false" aria-controls="panel4">
+                            How do I join the next tier?
+                        </button>
+                    </h4>
+                    <div id="panel4" class="question-accordion__panel roboS12W2" role="region" aria-labelledby="trigger4">
+                        You’ll automatically be upgraded to the next tier once you’ve spent the qualifying amount. Each tier unlocks exclusive benefits so you’ll earn even more perks as you level up!
+                    </div>
+                </li>
+                <li class="accordion question-accordion__item">
+                    <h4 class="question-accordion__question">
+                        <button type="button" id="trigger5" class="accordion-trigger question-accordion__trigger" aria-expanded="false" aria-controls="panel5">
+                            Does my tier ever expire?
+                        </button>
+                    </h4>
+                    <div id="panel5" class="question-accordion__panel roboS12W2" role="region" aria-labelledby="trigger5">
+                        Our program resets annually on 11/15 so you can keep climbing the tiers until then! Once the tiers have been reset, you’ll need to place an order and spend the qualifying amount for each tier to unlock those rewards. Don’t worry - you won’t lose your points when the tiers reset!
+                    </div>
+                </li>
+                <li class="accordion question-accordion__item">
+                    <h4 class="question-accordion__question">
+                        <button type="button" id="trigger6" class="accordion-trigger question-accordion__trigger" aria-expanded="false" aria-controls="panel6">
+                            How many points will I earn with my purchase?
+                        </button>
+                    </h4>
+                    <div id="panel6" class="question-accordion__panel roboS12W2" role="region" aria-labelledby="trigger6">
+                        It depends on your tier! Our Warm Up tier earns 3 points per dollar spent, Championship tier earns 5 points per dollar spent and MVPs earn 7 points per dollar spent. We also have exclusive double points events periodically so you can earn even more, no matter what tier you’re in!
+                    </div>
+                </li>
+                <li class="accordion question-accordion__item">
+                    <h4 class="question-accordion__question">
+                        <button type="button" id="trigger7" class="accordion-trigger question-accordion__trigger" aria-expanded="false" aria-controls="panel7">
+                            How do I check how many points I have?
+                        </button>
+                    </h4>
+                    <div id="panel7" class="question-accordion__panel roboS12W2" role="region" aria-labelledby="trigger7">
+                        You can view the balance by clicking the account icon at the top of the page and clicking rewards. This will take you to your personalized rewards page!
+                    </div>
+                </li>
+                <li class="accordion question-accordion__item">
+                    <h4 class="question-accordion__question">
+                        <button type="button" id="trigger8" class="accordion-trigger question-accordion__trigger" aria-expanded="false" aria-controls="panel8">
+                            I made a purchase, but I’m not seeing my points!
+                        </button>
+                    </h4>
+                    <div id="panel8" class="question-accordion__panel roboS12W2" role="region" aria-labelledby="trigger8">
+                        After making a purchase, please allow 14 days for your points to process. This allows time for potential returns. If 14 days have passed and you’re still not seeing your points, please reach out to hi@tonymoly.us and our customer service team would be happy to help!
+                    </div>
+                </li>
+                <li class="accordion question-accordion__item">
+                    <h4 class="question-accordion__question">
+                        <button type="button" id="trigger9" class="accordion-trigger question-accordion__trigger" aria-expanded="false" aria-controls="panel9">
+                            What happens to my points if I make a return?
+                        </button>
+                    </h4>
+                    <div id="panel9" class="question-accordion__panel roboS12W2" role="region" aria-labelledby="trigger9">
+                        Any points earned for the returned product will be deducted once your return is received. You can learn more about our Return Policy here!
+                    </div>
+                </li>
+                <li class="accordion question-accordion__item">
+                    <h4 class="question-accordion__question">
+                        <button type="button" id="trigger10" class="accordion-trigger question-accordion__trigger" aria-expanded="false" aria-controls="panel10">
+                            Will my points ever expire?
+                        </button>
+                    </h4>
+                    <div id="panel10" class="question-accordion__panel roboS12W2" role="region" aria-labelledby="trigger10">
+                        Yes - after one year of inactivity, your points will expire. Don’t worry, we’ll send you a reminder before that happens!
+                    </div>
+                </li>
+                <li class="accordion question-accordion__item">
+                    <h4 class="question-accordion__question">
+                        <button type="button" id="trigger11" class="accordion-trigger question-accordion__trigger" aria-expanded="false" aria-controls="panel11">
+                            What can I redeem my points for?
+                        </button>
+                    </h4>
+                    <div id="panel11" class="question-accordion__panel roboS12W2" role="region" aria-labelledby="trigger11">
+                        Team TONYMOLY members can redeem their points for free products, exclusive merch, and more! You’ll unlock access to more rewards as you level up and we’re always adding new options so there’s always something exciting to try!
+                    </div>
+                </li>
+                <li class="accordion question-accordion__item">
+                    <h4 class="question-accordion__question">
+                        <button type="button" id="trigger12" class="accordion-trigger question-accordion__trigger" aria-expanded="false" aria-controls="panel12">
+                            Do I need to buy something to redeem a reward?
+                        </button>
+                    </h4>
+                    <div id="panel12" class="question-accordion__panel roboS12W2" role="region" aria-labelledby="trigger12">
+                        In order to redeem a reward, you’ll need to have at least one physical item in your cart.
+                    </div>
+                </li>
+                <li class="accordion question-accordion__item">
+                    <h4 class="question-accordion__question">
+                        <button type="button" id="trigger13" class="accordion-trigger question-accordion__trigger" aria-expanded="false" aria-controls="panel3">
+                            Can I return my reward?
+                        </button>
+                    </h4>
+                    <div id="panel13" class="question-accordion__panel roboS12W2" role="region" aria-labelledby="trigger13">
+                        Rewards are final sale and cannot be returned or exchanged.
+                    </div>
+                </li>
+                <li class="accordion question-accordion__item">
+                    <h4 class="question-accordion__question">
+                        <button type="button" id="trigger14" class="accordion-trigger question-accordion__trigger" aria-expanded="false" aria-controls="panel14">
+                            Can I return a friend?
+                        </button>
+                    </h4>
+                    <div id="panel14" class="question-accordion__panel roboS12W2" role="region" aria-labelledby="trigger14">
+                        Yes! When you refer a friend, they'll get $15 off their first order. Once they've made a purchase, you'll get 300 points added to your account! Order must be $35 or more to qualify for discount or points reward.
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </main> 
+    <a href="#top">TOP btn</a>
+    <footer class="site-footer">
+        <div class="site-footer__inner px-global">
+            <div class="site-footer__top">
+                <h2 class="site-footer__logo mb-25"><img src="images/logo_footer.svg" alt="Goodbye, TONYMOLY!"></h2>
+                <ul class="site-footer__social-list flex">
+                    <li class="site-footer__social-item"><a href="https://www.instagram.com/tonymoly.us_official/" target="_blank">Instargram</a></li>
+                    <li class="site-footer__social-item"><a href="https://kr.pinterest.com/tonymolyusa/" target="_blank">Pinterest</a></li>
+                    <li class="site-footer__social-item"><a href="https://www.tiktok.com/@tonymolyusa" target="_blank">TikTok</a></li>
+                </ul>
+            </div>
+            <div class="site-footer__main mb-60">
+                <nav class="site-footer__nav-column" aria-label="About us">
+                    <h3 class="site-footer__nav-title godamS22W3 mb-24">ABOUT US</h3>
+                    <ul class="site-footer__nav-list roboS14W2">
+                        <li class="site-footer__nav-item"><a href="stock.html">Stockists</a></li>
+                        <li class="site-footer__nav-item"><a href="whole.html">Wholesale</a></li>
+                        <li class="site-footer__nav-item"><a href="https://kr.pinterest.com/tonymolyusa/tonymoly-press/" target="_blank">Press</a></li>
+                    </ul>
+                </nav>
+                <nav class="site-footer__nav-column" aria-label="Support">
+                    <h3 class="site-footer__nav-title godamS22W3 mb-24">SUPPORT</h3>
+                    <ul class="site-footer__nav-list roboS14W2">
+                        <li class="site-footer__nav-item"><a href="https://tony-moly.gorgias.help/en-US" target="_blank">F.A.Q.</a></li>
+                        <li class="site-footer__nav-item"><a href="https://tonymoly.us/apps/redo/returns-portal/login" target="_blank">Returns &amp; Exchanges</a></li>
+                        <li class="site-footer__nav-item"><a href="https://tony-moly.gorgias.help/en-US/contact" target="_blank">Contact Us</a></li>
+                        <li class="site-footer__nav-item"><a href="promotion.html">Promotion Details</a></li>
+                        <li class="site-footer__nav-item"><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </nav>
+                <section class="newsletter-form">
+                    <div id="emailInvalidPopup">
+                        <p class="godamS14W1">Invalid email address</p>
+                        <button type="button" class="closeBtn">btn close</button>
+                    </div>
+                    <div class="emailAlert" id="emailPopup">
+                        <button type="button" class="closeBtn">btn close</button>
+                        <em class="godamS16W4">Thank you for subscribing!</em>
+                        <span class="roboS16W1">You can receive various news about TonyMoly.</span>
+                    </div>
+                    <h3 class="newsletter-form__title godamS22W3 mb-24">JOIN OUR MAILING LIST</h3>
+                    <form class="newsletter-form__form" novalidate>
+                        <input type="email" id="inputEmail" class="newsletter-form__input roboS14W1" placeholder="Enter your email" title="input ur email" required>
+                        <button type="submit" id="btnSend" class="newsletter-form__submit-button roboS14W1" aria-label="Subscribe">Subscribe button</button>
+                    </form>
+                    <span class="roboS12W2">Unlock 15% off your next order!</span>
+                </section>
+            </div>
+            <div class="site-footer__bottom">
+                <hr class="site-footer__divider">
+                <p class="site-footer__copyright roboS14W2">&copy; 2024 TONYMOLY USA. ALL RIGHTS RESERVED.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,149 @@
+    .product-carousel--index .product-carousel__pager .bx-pager .bx-pager-item{
+        width: 20%; height: 2px;
+    }
+    .bx-wrapper{
+        box-shadow: none;
+        clear: both; 
+        border-style: none; border-color: transparent;
+        position: relative;
+    }
+    .indexContainer>.bx-wrapper:first-of-type{
+        margin-bottom: 0;
+    }
+    .hero-slider{
+        width: 100%;
+    }
+    .hero-slider .bx-wrapper{
+        margin-bottom: 0;
+    }
+    .hero-slider .bx-controls .bx-pager .bx-pager-item .bx-pager-link{
+        border-style: none; border-width: 0; width: 100%; margin: 0; height: 2px;
+        background-color: var(--Gray15); border-radius: 0;
+    }
+    .hero-slider .bx-controls .bx-pager .bx-pager-item .bx-pager-link.active{
+        background-color: var(--Gray2);
+    }
+    .hero-slider .bx-controls{
+        z-index: 1; position: relative;
+    }
+    .hero-slider .bx-controls .bx-pager{
+        position: absolute;
+    }
+    /* main slider */
+    
+    .product-carousel__pager .bx-pager .bx-pager-item{
+        display: block;
+        float: left; border-radius: 0;
+        transition-duration: 0.2s; 
+        transition-timing-function: ease-in;
+        border-style: none; text-indent: -9999px;
+    }
+    .product-carousel__pager .bx-pager .bx-pager-item a{
+        display: block; border-style: none; 
+        border-radius: 0; width: 100%; margin: 0;
+        background: var(--Gray11);
+    }
+    .product-carousel__pager .bx-pager .bx-pager-item a:hover{
+        background: var(--Gray11);
+    }
+    .product-carousel__pager .bx-pager .bx-pager-item a.active{
+        background: var(--Gray2);
+    }
+    .hero-slider .bx-controls .bx-pager .bx-pager-item{
+        width: 25%;
+    }
+    .product-carousel__pager .bx-pager .bx-pager-item{
+        width: 20%;
+    }
+
+@media screen and (max-width:767px){
+    .hero-slider .bx-controls{
+        width: 93%; left: 3.5%; bottom: 64px;
+    }
+    .hero-slider .bx-controls .bx-pager{
+        width: 100%;
+    }
+    .carouselBox [class*='Wrapper'],
+    .carouselrewardBox .bx-wrapper{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:1439px){
+    .product-carousel__pager .bx-pager{
+        height: 2px;
+    }
+    .product-carousel__pager .bx-pager .bx-pager-item a{
+        height: 2px;
+    }
+    .hero-slider .btnConMain{
+        display: none;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width: 1439px){
+    .hero-slider .bx-controls{
+        width: 40%; max-width: 680px; left: 10%; bottom: 24px;
+    }
+    .hero-slider .bx-controls .bx-pager{
+        width: 240px; bottom: 0;
+    }
+    .hero-slider .bx-controls .bx-pager .bx-pager-item{
+        width: 25%;
+    }
+    .carouselBox [class*='Wrapper'],
+    .carouselrewardBox .bx-wrapper{
+        width: 100%;
+    }
+}
+@media screen and (min-width:768px){
+    .product-carousel__prev-button,
+    .product-carousel__next-button{
+        display: block; text-indent: -9999px; width: 100%; height: 100%;
+    }
+    .indexContainer ul[class*='productList']>li{
+        width: 328px;
+    }
+}
+@media screen and (min-width:1440px){
+    .hero-slider .btnConMain{
+        max-width: 1400px; margin: 0 auto;
+        padding: 0; z-index: 1; top: 250px;
+    }
+    .hero-slider .btnConMain>*{
+        position: absolute; background-size: contain; background-repeat: no-repeat; background-position: center;
+    }
+    .hero-slider .btnConMain .next_btn_main{
+        background-image: url('../images/btn_next.svg');
+        right: -16px;
+    }
+    .hero-slider .btnConMain .prev_btn_main{
+        left: -16px; 
+        background-image: url('../images/btn_prev.svg');
+    }
+    .hero-slider .btnConMain div a{
+        display: block; width: 36px; height: 36px; text-indent: -9999px; 
+    }
+    /* control */
+    .hero-slider .bx-controls{
+        max-width: 1280px; margin: 0 auto; bottom: 100px;
+    }
+    .hero-slider .bx-controls .bx-pager{
+        width: 240px;
+    }
+    /* banner slider */
+    .carouselBox [class*='Wrapper'],
+    .carouselrewardBox .bx-wrapper{
+        width: 1660px;
+    }
+    /* reward, 캐러셀 박스 공통 */
+    .product-carousel__pager{
+        width: 100%;
+    }
+    .product-carousel__pager .bx-pager{
+        height: 3px;
+    }
+    .product-carousel__pager .bx-pager .bx-pager-item a{
+        height: 3px;
+    }
+}

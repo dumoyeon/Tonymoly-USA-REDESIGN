@@ -1,0 +1,1373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TONYMOLY</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="js/jquery.bxslider.js"></script>
+    <script src="js/tonymoly.js"></script>
+    <link rel="shortcut icon" href="images/ico_favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/import.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="site-header__inner px-global">
+            <h1 class="site-header__logo">
+                <a href="index.html">
+                    <img src="images/logo_header.svg" alt="Welcome Tonymoly">
+                </a>
+            </h1>
+            <div class="site-header__main-controls">
+                <form action="search.html" class="search-form">
+                    <input type="search" name="query" id="searchInput" class="search-form__input roboS14W1" placeholder="Aloe" title="Enter product name">
+                    <button type="submit" class="search-form__submit-button" aria-label="Search">Search bar btn</button>
+                </form>
+                <ul class="site-header__actions">
+                    <li class="site-header__action-item"><a href="sign_in.html" aria-label="Sign in"><img src="images/btn_sign_in.svg" alt="sign in btn"></a></li>
+                    <li class="site-header__action-item"><a href="sign_up.html" aria-label="Sign up"><img src="images/btn_sign_up.svg" alt="sign up btn"></a></li>
+                    <li class="site-header__action-item"><button type="button" id="mnav" class="site-header__mobile-menu-trigger mui">mobile user interface</button></li>
+                </ul>
+            </div>
+        </div>
+        <nav class="main-nav" aria-label="Main">
+            <div class="main-nav__inner">
+                <ul class="main-nav__primary-list godamS16W3" id="mnavList">
+                    <li class="main-nav__item px-global">
+                        <a class="main-nav__link" href="list_new_01.html">NEW</a>
+                    </li> 
+                    <li class="main-nav__item px-global">
+                        <a class="main-nav__link" href="list_best_01.html">BEST</a>
+                    </li>
+                    <li class="main-nav__item main-nav__item--has-dropdown px-global">
+                        <button type="button" class="main-nav__link" aria-expanded="false">SKINCARE</button>
+                        <div class="main-nav__dropdown">
+                            <div class="main-nav__dropdown-inner">
+                                <h2 class="main-nav__dropdown-title godamS32W3">
+                                    SKINCARE
+                                    <a href="list_skin_01.html" class="main-nav__dropdown-view-all godamS14W2">View All Products</a>
+                                </h2>
+                                <ol class="main-nav__sublist">
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_skin_01.html">View All Products</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_skin_clean_01.html">Cleansing</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_skin_toner_01.html">Toner</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_skin_treat_01.html">Treatments</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_skin_eye_01.html">Eye Care</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_skin_lip_01.html">Lip Care</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_skin_body_01.html">Body</a></li>
+                                </ol>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="main-nav__item main-nav__item--has-dropdown px-global">
+                        <button type="button" class="main-nav__link" aria-expanded="false">MAKEUP</button>
+                        <div class="main-nav__dropdown">
+                            <div class="main-nav__dropdown-inner">
+                                <h2 class="main-nav__dropdown-title godamS32W3">
+                                    MAKEUP
+                                    <a href="list_make_01.html" class="main-nav__dropdown-view-all godamS14W2">View All Products</a>
+                                </h2>
+                                <ol class="main-nav__sublist">
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_make_01.html">View All Products</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_make_eye_01.html">Eyes</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_make_lip_01.html">Lips</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_make_face_01.html">Face</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_make_tool_01.html">Tools</a></li>
+                                </ol>    
+                            </div>
+                        </div>
+                    </li>
+                    <li class="main-nav__item main-nav__item--has-dropdown px-global">
+                        <button type="button" class="main-nav__link" aria-expanded="false">MASK BAR</button>
+                        <div class="main-nav__dropdown">
+                            <div class="main-nav__dropdown-inner">
+                                <h2 class="main-nav__dropdown-title godamS32W3">
+                                    MASK BAR
+                                    <a href="list_mask_01.html" class="main-nav__dropdown-view-all godamS14W2">View All Products</a>
+                                </h2>
+                                <ol class="main-nav__sublist">
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_mask_01.html">View All Products</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_mask_sheet_01.html">Sheet Masks</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_mask_wash_01.html">Wash Off Masks</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_mask_sleep_01.html">Sleeping Masks</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_mask_eye_01.html">Eye Masks</a></li>
+                                </ol>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="main-nav__item px-global">
+                        <a class="main-nav__link" href="list_bun_01.html">BUNDLES</a>
+                    </li>
+                </ul>
+                <ul class="main-nav__secondary-list">
+                    <li class="main-nav__item px-global"><a class="main-nav__link" href="rewards.html">Rewards</a></li>
+                    <li class="main-nav__item px-global"><a class="main-nav__link" href="ourstory.html">Our Story</a></li>
+                    <li class="main-nav__item px-global"><a class="main-nav__link" href="https://tony-moly.gorgias.help/en-US/articles/shipping-delivery-92434" target="_blank">Shipping &amp; Delivery</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main class="home-page indexContainer">
+        <section class="hero-slider bx-wrapper">
+            <div class="hero-slider__controls btnConMain">
+                <button type="button" class="hero-slider__prev-button prev_btn_main"></button>
+                <button type="button" class="hero-slider__next-button next_btn_main"></button>
+            </div>
+            <ul class="hero-slider__slides indexSlider sliderMain">
+                <li class="hero-slider__slide">
+                    <div class="hero-slider__slide-content">
+                        <div class="mb-center">
+                            <h2 class="hero-slider__slide-title roboS32W3">TIGHTEN, TONE &amp; LIFT!</h2>
+                            <p class="roboS16W1">Our brand new Collagen Peptide Cream is packed with powerful ingredients
+                                to keep skin youthful!</p>
+                            <a class="btn btn-mainline" href="dt_skin_131.html">SHOP NOW</a>
+                        </div>
+                    </div>
+                    <picture class="hero-slider__img">
+                        <source srcset="images/index_slider_01_mobile.png" media="(max-width: 767px)">
+                        <img src="images/ex_slider_01.png" alt="slider img 01">
+                    </picture>
+                </li>
+                <li class="hero-slider__slide">
+                    <div class="hero-slider__slide-content">
+                        <div class="mb-center">
+                            <h2 class="hero-slider__slide-title roboS32W3">MAY BUNDLE</h2>
+                            <p class="roboS16W1">Our limited edition May Bundle is here! Includes. 10 products worth over
+                                $100 for just $45!</p>
+                            <a class="btn btn-mainline" href="dt_bun_15.html">SHOP NOW</a>
+                        </div>
+                    </div>
+                    <picture class="hero-slider__img">
+                        <source srcset="images/index_slider_02_mobile.png" media="(max-width: 767px)">
+                        <img src="images/ex_slider_02.png" alt="slider img 02">
+                    </picture>
+                </li>
+                <li class="hero-slider__slide">
+                    <div class="hero-slider__slide-content">
+                        <div class="mb-center">
+                            <h2 class="hero-slider__slide-title roboS32W3">EARN WHILE YOU SHOP</h2>
+                            <p class="roboS16W1">Our brand new rewards program is here! Earn points, unlock free products
+                                and more!</p>
+                            <a class="btn btn-mainline" href="dt_skin_42.html">SHOP NOW</a>
+                        </div>
+                    </div>
+                    <picture class="hero-slider__img">
+                        <source srcset="images/index_slider_03_mobile.png" media="(max-width: 767px)">
+                        <img src="images/ex_slider_03.png" alt="slider img 03">
+                    </picture>
+                </li>
+                <li class="hero-slider__slide">
+                    <div class="hero-slider__slide-content">
+                        <div class="mb-center">
+                            <h2 class="hero-slider__slide-title roboS32W3">JUST LAUNCHED!</h2>
+                            <p class="roboS16W1">Berry sweet skincare is here! Try our brand new. Jelly Lip Melt with an
+                                irresistible strawberry scent!</p>
+                            <a class="btn btn-mainline" href="dt_skin_122.html">SHOP NOW</a>
+                        </div>
+                    </div>
+                    <picture class="hero-slider__img">
+                        <source srcset="images/index_slider_04_mobile.png" media="(max-width: 767px)">
+                        <img src="images/ex_slider_04.png" alt="slider img 04">
+                    </picture>
+                </li>
+            </ul>
+        </section>
+        <p class="info-bar roboS16W3 mb-86 color-gray15">TONYMOLY US | FREE SHIPPING FOR ORDERS $50+</p>
+        <section class="product-carousel product-carousel--index carouselBox bx-wrapper px-global">
+            <header class="product-carousel__header mb-24">
+                <h2 class="product-carousel__title godamS32W3">NEW</h2>
+                <a href="list_new_01.html" class="product-carousel__view-more-link godamS12W3">VIEW MORE</a>
+            </header>
+            <nav class="product-carousel__nav mb-32">
+                <ul class="product-carousel__tabs godamW1 cateNav flex-wrap">
+                    <li class="product-carousel__tab active godamS16W3">skincare</li>
+                    <li class="product-carousel__tab">makeup</li>
+                    <li class="product-carousel__tab">mask bar</li>
+                    <li class="product-carousel__tab">bundles</li>
+                </ul>
+            </nav>
+            <div class="product-carousel__controls bx-controls">
+                <button type="button" class="product-carousel__prev-button prev_btn">이전</button>
+                <button type="button" class="product-carousel__next-button next_btn">다음</button>
+            </div>
+            <ul class="skincare-imgSlider product-grid product-grid--index active productList">
+                <li class="product-card product-card--carousel">
+                    <figure>
+                        <img src="images/ex_new_skin_01.png" alt="New Skin img 01">
+                        <figcaption>
+                            <div>
+                                <span>SKINCARE</span>
+                                <b>Red Apple Hand Cream</b>
+                                <strong>$12.00</strong>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card product-card--carousel">
+                    <figure>
+                        <img src="images/ex_new_skin_02.png" alt="New Skin img 02">
+                        <figcaption>
+                            <div>
+                                <span>SKINCARE</span>
+                                <b>Pocket Bunny Perfume Bars - BEBE BUNNY</b>
+                                <strong>$14.00</strong>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card product-card--carousel">
+                    <figure>
+                        <img src="images/ex_new_skin_03.png" alt="New Skin img 03">
+                        <figcaption>
+                            <div>
+                                <span>SKINCARE</span>
+                                <b>Wonder Tea Tree Pore Fresh Toner</b>
+                                <strong>$15.00</strong>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card product-card--carousel">
+                    <figure>
+                        <img src="images/ex_new_skin_04.png" alt="New Skin img 04">
+                        <figcaption>
+                            <div>
+                                <span>SKINCARE</span>
+                                <b>Wonder Ceramide Mochi Water Cream - 300ml</b>
+                                <strong>$18.00</strong>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card product-card--carousel">
+                    <figure>
+                        <img src="images/ex_new_skin_05.png" alt="New Skin img 05">
+                        <figcaption>
+                            <div>
+                                <span>SKINCARE</span>
+                                <b>Changing U Magic Foot Peeling Shoes</b>
+                                <strong>$6.50</strong>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card product-card--carousel">
+                    <figure>
+                        <img src="images/ex_new_skin_06.png" alt="New Skin img 06">
+                        <figcaption>
+                            <div>
+                                <span>SKINCARE</span>
+                                <b>24K Snail Everywhere Repair Gel</b>
+                                <strong>$20.00</strong>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card product-card--carousel">
+                    <figure>
+                        <img src="images/ex_new_skin_07.png" alt="New Skin img 07">
+                        <figcaption>
+                            <div>
+                                <span>SKINCARE</span>
+                                <b>Pure Dew Tea Tree &amp; Yuja C Essence</b>
+                                <strong>$20.00</strong>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card product-card--carousel">
+                    <figure>
+                        <img src="images/ex_new_skin_08.png" alt="New Skin img 08">
+                        <figcaption>
+                            <div>
+                                <span>SKINCARE</span>
+                                <b>Pride Jelly Lip Melt</b>
+                                <strong>$12.00</strong>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card product-card--carousel">
+                    <figure>
+                        <img src="images/ex_new_skin_09.png" alt="New Skin img 09">
+                        <figcaption>
+                            <div>
+                                <span>SKINCARE</span>
+                                <b>2X Collagen Booster</b>
+                                <strong>$28.00</strong>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card product-card--carousel">
+                    <figure>
+                        <img src="images/ex_new_skin_10.png" alt="New Skin img 10">
+                        <figcaption>
+                            <div>
+                                <span>SKINCARE</span>
+                                <b>The Chok Chok Green Tea Mild Micro Mist</b>
+                                <strong>$13.00</strong>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+            </ul>
+            <ul class="makeup-imgSlider product-grid product-grid--index productList">
+                <li class="product-card product-card--carousel">
+                    <figure>
+                        <img src="images/ex_new_make_01.png" alt="New Makeup img 01">
+                        <figcaption>
+                            <div>
+                                <span>MAKEUP</span>
+                                <b>White Jade Heart Gua Sha</b>
+                                <strong>$20.00</strong>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card product-card--carousel">
+                    <figure>
+                        <img src="images/ex_new_make_02.png" alt="New Makeup img 02">
+                        <figcaption>
+                            <div>
+                                <span>MAKEUP</span>
+                                <b>Cheek Tone Jelly Blusher - NUDE AMBER</b>
+                                <strong>$20.00</strong>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card product-card--carousel">
+                    <figure>
+                        <img src="images/ex_new_make_03.png" alt="New Makeup img 03">
+                        <figcaption>
+                            <div>
+                                <span>MAKEUP</span>
+                                <b>Get It Tint Glaze Balm - SPARKLING CORAL</b>
+                                <strong>$24.00</strong>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card product-card--carousel">
+                    <figure>
+                        <img src="images/ex_new_make_04.png" alt="New Makeup img 04">
+                        <figcaption>
+                            <div>
+                                <span>MAKEUP</span>
+                                <b>Get It Tint Waterful Butter - AFTER CORAL</b>
+                                <strong>$19.00</strong>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card product-card--carousel">
+                    <figure>
+                        <img src="images/ex_new_make_05.png" alt="New Makeup img 05">
+                        <figcaption>
+                            <div>
+                                <span>MAKEUP</span>
+                                <b>Get It Tint Waterful Butter - MAUVE BREW</b>
+                                <strong>$19.00</strong>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card product-card--carousel">
+                    <figure>
+                        <img src="images/ex_new_make_06.png" alt="New Makeup img 06">
+                        <figcaption>
+                            <div>
+                                <span>MAKEUP</span>
+                                <b>Get It Tint Waterful Butter - PEACH ROLL</b>
+                                <strong>$19.00</strong>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card product-card--carousel">
+                    <figure>
+                        <img src="images/ex_new_make_07.png" alt="New Makeup img 07">
+                        <figcaption>
+                            <div>
+                                <span>MAKEUP</span>
+                                <b>Perfect Lips Shocking Lip - RUBY SHOCKING</b>
+                                <strong>$19.00</strong>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card product-card--carousel">
+                    <figure>
+                        <img src="images/ex_new_make_08.png" alt="New Makeup img 08">
+                        <figcaption>
+                            <div>
+                                <span>MAKEUP</span>
+                                <b>Perfect Lips Shocking Lip - roboSE SHOCKING</b>
+                                <strong>$19.00</strong>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card product-card--carousel">
+                    <figure>
+                        <img src="images/ex_new_make_09.png" alt="New Makeup img 09">
+                        <figcaption>
+                            <div>
+                                <span>MAKEUP</span>
+                                <b>Perfect Lips Shocking Lip - roboSE SHOCKING</b>
+                                <strong>$19.00</strong>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card product-card--carousel">
+                    <figure>
+                        <img src="images/ex_new_make_10.png" alt="New Makeup img 10">
+                        <figcaption>
+                            <div>
+                                <span>MAKEUP</span>
+                                <b>Perfect Lips Shocking Lip - roboSE SHOCKING</b>
+                                <strong>$19.00</strong>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+            </ul>
+            <ul class="maskbar-imgSlider product-grid product-grid--index productList">
+                <li class="product-card product-card--carousel">
+                    <figure>
+                        <img src="images/ex_new_mask_01.png" alt="New Mask Bar img 01">
+                        <figcaption>
+                            <div>
+                                <span>MASK BAR</span>
+                                <b>SuperFood Mask Bowl Set</b>
+                                <strong>$16.00</strong>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card product-card--carousel">
+                    <figure>
+                        <img src="images/ex_new_mask_02.png" alt="New Mask Bar img 02">
+                        <figcaption>
+                            <div>
+                                <span>MASK BAR</span>
+                                <b>I'm Aloe Skin Calming Instant Mask Pads</b>
+                                <strong>$24.00</strong>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card product-card--carousel">
+                    <figure>
+                        <img src="images/ex_new_mask_03.png" alt="New Mask Bar img 03">
+                        <figcaption>
+                            <div>
+                                <span>MASK BAR</span>
+                                <b>Master Lab Sheet Mask (Set of 2) - Hyaluronic Acid</b>
+                                <strong>$9.00</strong>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card product-card--carousel">
+                    <figure>
+                        <img src="images/ex_new_mask_04.png" alt="New Mask Bar img 04">
+                        <figcaption>
+                            <div>
+                                <span>MASK BAR</span>
+                                <b>I Am Sheet Mask (Set of 2) - PEACH</b>
+                                <strong>$6.00</strong>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card product-card--carousel">
+                    <figure>
+                        <img src="images/ex_new_mask_05.png" alt="New Mask Bar img 05">
+                        <figcaption>
+                            <div>
+                                <span>MASK BAR</span>
+                                <b>I'm Honey Deep Moisture Rescue Mask</b>
+                                <strong>$15.00</strong>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card product-card--carousel">
+                    <figure>
+                        <img src="images/ex_new_mask_06.png" alt="New Mask Bar img 06">
+                        <figcaption>
+                            <div>
+                                <span>MASK BAR</span>
+                                <b>I'm Gel Eye Mask (Set of 2) - RED WINE</b>
+                                <strong>$8.00</strong>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card product-card--carousel">
+                    <figure>
+                        <img src="images/ex_new_mask_07.png" alt="New Mask Bar img 07">
+                        <figcaption>
+                            <div>
+                                <span>MASK BAR</span>
+                                <b>Pride Moisture Boost Cooling Hydrogel Eye Patches</b>
+                                <strong>$24.00</strong>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card product-card--carousel">
+                    <figure>
+                        <img src="images/ex_new_mask_08.png" alt="New Mask Bar img 08">
+                        <figcaption>
+                            <div>
+                                <span>MASK BAR</span>
+                                <b>Wonder Ceramide Collagen Mochi Eye Patches</b>
+                                <strong>$24.00</strong>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card product-card--carousel">
+                    <figure>
+                        <img src="images/ex_new_mask_09.png" alt="New Mask Bar img 09">
+                        <figcaption>
+                            <div>
+                                <span>MASK BAR</span>
+                                <b>Cat's Purrfect Night Mask</b>
+                                <strong>$19.00</strong>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card product-card--carousel">
+                    <figure>
+                        <img src="images/ex_new_mask_10.png" alt="New Mask Bar img 10">
+                        <figcaption>
+                            <div>
+                                <span>MASK BAR</span>
+                                <b>I'm Lavender Lullaby Sleeping Mask</b>
+                                <strong>$15.00</strong>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+            </ul>
+            <ul class="bundles-imgSlider product-grid product-grid--index productList">
+                <li class="product-card product-card--carousel">
+                    <figure>
+                        <img src="images/ex_new_bun_01.png" alt="New Bundles img 01">
+                        <figcaption>
+                            <div>
+                                <span>BUNDLES</span>
+                                <b>Moisture Trio</b>
+                                <strong>$46.00<del>$56.00</del></strong>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card product-card--carousel">
+                    <figure>
+                        <img src="images/ex_new_bun_02.png" alt="New Bundles img 02">
+                        <figcaption>
+                            <div>
+                                <span>BUNDLES</span>
+                                <b>Peach Punch Cleansing Set</b>
+                                <strong>$45.00<del>$54.50</del></strong>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card product-card--carousel">
+                    <figure>
+                        <img src="images/ex_new_bun_03.png" alt="New Bundles img 03">
+                        <figcaption>
+                            <div>
+                                <span>BUNDLES</span>
+                                <b>3 Step Clarifying Skin Set</b>
+                                <strong>$29.00<del>$34.00</del></strong>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card product-card--carousel">
+                    <figure>
+                        <img src="images/ex_new_bun_04.png" alt="New Bundles img 04">
+                        <figcaption>
+                            <div>
+                                <span>BUNDLES</span>
+                                <b>Plump It Up</b>
+                                <strong>$31.00<del>$37.00</del></strong>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card product-card--carousel">
+                    <figure>
+                        <img src="images/ex_new_bun_05.png" alt="New Bundles img 05">
+                        <figcaption>
+                            <div>
+                                <span>BUNDLES</span>
+                                <b>The Glow-Getters Set</b>
+                                <strong>$31.00<del>$37.00</del></strong>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card product-card--carousel">
+                    <figure>
+                        <img src="images/ex_new_bun_06.png" alt="New Bundles img 06">
+                        <figcaption>
+                            <div>
+                                <span>BUNDLES</span>
+                                <b>Limited Edition AAPI Bundle</b>
+                                <strong>$50.00<del>$69.00</del></strong>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card product-card--carousel">
+                    <figure>
+                        <img src="images/ex_new_bun_07.png" alt="New Bundles img 07">
+                        <figcaption>
+                            <div>
+                                <span>BUNDLES</span>
+                                <b>Sensitive Skin Savers</b>
+                                <strong>$48.00<del>$66.00</del></strong>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card product-card--carousel">
+                    <figure>
+                        <img src="images/ex_new_bun_08.png" alt="New Bundles img 08">
+                        <figcaption>
+                            <div>
+                                <span>BUNDLES</span>
+                                <b>May Bundle</b>
+                                <strong>$45.00<del>$103.00</del></strong>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card product-card--carousel">
+                    <figure>
+                        <img src="images/ex_new_bun_09.png" alt="New Bundles img 09">
+                        <figcaption>
+                            <div>
+                                <span>BUNDLES</span>
+                                <b>May Bundle</b>
+                                <strong>$45.00<del>$103.00</del></strong>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card product-card--carousel">
+                    <figure>
+                        <img src="images/ex_new_bun_10.png" alt="New Bundles img 10">
+                        <figcaption>
+                            <div>
+                                <span>BUNDLES</span>
+                                <b>May Bundle</b>
+                                <strong>$45.00<del>$103.00</del></strong>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+            </ul>
+            <div class="product-carousel__pager product-carousel__pager--new">
+            </div>
+        </section>
+        <div class="content-grid content-grid--index imgListBox mb-86 py-86 bg-gray12">
+            <figure class="image-card px-global mb-60">
+                <img src="images/ex_01.png" class="image-card__img" alt="ourstory img 01">
+                <figcaption class="image-card__caption">
+                    <h3 class="image-card__title godamS22W3 mb-15">OUR STORY</h3>
+                    <p class="image-card__text roboS16W1 mb-32">Born in 2006 in Seoul, TONYMOLY has pioneered the Korean beauty trend that has taken the cosmetic world by storm! Our high-quality ingredients combined with innovated technology are recognized worldwide by our unique and inimitable designs.</p>
+                    <a href="ourStory.html" class="btn btn-mainfill mb-center">LEARN MORE</a>
+                </figcaption>
+            </figure>
+            <figure class="image-card px-global">
+                <img src="images/ex_02.png" class="image-card__img" alt="ourstory img 02">
+                <figcaption class="image-card__caption">
+                    <h3 class="image-card__title godamS22W3 mb-15">FUN EFFECTIVE SKINCARE</h3>
+                    <p class="image-card__text roboS16W1 mb-32">TONYMOLY is Peta-certified, 100% Cruelty Free. We never test our products or ingredients on animals!</p>
+                    <ul class="image-card__details godamS12W2 flex-wrap justify-center">
+                        <li class="image-card__detail">FUN</li>
+                        <li class="image-card__detail">EFFECTIVE</li>
+                        <li class="image-card__detail">INGREDIENT DRIVEN</li>
+                        <li class="image-card__detail">CRUELTY FREE</li>
+                    </ul>
+                </figcaption>
+            </figure>
+        </div>
+        <section class="collection-feature px-global mb-center86">
+            <figure class="collection-feature__images mb-20">
+                <img src="images/ex_03.png" alt="collection img 01">
+                <img src="images/ex_04.png" alt="collection img 02">
+            </figure>
+            <div class="collection-feature__content flex-wrap">
+                <div class="collection-feature__text-content">
+                    <h2 class="collection-feature__title godamS32W3 mb-15">Pride Collection</h2>
+                    <p class="collection-feature__text roboS16W1 mb-32">We're celebrating Pride Month with a limited-edition collection that gives back!</p>
+                    <a href="dt_skin_21.html" class="collection-feature__button btn btn-mainfill">SHOP NOW</a>
+                </div>
+                <ul class="collection-feature__product-gallery">
+                    <li><img class="w100" src="images/ex_05.png" alt="collection profuct img 01"></li>
+                    <li><img class="w100" src="images/ex_06.png" alt="collection profuct img 02"></li>
+                    <li><img class="w100" src="images/ex_07.png" alt="collection profuct img 03"></li>
+                </ul>
+            </div>
+        </section>
+        <section class="key-features mb-86">
+            <h2 class="key-features__title roboS32W3 text-center mb-60">ONLY ON TONYMOLY.US!</h2>
+            <ul class="key-features__list mb-center flex-wrap justify-between">
+                <li class="key-features__item bg-gray15">
+                    <strong class="key-features__item-title godamS22W3 mb-10 block">SHIPPING</strong>
+                    <span class="key-features__item-text roboS16W1">FREE SHIPPING ON ORDERS $50+!</span>
+                </li>
+                <li class="key-features__item bg-gray15">
+                    <strong class="key-features__item-title godamS22W3 mb-10 block">SALE</strong>
+                    <span class="key-features__item-text roboS16W1">EXCLUSIVE DEALS &amp; OFFERS!</span>
+                </li>
+                <li class="key-features__item bg-gray15">
+                    <strong class="key-features__item-title godamS22W3 mb-10 block">GOOD INGREDIENTS</strong>
+                    <span class="key-features__item-text roboS16W1">EXCLUSIVE PRODUCTS</span>
+                </li>
+            </ul>
+        </section>
+        <section class="product-carousel product-carousel--index carouselBox bx-wrapper px-global">
+            <header class="product-carousel__header mb-24">
+                <h2 class="product-carousel__title godamS32W3">BEST</h2>
+                <a href="list_best_01.html" class="product-carousel__view-more-link godamS12W3">VIEW MORE</a>
+            </header>
+            <nav class="product-carousel__nav mb-32">
+                <ul class="product-carousel__tabs godamW1 bestNav flex-wrap">
+                    <li class="product-carousel__tab active godamS16W3">skincare</li>
+                    <li class="product-carousel__tab">makeup</li>
+                    <li class="product-carousel__tab">mask bar</li>
+                    <li class="product-carousel__tab">bundles</li>
+                </ul>
+            </nav>
+            <div class="product-carousel__controls bx-controls">
+                <button type="button" class="product-carousel__prev-button prev_btn2">이전</button>
+                <button type="button" class="product-carousel__next-button next_btn2">다음</button>
+            </div>
+            <ul class="skin-bestSlider product-grid product-grid--index active productList">
+                <li class="product-card product-card--carousel">
+                    <figure>
+                        <img src="images/ex_best_skin_01.png" alt="Best Skincare img 01">
+                        <figcaption>
+                            <div>
+                                <span>SKINCARE</span>
+                                <b>Floria Brightening Peeling Gel (150ml)</b>
+                                <strong>$13.50</strong>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card product-card--carousel">
+                    <figure>
+                        <img src="images/ex_best_skin_02.png" alt="Best Skincare img 02">
+                        <figcaption>
+                            <div>
+                                <span>SKINCARE</span>
+                                <b>Clean Dew Foam Cleanser - BLUEBERRY</b>
+                                <strong>$7.50</strong>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card product-card--carousel">
+                    <figure>
+                        <img src="images/ex_best_skin_03.png" alt="Best Skincare img 03">
+                        <figcaption>
+                            <div>
+                                <span>SKINCARE</span>
+                                <b>Peach Punch Cleansing Water</b>
+                                <strong>$15.50</strong>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card product-card--carousel">
+                    <figure>
+                        <img src="images/ex_best_skin_04.png" alt="Best Skincare img 04">
+                        <figcaption>
+                            <div>
+                                <span>SKINCARE</span>
+                                <b>Wonder Ceramide Mochi Toner - 500ml</b>
+                                <strong>$23.00</strong>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card product-card--carousel">
+                    <figure>
+                        <img src="images/ex_best_skin_05.png" alt="Best Skincare img 05">
+                        <figcaption>
+                            <div>
+                                <span>SKINCARE</span>
+                                <b>Vital Vita 12 Ampoules - PORESOL</b>
+                                <strong>$20.00</strong>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card product-card--carousel">
+                    <figure>
+                        <img src="images/ex_best_skin_06.png" alt="Best Skincare img 06">
+                        <figcaption>
+                            <div>
+                                <span>SKINCARE</span>
+                                <b>Vital Vita 12 Ampoules - FIRMING </b>
+                                <strong>$20.00</strong>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card product-card--carousel">
+                    <figure>
+                        <img src="images/ex_best_skin_07.png" alt="Best Skincare img 07">
+                        <figcaption>
+                            <div>
+                                <span>SKINCARE</span>
+                                <b>Pocket Bunny Mist - SLEEK MIST</b>
+                                <strong>$14.50</strong>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card product-card--carousel">
+                    <figure>
+                        <img src="images/ex_best_skin_08.png" alt="Best Skincare img 08">
+                        <figcaption>
+                            <div>
+                                <span>SKINCARE</span>
+                                <b>Cat's Purrfect Day Cream</b>
+                                <strong>$20.00</strong>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card product-card--carousel">
+                    <figure>
+                        <img src="images/ex_best_skin_09.png" alt="Best Skincare img 09">
+                        <figcaption>
+                            <div>
+                                <span>SKINCARE</span>
+                                <b>The Chok Chok Green Tea Watery Moisture Cream - 60 ml</b>
+                                <strong>$25.00</strong>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card product-card--carousel">
+                    <figure>
+                        <img src="images/ex_best_skin_10.png" alt="Best Skincare img 10">
+                        <figcaption>
+                            <div>
+                                <span>SKINCARE</span>
+                                <b>Timeless Ferment Snail Lip Treatment Stick</b>
+                                <strong>$11.00</strong>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+            </ul>
+            <ul class="make-bestSlider product-grid product-grid--index productList">
+                <li class="product-card product-card--carousel">
+                    <figure>
+                        <img src="images/ex_best_make_01.png" alt="Best Makeup img 01">
+                        <figcaption>
+                            <div>
+                                <span>MAKEUP</span>
+                                <b>Panda's Dream Smudge Out Mascara - VOLUME</b>
+                                <strong>$15.00</strong>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card product-card--carousel">
+                    <figure>
+                        <img src="images/ex_best_make_02.png" alt="Best Makeup img 02">
+                        <figcaption>
+                            <div>
+                                <span>MAKEUP</span>
+                                <b>Back Gel Eyeliner - PEARL BROWN</b>
+                                <strong>$14.50</strong>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card product-card--carousel">
+                    <figure>
+                        <img src="images/ex_best_make_03.png" alt="Best Makeup img 03">
+                        <figcaption>
+                            <div>
+                                <span>MAKEUP</span>
+                                <b>The Shocking Cara - MILLIGRAM LASH</b>
+                                <strong>$19.00</strong>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card product-card--carousel">
+                    <figure>
+                        <img src="images/ex_best_make_04.png" alt="Best Makeup img 04">
+                        <figcaption>
+                            <div>
+                                <span>MAKEUP</span>
+                                <b>Panda's Dream Smudge Out Mascara - LONG LASH</b>
+                                <strong>$15.00</strong>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card product-card--carousel">
+                    <figure>
+                        <img src="images/ex_best_make_05.png" alt="Best Makeup img 05">
+                        <figcaption>
+                            <div>
+                                <span>MAKEUP</span>
+                                <b>Lovely Beam Glitter Liner - roboSE GOLD</b>
+                                <strong>$13.00</strong>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card product-card--carousel">
+                    <figure>
+                        <img src="images/ex_best_make_06.png" alt="Best Makeup img 06">
+                        <figcaption>
+                            <div>
+                                <span>MAKEUP</span>
+                                <b>Perfect Lips Shocking Lip - roboSE SHOCKING</b>
+                                <strong>$19.00</strong>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card product-card--carousel">
+                    <figure>
+                        <img src="images/ex_best_make_07.png" alt="Best Makeup img 07">
+                        <figcaption>
+                            <div>
+                                <span>MAKEUP</span>
+                                <b>LIPTONE Get It Tint S - BABY CORAL</b>
+                                <strong>$9.00</strong>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card product-card--carousel">
+                    <figure>
+                        <img src="images/ex_best_make_08.png" alt="Best Makeup img 08">
+                        <figcaption>
+                            <div>
+                                <span>MAKEUP</span>
+                                <b>LIPTONE Get It Tint S - RED HOT</b>
+                                <strong>$9.00</strong>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card product-card--carousel">
+                    <figure>
+                        <img src="images/ex_best_make_09.png" alt="Best Makeup img 09">
+                        <figcaption>
+                            <div>
+                                <span>MAKEUP</span>
+                                <b>The Shocking Cara - 15EYELASH AMPOULE</b>
+                                <strong>$19.00</strong>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card product-card--carousel">
+                    <figure>
+                        <img src="images/ex_best_make_10.png" alt="Best Makeup img 10">
+                        <figcaption>
+                            <div>
+                                <span>MAKEUP</span>
+                                <b>Lovely Beam Bling Eye Glitter - GOLD BEAM</b>
+                                <strong>$10.00</strong>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+            </ul>
+            <ul class="mask-bestSlider product-grid product-grid--index productList">
+                <li class="product-card product-card--carousel">
+                    <figure>
+                        <img src="images/ex_best_mask_01.png" alt="Best Mask bar img 01">
+                        <figcaption>
+                            <div>
+                                <span>MASK BAR</span>
+                                <b>Egg Pore Nose Pack</b>
+                                <strong>$6.50</strong>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card product-card--carousel">
+                    <figure>
+                        <img src="images/ex_best_mask_02.png" alt="Best Mask bar img 02">
+                        <figcaption>
+                            <div>
+                                <span>MASK BAR</span>
+                                <b>Wonder Ceramide Mochi Daily Mask Sheet</b>
+                                <strong>$31.00</strong>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card product-card--carousel">
+                    <figure>
+                        <img src="images/ex_best_mask_03.png" alt="Best Mask bar img 03">
+                        <figcaption>
+                            <div>
+                                <span>MASK BAR</span>
+                                <b>Master Lab Sheet Mask (Set of 2) - Centella Asiatica</b>
+                                <strong>$9.00</strong>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card product-card--carousel">
+                    <figure>
+                        <img src="images/ex_best_mask_04.png" alt="Best Mask bar img 04">
+                        <figcaption>
+                            <div>
+                                <span>MASK BAR</span>
+                                <b>I Am Sheet Mask (Set of 2) - COCONUT</b>
+                                <strong>$6.00</strong>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card product-card--carousel">
+                    <figure>
+                        <img src="images/ex_best_mask_05.png" alt="Best Mask bar img 05">
+                        <figcaption>
+                            <div>
+                                <span>MASK BAR</span>
+                                <b>I Am Sheet Mask (Set of 2) - RICE</b>
+                                <strong>$6.00</strong>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card product-card--carousel">
+                    <figure>
+                        <img src="images/ex_best_mask_06.png" alt="Best Mask bar img 06">
+                        <figcaption>
+                            <div>
+                                <span>MASK BAR</span>
+                                <b>I Am Sheet Mask (Set of 2) - AVOCADO</b>
+                                <strong>$6.00</strong>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card product-card--carousel">
+                    <figure>
+                        <img src="images/ex_best_mask_07.png" alt="Best Mask bar img 07">
+                        <figcaption>
+                            <div>
+                                <span>MASK BAR</span>
+                                <b>Egg Pore Tightening Cooling Pack</b>
+                                <strong>$13.50</strong>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card product-card--carousel">
+                    <figure>
+                        <img src="images/ex_best_mask_08.png" alt="Best Mask bar img 08">
+                        <figcaption>
+                            <div>
+                                <span>MASK BAR</span>
+                                <b>Panda's Dream White Sleeping Pack</b>
+                                <strong>$14.50</strong>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card product-card--carousel">
+                    <figure>
+                        <img src="images/ex_best_mask_09.png" alt="Best Mask bar img 09">
+                        <figcaption>
+                            <div>
+                                <span>MASK BAR</span>
+                                <b>I'm Red Wine Pore Tightening Masks</b>
+                                <strong>$15.00</strong>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card product-card--carousel">
+                    <figure>
+                        <img src="images/ex_best_mask_10.png" alt="Best Mask bar img 10">
+                        <figcaption>
+                            <div>
+                                <span>MASK BAR</span>
+                                <b>Kiss Kiss Lip Sleeping Mask</b>
+                                <strong>$12.00</strong>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+            </ul>
+            <ul class="bund-bestSlider product-grid product-grid--index productList">
+                <li class="product-card product-card--carousel">
+                    <figure>
+                        <img src="images/ex_best_bun_01.png" alt="Best Bundles img 01">
+                        <figcaption>
+                            <div>
+                                <span>BUNDLES</span>
+                                <b>Peach Punch Cleansing Set</b>
+                                <strong>$45.00<del>$54.50</del></strong>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card product-card--carousel">
+                    <figure>
+                        <img src="images/ex_best_bun_02.png" alt="Best Bundles img 02">
+                        <figcaption>
+                            <div>
+                                <span>BUNDLES</span>
+                                <b>The Glow-Getters Set</b>
+                                <strong>$31.00<del>$37.00</del></strong>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card product-card--carousel">
+                    <figure>
+                        <img src="images/ex_best_bun_03.png" alt="Best Bundles img 03">
+                        <figcaption>
+                            <div>
+                                <span>BUNDLES</span>
+                                <b>Wake Up &amp; Glow</b>
+                                <strong>$30.00<del>$36.00</del></strong>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card product-card--carousel">
+                    <figure>
+                        <img src="images/ex_best_bun_04.png" alt="Best Bundles img 04">
+                        <figcaption>
+                            <div>
+                                <span>BUNDLES</span>
+                                <b>Rainbow Radiance Set</b>
+                                <strong>$32.00<del>$43.00</del></strong>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card product-card--carousel">
+                    <figure>
+                        <img src="images/ex_best_bun_05.png" alt="Best Bundles img 05">
+                        <figcaption>
+                            <div>
+                                <span>BUNDLES</span>
+                                <b>Fresh Faced Faves</b>
+                                <strong>$40.00<del>$53.00</del></strong>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card product-card--carousel">
+                    <figure>
+                        <img src="images/ex_best_bun_06.png" alt="Best Bundles img 06">
+                        <figcaption>
+                            <div>
+                                <span>BUNDLES</span>
+                                <b>You're The Cats Meow</b>
+                                <strong>$35.00<del>$45.00</del></strong>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card product-card--carousel">
+                    <figure>
+                        <img src="images/ex_best_bun_07.png" alt="Best Bundles img 07">
+                        <figcaption>
+                            <div>
+                                <span>BUNDLES</span>
+                                <b>May Bundle</b>
+                                <strong>$45.00<del>$103.00</del></strong>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card product-card--carousel">
+                    <figure>
+                        <img src="images/ex_best_bun_08.png" alt="Best Bundles img 08">
+                        <figcaption>
+                            <div>
+                                <span>BUNDLES</span>
+                                <b>Deluxe Sampler Set - PINKL</b>
+                                <strong>$20.00<del>$75.00</del></strong>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card product-card--carousel">
+                    <figure>
+                        <img src="images/ex_best_bun_09.png" alt="Best Bundles img 09">
+                        <figcaption>
+                            <div>
+                                <span>BUNDLES</span>
+                                <b>Spotless Skin Set</b>
+                                <strong>$45.00<del>$58.50</del></strong>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card product-card--carousel">
+                    <figure>
+                        <img src="images/ex_best_bun_10.png" alt="Best Bundles img 10">
+                        <figcaption>
+                            <div>
+                                <span>BUNDLES</span>
+                                <b>Limited Edition AAPI Bundle</b>
+                                <strong>$50.00<del>$69.00</del></strong>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+            </ul>
+            <div class="product-carousel__pager product-carousel__pager--best">
+            </div>
+        </section>
+        <section class="instagram-feed">
+            <div class="instagram-feed__inner px-global">
+                <header class="instagram-feed__header">
+                    <a class="instagram-feed__username-link" href="https://www.instagram.com/tonymoly.us_official/" target="_blank">
+                        <b class="instagram-feed__username godamS16W2">@TONYMOLY.US_OFFICIAL</b>
+                    </a>
+                </header>
+                <div class="instagram-feed__item instagram-feed__item--featured moveList">
+                    <div class="instagram-feed__item-overlay">
+                        <span class="instagram-feed__item-inner">
+                            <a class="instagram-feed__item-link godamS12W4" href="https://www.instagram.com/p/Czt1ghoOGbc/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="target="_blank">
+                                LEAER MORE
+                            </a>
+                            <b class="godamS16W4">406</b>
+                            <b class="godamS16W4">0</b>
+                        </span>
+                    </div>
+                    <img class="w100" src="images/ex_sns_01.png" alt="instargram Review 01">
+                </div>
+                <ul class="instagram-feed__item-list moveList flex-wrap">
+                    <li class="instagram-feed__item">
+                        <div class="instagram-feed__item-overlay">
+                            <span class="instagram-feed__item-inner">
+                                <a class="instagram-feed__item-link godamS12W4"
+                                    href="https://www.instagram.com/p/C2ndYwVO4SW/?utm_source=ig_web_button_share_sheet&igsh=MzRlODBiNWFlZA==" target="_blank">LEAER MORE
+                                </a>
+                                <b class="godamS16W4">1251</b>
+                                <b class="godamS16W4">15</b>
+                            </span>
+                        </div>
+                        <img class="w100" src="images/ex_sns_02.png" alt="instargram Review 0">
+                    </li>
+                    <li class="instagram-feed__item">
+                        <div class="instagram-feed__item-overlay">
+                            <span class="instagram-feed__item-inner">
+                                <a class="instagram-feed__item-link godamS12W4" href="https://www.instagram.com/p/C7mYH2nORBO/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank">LEAER MORE
+                                </a>
+                                <b class="godamS16W4">411</b>
+                                <b class="godamS16W4">10</b>
+                            </span>
+                        </div>
+                        <img class="w100" src="images/ex_sns_03.png" alt="instargram Review 0">
+                    </li>
+                    <li class="instagram-feed__item">
+                        <div class="instagram-feed__item-overlay">
+                            <span class="instagram-feed__item-inner">
+                                <a class="instagram-feed__item-link godamS12W4" href="https://www.instagram.com/p/C5YYdDeufx3/?utm_source=ig_web_button_share_sheet&igsh=MzRlODBiNWFlZA==" target="_blank">LEAER MORE</a>
+                                <b class="godamS16W4">352</b>
+                                <b class="godamS16W4">10</b>
+                            </span>
+                        </div>
+                        <img class="w100" src="images/ex_sns_04.png" alt="instargram Review 0">
+                    </li>
+                    <li class="instagram-feed__item">
+                        <div class="instagram-feed__item-overlay">
+                            <span class="instagram-feed__item-inner">
+                                <a class="instagram-feed__item-link godamS12W4" href="https://www.instagram.com/p/C0z86lWOvhX/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank">LEAER MORE</a>
+                                <b class="godamS16W4">1396</b>
+                                <b class="godamS16W4">2</b>
+                            </span>
+                        </div>
+                        <img class="w100" src="images/ex_sns_05.png" alt="instargram Review 0">
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="site-footer__inner px-global">
+            <div class="site-footer__top">
+                <h2 class="site-footer__logo mb-25"><img src="images/logo_footer.svg" alt="Goodbye, TONYMOLY!"></h2>
+                <ul class="site-footer__social-list flex">
+                    <li class="site-footer__social-item"><a href="https://www.instagram.com/tonymoly.us_official/" target="_blank">Instargram</a></li>
+                    <li class="site-footer__social-item"><a href="https://kr.pinterest.com/tonymolyusa/" target="_blank">Pinterest</a></li>
+                    <li class="site-footer__social-item"><a href="https://www.tiktok.com/@tonymolyusa" target="_blank">TikTok</a></li>
+                </ul>
+            </div>
+            <div class="site-footer__main mb-60">
+                <nav class="site-footer__nav-column" aria-label="About us">
+                    <h3 class="site-footer__nav-title godamS22W3 mb-24">ABOUT US</h3>
+                    <ul class="site-footer__nav-list roboS14W2">
+                        <li class="site-footer__nav-item"><a href="stock.html">Stockists</a></li>
+                        <li class="site-footer__nav-item"><a href="whole.html">Wholesale</a></li>
+                        <li class="site-footer__nav-item"><a href="https://kr.pinterest.com/tonymolyusa/tonymoly-press/" target="_blank">Press</a></li>
+                    </ul>
+                </nav>
+                <nav class="site-footer__nav-column" aria-label="Support">
+                    <h3 class="site-footer__nav-title godamS22W3 mb-24">SUPPORT</h3>
+                    <ul class="site-footer__nav-list roboS14W2">
+                        <li class="site-footer__nav-item"><a href="https://tony-moly.gorgias.help/en-US" target="_blank">F.A.Q.</a></li>
+                        <li class="site-footer__nav-item"><a href="https://tonymoly.us/apps/redo/returns-portal/login" target="_blank">Returns &amp; Exchanges</a></li>
+                        <li class="site-footer__nav-item"><a href="https://tony-moly.gorgias.help/en-US/contact" target="_blank">Contact Us</a></li>
+                        <li class="site-footer__nav-item"><a href="promotion.html">Promotion Details</a></li>
+                        <li class="site-footer__nav-item"><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </nav>
+                <section class="newsletter-form">
+                    <div id="emailInvalidPopup">
+                        <p class="godamS14W1">Invalid email address</p>
+                        <button type="button" class="closeBtn">btn close</button>
+                    </div>
+                    <div class="emailAlert" id="emailPopup">
+                        <button type="button" class="closeBtn">btn close</button>
+                        <em class="godamS16W4">Thank you for subscribing!</em>
+                        <span class="roboS16W1">You can receive various news about TonyMoly.</span>
+                    </div>
+                    <h3 class="newsletter-form__title godamS22W3 mb-24">JOIN OUR MAILING LIST</h3>
+                    <form class="newsletter-form__form" novalidate>
+                        <input type="email" id="inputEmail" class="newsletter-form__input roboS14W1" placeholder="Enter your email" title="input ur email" required>
+                        <button type="submit" id="btnSend" class="newsletter-form__submit-button roboS14W1" aria-label="Subscribe">Subscribe button</button>
+                    </form>
+                    <span class="roboS12W2">Unlock 15% off your next order!</span>
+                </section>
+            </div>
+            <div class="site-footer__bottom">
+                <hr class="site-footer__divider">
+                <p class="site-footer__copyright roboS14W2">&copy; 2024 TONYMOLY USA. ALL RIGHTS RESERVED.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wish | TONYMOLY</title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="js/tonymoly.js"></script>
+    <link rel="shortcut icon" href="images/ico_favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/import.css">
+</head>
+<body>
+    <div id="removeAllPopup" class="defaultPopup">
+        <button type="button" class="closeBtn">btn close</button>
+        <b class="roboS18W3">Are you sure?</b>
+        <p class="roboS14W2">Do you want to clear all products from my Wishlist?</p>
+        <div class="default__actions">
+            <button type="button" class="closeBtn">cancel</button>
+            <button type="button" data-popName="clearWishComplete">Remove product</button>
+        </div>
+    </div>
+    <div id="clearCompletePopup" class="defaultPopup">
+        <button type="button" class="closeBtn">btn close</button>
+        <p class="roboS14W2">Clear successfully completed.</p>
+        <button type="button" class="closeBtn default__action">OK</button>
+    </div>
+    <div id="cartPopup" class="defaultPopup">
+        <button type="button" class="closeBtn">btn close</button>
+        <p class="roboS14W2">Successfully store goods in a shopping cart!</p>
+        <div class="default__actions">
+            <a href="cart.html">Check the cart</a>
+            <button type="button" class="closeBtn">Continue shopping</button>
+        </div>
+    </div>
+    <header class="site-header">
+        <div class="site-header__inner px-global">
+            <h1 class="site-header__logo">
+                <a href="index_after.html">
+                    <img src="images/logo_header.svg" alt="Welcome Tonymoly">
+                </a>
+            </h1>
+            <div class="site-header__main-controls">
+                <form action="search.html" class="search-form">
+                    <input type="search" name="query" id="searchInput" class="search-form__input roboS14W1" placeholder="Aloe" title="Enter product name">
+                    <button type="submit" class="search-form__submit-button" aria-label="Search">Search bar btn</button>
+                </form>
+                <ul class="site-header__actions">
+                    <li class="site-header__action-item"><a href="cart.html" aria-label="Cart List"><img src="images/btn_cart.svg" alt="cart btn"></a></li>
+                    <li class="site-header__action-item"><a href="orders.html"aria-label="Orders page"><img src="images/btn_account.svg" alt="my account btn"></a></li>
+                    <li class="site-header__action-item"><button type="button" id="mnav" class="site-header__mobile-menu-trigger mui">mobile user interface</button></li>
+                </ul>
+            </div>
+        </div>
+        <nav class="main-nav" aria-label="Main">
+            <div class="main-nav__inner">
+                <ul class="main-nav__primary-list godamS16W3" id="mnavList">
+                    <li class="main-nav__item px-global">
+                        <a class="main-nav__link" href="list_new_01.html">NEW</a>
+                    </li> 
+                    <li class="main-nav__item px-global">
+                        <a class="main-nav__link" href="list_best_01.html">BEST</a>
+                    </li>
+                    <li class="main-nav__item main-nav__item--has-dropdown px-global">
+                        <button type="button" class="main-nav__link" aria-expanded="false">SKINCARE</button>
+                        <div class="main-nav__dropdown">
+                            <div class="main-nav__dropdown-inner">
+                                <h2 class="main-nav__dropdown-title godamS32W3">
+                                    SKINCARE
+                                    <a href="list_skin_01.html" class="main-nav__dropdown-view-all godamS14W2">View All Products</a>
+                                </h2>
+                                <ol class="main-nav__sublist">
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_skin_01.html">View All Products</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_skin_clean_01.html">Cleansing</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_skin_toner_01.html">Toner</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_skin_treat_01.html">Treatments</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_skin_eye_01.html">Eye Care</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_skin_lip_01.html">Lip Care</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_skin_body_01.html">Body</a></li>
+                                </ol>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="main-nav__item main-nav__item--has-dropdown px-global">
+                        <button type="button" class="main-nav__link" aria-expanded="false">MAKEUP</button>
+                        <div class="main-nav__dropdown">
+                            <div class="main-nav__dropdown-inner">
+                                <h2 class="main-nav__dropdown-title godamS32W3">
+                                    MAKEUP
+                                    <a href="list_make_01.html" class="main-nav__dropdown-view-all godamS14W2">View All Products</a>
+                                </h2>
+                                <ol class="main-nav__sublist">
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_make_01.html">View All Products</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_make_eye_01.html">Eyes</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_make_lip_01.html">Lips</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_make_face_01.html">Face</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_make_tool_01.html">Tools</a></li>
+                                </ol>    
+                            </div>
+                        </div>
+                    </li>
+                    <li class="main-nav__item main-nav__item--has-dropdown px-global">
+                        <button type="button" class="main-nav__link" aria-expanded="false">MASK BAR</button>
+                        <div class="main-nav__dropdown">
+                            <div class="main-nav__dropdown-inner">
+                                <h2 class="main-nav__dropdown-title godamS32W3">
+                                    MASK BAR
+                                    <a href="list_mask_01.html" class="main-nav__dropdown-view-all godamS14W2">View All Products</a>
+                                </h2>
+                                <ol class="main-nav__sublist">
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_mask_01.html">View All Products</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_mask_sheet_01.html">Sheet Masks</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_mask_wash_01.html">Wash Off Masks</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_mask_sleep_01.html">Sleeping Masks</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_mask_eye_01.html">Eye Masks</a></li>
+                                </ol>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="main-nav__item px-global">
+                        <a class="main-nav__link" href="list_bun_01.html">BUNDLES</a>
+                    </li>
+                </ul>
+                <ul class="main-nav__secondary-list">
+                    <li class="main-nav__item px-global"><a class="main-nav__link" href="rewards.html">Rewards</a></li>
+                    <li class="main-nav__item px-global"><a class="main-nav__link" href="ourstory.html">Our Story</a></li>
+                    <li class="main-nav__item px-global"><a class="main-nav__link" href="https://tony-moly.gorgias.help/en-US/articles/shipping-delivery-92434" target="_blank">Shipping &amp; Delivery</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="account-layout wishContainer" id="top">
+        <aside class="account-layout__sidebar px-global">
+            <nav class="account-nav">
+                <ul class="account-nav__list godamS14W2">
+                    <li class="account-nav__item"><a class="account-nav__link" href="orders.html">Orders</a></li>
+                    <li class="account-nav__item active"><a class="account-nav__link" href="wish.html">Wishlist</a></li>
+                    <li class="account-nav__item"><a class="account-nav__link" href="account.html">Account detail</a></li>
+                    <li class="account-nav__item"><a class="account-nav__link" href="addresses.html">Addresses</a></li>
+                </ul>
+            </nav>
+            <div class="account-nav__logout-form">
+                <form action="index.html">
+                    <button type="submit" class="btn btn-darkline">LOGOUT</button>
+                </form>
+            </div>
+        </aside>
+        <main class="account-layout__main wishlist-page px-global">
+            <h2 class="wishlist-page__title godamS32W3">Wishlist</h2>
+            <header class="product-grid-header product-grid-header--wish">
+                <div class="product-grid-header__count">
+                    <mark class="godamS14W4 color-main3" id="wishCount">6</mark>
+                    <span class="godamS14W2">products</span>
+                </div>
+                <button type="button" data-popName="removeAll" class="product-grid-header__remove-all-button btn btn-maintext godamS14W2">Remove all</button>
+            </header>
+            <ul class="product-grid product-grid--wish productList js-grid">
+                <li class="product-card">
+                    <figure>
+                        <img src="images/list_skin_09.png" alt="list skin img 09">
+                        <figcaption>
+                            <a href="dt_skin_09.html">skin 09 detail btn</a>
+                            <div>
+                                <span>SKINCARE</span>
+                                <b>Clean Dew Foam Cleanser - RED GRAPEFRUIT</b>
+                                <strong>$7.50</strong>
+                            </div>
+                            <div>
+                                <div>
+                                    <ol class="review-star star5">
+                                        <li>icon star filled</li>
+                                        <li>icon star filled</li>
+                                        <li>icon star filled</li>
+                                        <li>icon star filled</li>
+                                        <li>icon star filled</li>
+                                    </ol>
+                                    <b>72</b>
+                                </div>
+                                <span>
+                                    <button type="button" class="product-card__add-to-cart-button toggleBtn">Add to bag btn</button>
+                                    <button type="button" class="product-card-wishlist-button wishlist-button toggleBtn js-active">Add to wish list btn</button>
+                                </span>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card">
+                    <figure>
+                        <img src="images/list_skin_32.png" alt="list skin img 32">
+                        <figcaption>
+                            <span>
+                                <mark class="newBg">NEW</mark>
+                            </span>
+                            <a href="dt_skin_32.html">skin 32 detail btn</a>
+                            <div>
+                                <span>SKINCARE</span>
+                                <b>Wonder Tea Tree Pore Fresh Toner</b>
+                                <strong>$15.00</strong>
+                            </div>
+                            <div>
+                                <div>
+                                    <ol class="review-star star4">
+                                        <li>icon star filled</li>
+                                        <li>icon star filled</li>
+                                        <li>icon star filled</li>
+                                        <li>icon star filled</li>
+                                        <li>icon star filled</li>
+                                    </ol>
+                                    <b>2</b>
+                                </div>
+                                <span>
+                                    <button type="button" class="product-card__add-to-cart-button toggleBtn">Add to bag btn</button>
+                                    <button type="button" class="product-card-wishlist-button wishlist-button toggleBtn js-active">Add to wish list btn</button>
+                                </span>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card">
+                    <figure>
+                        <img src="images/list_mask_14.png" alt="list mask img 14">
+                        <figcaption>
+                            <a href="dt_mask_14.html">mask 14 detail btn</a>
+                            <div>
+                                <span>MASK BAR</span>
+                                <b>Master Lab Sheet Mask (Set of 2) - Ceramide</b>
+                                <strong>$9.00</strong>
+                            </div>
+                            <div>
+                                <div>
+                                    <ol class="review-star star5">
+                                        <li>icon star filled</li>
+                                        <li>icon star filled</li>
+                                        <li>icon star filled</li>
+                                        <li>icon star filled</li>
+                                        <li>icon star filled</li>
+                                    </ol>
+                                    <b>34</b>
+                                </div>
+                                <span>
+                                    <button type="button" class="product-card__add-to-cart-button toggleBtn">Add to bag btn</button>
+                                    <button type="button" class="product-card-wishlist-button wishlist-button toggleBtn js-active">Add to wish list btn</button>
+                                </span>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card">
+                    <figure>
+                        <img src="images/list_mask_25.png" alt="list mask img 25">
+                        <figcaption>
+                            <a href="dt_mask_25.html">mask 25 detail btn</a>
+                            <div>
+                                <span>MASK BAR</span>
+                                <b>I Am Sheet Mask (Set of 2) - HONEY</b>
+                                <strong>$6.00</strong>
+                            </div>
+                            <div>
+                                <div>
+                                    <ol class="review-star star5">
+                                        <li>icon star filled</li>
+                                        <li>icon star filled</li>
+                                        <li>icon star filled</li>
+                                        <li>icon star filled</li>
+                                        <li>icon star filled</li>
+                                    </ol>
+                                    <b>105</b>
+                                </div>
+                                <span>
+                                    <button type="button" class="product-card__add-to-cart-button toggleBtn">Add to bag btn</button>
+                                    <button type="button" class="product-card-wishlist-button wishlist-button toggleBtn js-active">Add to wish list btn</button>
+                                </span>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card">
+                    <figure>
+                        <img src="images/list_mask_59.png" alt="list mask img 59">
+                        <figcaption>
+                            <a href="dt_mask_59.html">mask 59 detail btn</a>
+                            <div>
+                                <span>MASK BAR</span>
+                                <b>Cat's Purrfect Night Mask</b>
+                                <strong>$19.00</strong>
+                            </div>
+                            <div>
+                                <div>
+                                    <ol class="review-star star5">
+                                        <li>icon star filled</li>
+                                        <li>icon star filled</li>
+                                        <li>icon star filled</li>
+                                        <li>icon star filled</li>
+                                        <li>icon star filled</li>
+                                    </ol>
+                                    <b>41</b>
+                                </div>
+                                <span>
+                                    <button type="button" class="product-card__add-to-cart-button toggleBtn">Add to bag btn</button>
+                                    <button type="button" class="product-card-wishlist-button wishlist-button toggleBtn js-active">Add to wish list btn</button>
+                                </span>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="product-card">
+                    <figure>
+                        <img src="images/list_make_66.png" alt="list make img 66">
+                        <figcaption>
+                            <span>
+                                <mark class="newBg">NEW</mark>
+                            </span>
+                            <a href="dt_make_66.html">make 66 detail btn</a>
+                            <div>
+                                <span>MAKEUP</span>
+                                <b>Get It Tint Waterful Butter - WINTER VIN CHAUD</b>
+                                <strong>$19.00</strong>
+                            </div>
+                            <div>
+                                <div>
+                                    <ol class="review-star star4">
+                                        <li>icon star filled</li>
+                                        <li>icon star filled</li>
+                                        <li>icon star filled</li>
+                                        <li>icon star filled</li>
+                                        <li>icon star filled</li>
+                                    </ol>
+                                    <b>10</b>
+                                </div>
+                                <span>
+                                    <button type="button" class="product-card__add-to-cart-button toggleBtn">Add to bag btn</button>
+                                    <button type="button" class="product-card-wishlist-button wishlist-button toggleBtn js-active">Add to wish list btn</button>
+                                </span>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+            </ul>
+            <div class="wishlist-page__empty-message wishListempty">
+                <strong class="godamS18W3">Your cart is empty</strong>
+                <p class="roboS14W1">Looks like you have not added anything to you cart.</p>
+                <a href="index_after.html" class="btn btn-mainfill">CONTINUE SHOPPING</a>
+            </div>
+        </main>
+    </div>
+    <a href="#top">TOP btn</a>
+    <footer class="site-footer">
+        <div class="site-footer__inner px-global">
+            <div class="site-footer__top">
+                <h2 class="site-footer__logo mb-25"><img src="images/logo_footer.svg" alt="Goodbye, TONYMOLY!"></h2>
+                <ul class="site-footer__social-list flex">
+                    <li class="site-footer__social-item"><a href="https://www.instagram.com/tonymoly.us_official/" target="_blank">Instargram</a></li>
+                    <li class="site-footer__social-item"><a href="https://kr.pinterest.com/tonymolyusa/" target="_blank">Pinterest</a></li>
+                    <li class="site-footer__social-item"><a href="https://www.tiktok.com/@tonymolyusa" target="_blank">TikTok</a></li>
+                </ul>
+            </div>
+            <div class="site-footer__main mb-60">
+                <nav class="site-footer__nav-column" aria-label="About us">
+                    <h3 class="site-footer__nav-title godamS22W3 mb-24">ABOUT US</h3>
+                    <ul class="site-footer__nav-list roboS14W2">
+                        <li class="site-footer__nav-item"><a href="stock.html">Stockists</a></li>
+                        <li class="site-footer__nav-item"><a href="whole.html">Wholesale</a></li>
+                        <li class="site-footer__nav-item"><a href="https://kr.pinterest.com/tonymolyusa/tonymoly-press/" target="_blank">Press</a></li>
+                    </ul>
+                </nav>
+                <nav class="site-footer__nav-column" aria-label="Support">
+                    <h3 class="site-footer__nav-title godamS22W3 mb-24">SUPPORT</h3>
+                    <ul class="site-footer__nav-list roboS14W2">
+                        <li class="site-footer__nav-item"><a href="https://tony-moly.gorgias.help/en-US" target="_blank">F.A.Q.</a></li>
+                        <li class="site-footer__nav-item"><a href="https://tonymoly.us/apps/redo/returns-portal/login" target="_blank">Returns &amp; Exchanges</a></li>
+                        <li class="site-footer__nav-item"><a href="https://tony-moly.gorgias.help/en-US/contact" target="_blank">Contact Us</a></li>
+                        <li class="site-footer__nav-item"><a href="promotion.html">Promotion Details</a></li>
+                        <li class="site-footer__nav-item"><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </nav>
+                <section class="newsletter-form">
+                    <div id="emailInvalidPopup">
+                        <p class="godamS14W1">Invalid email address</p>
+                        <button type="button" class="closeBtn">btn close</button>
+                    </div>
+                    <div class="emailAlert" id="emailPopup">
+                        <button type="button" class="closeBtn">btn close</button>
+                        <em class="godamS16W4">Thank you for subscribing!</em>
+                        <span class="roboS16W1">You can receive various news about TonyMoly.</span>
+                    </div>
+                    <h3 class="newsletter-form__title godamS22W3 mb-24">JOIN OUR MAILING LIST</h3>
+                    <form class="newsletter-form__form" novalidate>
+                        <input type="email" id="inputEmail" class="newsletter-form__input roboS14W1" placeholder="Enter your email" title="input ur email" required>
+                        <button type="submit" id="btnSend" class="newsletter-form__submit-button roboS14W1" aria-label="Subscribe">Subscribe button</button>
+                    </form>
+                    <span class="roboS12W2">Unlock 15% off your next order!</span>
+                </section>
+            </div>
+            <div class="site-footer__bottom">
+                <hr class="site-footer__divider">
+                <p class="site-footer__copyright roboS14W2">&copy; 2024 TONYMOLY USA. ALL RIGHTS RESERVED.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

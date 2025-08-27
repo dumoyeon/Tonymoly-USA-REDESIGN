@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Addresses | TONYMOLY</title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="js/tonymoly.js"></script>
+    <link rel="shortcut icon" href="images/ico_favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/import.css">
+</head>
+<body>
+    <div id="clearCompletePopup"  class="defaultPopup">
+        <button type="button" class="closeBtn">btn close</button>
+        <p class="roboS14W2">Clear successfully completed.</p>
+        <button type="button" class="closeBtn default__action">OK</button>
+    </div>
+    <div id="removeAddressesPopup" class="defaultPopup">
+        <button type="button" class="closeBtn">btn close</button>
+        <b class="roboS18W3">Do you want to clear all addresses?</b>
+        <p class="roboS14W2">The default address is not deleted.</p>
+        <div class="default__actions">
+            <button type="button" class="closeBtn">Don't remove</button>
+            <button type="button" data-popName="clearAllAddressComplete">Remove all address</button>
+        </div>
+    </div>
+    <div id="removeAddressPopup" class="defaultPopup">
+        <button type="button" class="closeBtn">btn close</button>
+        <b class="roboS18W3">Are you sure?</b>
+        <p class="roboS14W2">you want to clear the address?</p>
+        <div class="default__actions">
+            <button type="button" class="closeBtn">Don't remove</button>
+            <button type="button" data-popName="clearAddressComplete">Remove address</button>
+        </div>
+    </div>
+    <div id="saveAddressesPopup" class="defaultPopup iconPopup">
+        <button type="button" class="closeBtn">btn close</button>
+        <b class="roboS18W3">Saved!</b>
+        <p class="roboS14W2">Successfully saved your address</p>
+        <button type="button" class="saveAlertButton closeBtn default__action">OK</button>
+    </div>
+    <div id="cancelPopup" class="defaultPopup">
+        <button type="button" class="closeBtn">btn close</button>
+        <b class="roboS18W3">Do you really want to leave?</b>
+        <p class="roboS14W2">Changes you made may not be saved</p>
+        <div class="default__actions">
+            <button type="button" class="closeBtn">Cancel</button>
+            <button type="button" class="addressLeaveBtn">leave</button>
+        </div>
+    </div>
+    <header class="site-header">
+        <div class="site-header__inner px-global">
+            <h1 class="site-header__logo">
+                <a href="index_after.html">
+                    <img src="images/logo_header.svg" alt="Welcome Tonymoly">
+                </a>
+            </h1>
+            <div class="site-header__main-controls">
+                <form action="search.html" class="search-form">
+                    <input type="search" name="query" id="searchInput" class="search-form__input roboS14W1" placeholder="Aloe" title="Enter product name">
+                    <button type="submit" class="search-form__submit-button" aria-label="Search">Search bar btn</button>
+                </form>
+                <ul class="site-header__actions">
+                    <li class="site-header__action-item"><a href="cart.html" aria-label="Cart List"><img src="images/btn_cart.svg" alt="cart btn"></a></li>
+                    <li class="site-header__action-item"><a href="orders.html"aria-label="Orders page"><img src="images/btn_account.svg" alt="my account btn"></a></li>
+                    <li class="site-header__action-item"><button type="button" id="mnav" class="site-header__mobile-menu-trigger mui">mobile user interface</button></li>
+                </ul>
+            </div>
+        </div>
+        <nav class="main-nav" aria-label="Main">
+            <div class="main-nav__inner">
+                <ul class="main-nav__primary-list godamS16W3" id="mnavList">
+                    <li class="main-nav__item px-global">
+                        <a class="main-nav__link" href="list_new_01.html">NEW</a>
+                    </li> 
+                    <li class="main-nav__item px-global">
+                        <a class="main-nav__link" href="list_best_01.html">BEST</a>
+                    </li>
+                    <li class="main-nav__item main-nav__item--has-dropdown px-global">
+                        <button type="button" class="main-nav__link" aria-expanded="false">SKINCARE</button>
+                        <div class="main-nav__dropdown">
+                            <div class="main-nav__dropdown-inner">
+                                <h2 class="main-nav__dropdown-title godamS32W3">
+                                    SKINCARE
+                                    <a href="list_skin_01.html" class="main-nav__dropdown-view-all godamS14W2">View All Products</a>
+                                </h2>
+                                <ol class="main-nav__sublist">
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_skin_01.html">View All Products</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_skin_clean_01.html">Cleansing</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_skin_toner_01.html">Toner</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_skin_treat_01.html">Treatments</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_skin_eye_01.html">Eye Care</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_skin_lip_01.html">Lip Care</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_skin_body_01.html">Body</a></li>
+                                </ol>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="main-nav__item main-nav__item--has-dropdown px-global">
+                        <button type="button" class="main-nav__link" aria-expanded="false">MAKEUP</button>
+                        <div class="main-nav__dropdown">
+                            <div class="main-nav__dropdown-inner">
+                                <h2 class="main-nav__dropdown-title godamS32W3">
+                                    MAKEUP
+                                    <a href="list_make_01.html" class="main-nav__dropdown-view-all godamS14W2">View All Products</a>
+                                </h2>
+                                <ol class="main-nav__sublist">
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_make_01.html">View All Products</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_make_eye_01.html">Eyes</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_make_lip_01.html">Lips</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_make_face_01.html">Face</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_make_tool_01.html">Tools</a></li>
+                                </ol>    
+                            </div>
+                        </div>
+                    </li>
+                    <li class="main-nav__item main-nav__item--has-dropdown px-global">
+                        <button type="button" class="main-nav__link" aria-expanded="false">MASK BAR</button>
+                        <div class="main-nav__dropdown">
+                            <div class="main-nav__dropdown-inner">
+                                <h2 class="main-nav__dropdown-title godamS32W3">
+                                    MASK BAR
+                                    <a href="list_mask_01.html" class="main-nav__dropdown-view-all godamS14W2">View All Products</a>
+                                </h2>
+                                <ol class="main-nav__sublist">
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_mask_01.html">View All Products</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_mask_sheet_01.html">Sheet Masks</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_mask_wash_01.html">Wash Off Masks</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_mask_sleep_01.html">Sleeping Masks</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_mask_eye_01.html">Eye Masks</a></li>
+                                </ol>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="main-nav__item px-global">
+                        <a class="main-nav__link" href="list_bun_01.html">BUNDLES</a>
+                    </li>
+                </ul>
+                <ul class="main-nav__secondary-list">
+                    <li class="main-nav__item px-global"><a class="main-nav__link" href="rewards.html">Rewards</a></li>
+                    <li class="main-nav__item px-global"><a class="main-nav__link" href="ourstory.html">Our Story</a></li>
+                    <li class="main-nav__item px-global"><a class="main-nav__link" href="https://tony-moly.gorgias.help/en-US/articles/shipping-delivery-92434" target="_blank">Shipping &amp; Delivery</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="account-layout addressesMyaccountContainer" id="top">
+        <aside class="account-layout__sidebar px-global">
+            <nav class="account-nav">
+                <ul class="account-nav__list godamS14W2">
+                    <li class="account-nav__item"><a class="account-nav__link" href="orders.html">Orders</a></li>
+                    <li class="account-nav__item"><a class="account-nav__link" href="wish.html">Wishlist</a></li>
+                    <li class="account-nav__item"><a class="account-nav__link" href="account.html">Account detail</a></li>
+                    <li class="account-nav__item active"><a class="account-nav__link" href="addresses.html">Addresses</a></li>
+                </ul>
+            </nav>
+            <div class="account-nav__logout-form">
+                <form action="index.html">
+                    <button type="submit" class="btn btn-darkline">LOGOUT</button>
+                </form>
+            </div>
+        </aside>
+        <div class="account-layout__main addresses-page px-global" id="addressListContainer">
+            <h2 class="addresses-page__title godamS32W3">Addresses</h2>
+            <header class="addresses-page__count">
+                <mark class="godamS14W4 color-main3" id="addressCount">3</mark>
+                <span class="godamS14W2">products</span>
+                <button type="button" data-popName="removeAddresses" class="addresses-page__remove-all-button btn btn-maintext">Remove all</button>
+            </header>
+            <ul class="addresses-page__list mb-60">
+                <li class="address-card address-card--default js-active"
+                data-address-id="addr-1" 
+                data-first-name="Lee"
+                data-last-name="Seung yeon"
+                data-phone-number="(800)500-7078"
+                data-address="Apple Computer Inc 1 infinite 1600 Amphitheatre parkway 2083"
+                data-country="unitedStates"
+                data-postal-code="915014"
+                data-city="CUPERTINO" 
+                data-province="Manitoba">
+                    <span class="address-card__owner-name godamS16W3"><mark class="address-card__badge pinkS14Bedge mb-10 block">Default</mark>Seung yeon Lee</span>
+                    <div>
+                        <div class="address-card__customer-section roboS14W2">
+                            <p class="address-card__phone-number mb-10">(800)500-7078</p>
+                            <p class="address-card__address">Apple Computer Inc 1 infinite 1600 Amphitheatre parkway CUPERTINO Manitoba 915014 2083 United States</p>
+                            <button type="button" class="address-card__set-default-button btn btn-maintext">Set as default address</button>
+                        </div>
+                        <div class="address-card__actions">
+                            <button type="button" data-popName="removeAddress" class="btn btn-grayline">Remove</button>
+                            <button type="button" class="edit-button btn btn-mainline">Edit</button>
+                        </div>
+                    </div>
+                </li>
+                <li class="address-card js-active"
+                data-address-id="addr-2"
+                data-first-name="kwon"
+                data-last-name="Jisu"
+                data-phone-number="(800)200-2455"
+                data-address="742 Evergreen Terrace"
+                data-country="unitedStates"
+                data-detail-address="Apt. 5B"
+                data-postal-code="62704"
+                data-city="Ontario"
+                data-province="Alberta">
+                    <span class="address-card__owner-name godamS16W3"><mark class="address-card__badge pinkS14Bedge mb-10 block">Default</mark>Jisu kwon</span>
+                    <div>
+                        <div class="address-card__customer-section roboS14W2">
+                            <p class="address-card__phone-number mb-10">(800)200-2455</p>
+                            <p class="address-card__address">742 Evergreen Terrace Apt. 5B, Ontario, Alberta 62704 United States</p>
+                            <button type="button" class="address-card__set-default-button btn btn-maintext">Set as default address</button>
+                        </div>
+                        <div class="address-card__actions">
+                            <button type="button" data-popName="removeAddress" class="btn btn-grayline">Remove</button>
+                            <button type="button" class="edit-button btn btn-mainline">Edit</button>
+                        </div>
+                    </div>
+                </li>
+                <li class="address-card js-active"
+                data-address-id="addr-3"
+                data-first-name="Jeoung"
+                data-last-name="Ha Gyeong"
+                data-phone-number="(800)600-1199"
+                data-address="123 Maple Street"
+                data-country="unitedStates"
+                data-company-address="Suite 210"
+                data-postal-code="44126"
+                data-city="Fairview"
+                data-province="Nunavut">
+                    <span class="address-card__owner-name godamS16W3"><mark class="address-card__badge pinkS14Bedge mb-10">Default</mark>Ha Gyeong Jeoung</span>
+                    <div>
+                        <div class="address-card__customer-section roboS14W2">
+                            <p class="address-card__phone-number mb-10">(800)600-1199</p>
+                            <p class="address-card__address">123 Maple Street Suite 210, Fairview, OH 44126 United States</p>
+                            <button type="button" class="address-card__set-default-button btn btn-maintext">Set as default address</button>
+                        </div>
+                        <div class="address-card__actions">
+                            <button type="button" data-popName="removeAddress" class="btn btn-grayline">Remove</button>
+                            <button type="button" class="edit-button btn btn-mainline">Edit</button>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <button type="button" class="addresses-page__address-add-button btn btn-mainfill mb-center">Add Address</button>
+        </div>
+        <div class="account-layout__main address-form px-global" id="addressEditContainer">
+            <h2 class="address-form__title roboS32W3">Edit Addresses</h2>
+            <form id="editAddress" class="address-form__form inputBoxTwo">
+                <input type="hidden" id="editingAddressId">
+                <div class="form-group form-group--country selectList">
+                    <ul class="custom-select__list custom-select__list--country selectComponent">
+                        <li class="godamS14W2 active">Country/region</li>
+                        <li class="godamS14W2" id="canada">Canada</li>
+                        <li class="godamS14W2" id="unitedStates">United states</li>
+                    </ul>
+                </div>
+                <div class="form-group form-group--first-name">
+                    <input type="text" class="form-group__input" placeholder="First Name" id="userFirstname" maxlength="16">
+                    <label for="userFirstname" class="form-group__label">First Name</label>
+                    <mark id="validAlert" class="form-group__error-message">Enter First Name</mark>
+                </div>
+                <div class="form-group form-group--last-name">
+                    <input type="text" class="form-group__input" placeholder="Last Name" id="userLastname" maxlength="16">
+                    <label for="userLastname" class="form-group__label">Last Name</label>
+                    <mark id="validAlert" class="form-group__error-message">Enter Last Name</mark>
+                </div>
+                <div class="form-group form-group--company">
+                    <input type="text" class="form-group__input form-group--company" placeholder="Company(optional)" id="userCompany">
+                    <label for="userCompany" class="form-group__label">Company(optional)</label>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-group__input" placeholder="Address" id="userAddress">
+                    <label for="userAddress" class="form-group__label">Address</label>
+                    <mark id="validAlert" class="form-group__error-message">Enter your address</mark>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-group__input" placeholder="Apartment, suite, etc (optiional)" id="userDetailAddress">
+                    <label for="userDetailAddress" class="form-group__label">Apartment, suite, etc (optiional)</label>
+                </div>
+                <div class="form-group form-group--city">
+                    <input type="text" class="form-group__input" placeholder="City" id="userCity">
+                    <label for="userCity" class="form-group__label">City</label>
+                    <mark id="validAlert" class="form-group__error-message">Enter the name of the city</mark>
+                </div>
+                <div class="form-group form-group--province selectList">
+                    <ul class="custom-select__list custom-select__list--province selectComponent">
+                        <li id="Province" class="godamS14W2 active">Province</li>
+                        <li id="Alberta" class="godamS14W2">Alberta</li>
+                        <li id="British Columbia" class="godamS14W2">British Columbia</li>
+                        <li id="Manitoba" class="godamS14W2">Manitoba</li>
+                        <li id="New Brunswick" class="godamS14W2">New Brunswick</li>
+                        <li id="Newfoundland and Labrador" class="godamS14W2">Newfoundland and Labrador</li>
+                        <li id="Northwest Territories" class="godamS14W2">Northwest Territories</li>
+                        <li id="Nova Scotia" class="godamS14W2">Nova Scotia</li>
+                        <li id="Nunavut" class="godamS14W2">Nunavut</li>
+                        <li id="Ontario" class="godamS14W2">Ontario</li>
+                        <li id="Prince Edward Island" class="godamS14W2">Prince Edward Island</li>
+                        <li id="Quebec" class="godamS14W2">Quebec</li>
+                        <li id="Saskatchewan" class="godamS14W2">Saskatchewan</li>
+                        <li id="Yukon" class="godamS14W2">Yukon</li>
+                    </ul>
+                </div>
+                <div class="form-group form-group--province">
+                    <input placeholder="Postal code" type="text" class="form-group__input" id="userCode" maxlength="5">
+                    <label for="userCode" class="form-group__label">Postal code</label>
+                    <mark class="form-group__error-message">Code must be a number</mark>
+                </div>
+                <div class="form-group form-group--phone">
+                    <input placeholder="Phone" type="tel" class="form-group__input" id="userPhone" maxlength="13">
+                    <label for="userPhone" class="form-group__label">Phone</label>
+                    <button type="button" class="form-group__phone-alert-button" data-popname="phoneHelp">phoneHelp</button>
+                    <mark class="form-group__error-message">Phone number must be a number</mark>
+                </div>
+                <div class="form-group form-group--checkbox">
+                    <input type="checkbox" id="defaultAddress">
+                    <label for="defaultAddress" class="form-group__label godamS14W1">Set as default address</label>
+                </div>
+            </form>
+            <div class="address-form__actions flex-wrap justify-center mb-center">
+                <button type="button" class="btn btn-darkline" data-popName="cancel">Cancel</button>
+                <button type="submit" form="editAddress" class="btn btn-mainfill" id="saveAddresses">Save Addresses</button>
+            </div>
+        </div>
+    </div>
+    <a href="#top">TOP btn</a>
+    <footer class="site-footer">
+        <div class="site-footer__inner px-global">
+            <div class="site-footer__top">
+                <h2 class="site-footer__logo mb-25"><img src="images/logo_footer.svg" alt="Goodbye, TONYMOLY!"></h2>
+                <ul class="site-footer__social-list flex">
+                    <li class="site-footer__social-item"><a href="https://www.instagram.com/tonymoly.us_official/" target="_blank">Instargram</a></li>
+                    <li class="site-footer__social-item"><a href="https://kr.pinterest.com/tonymolyusa/" target="_blank">Pinterest</a></li>
+                    <li class="site-footer__social-item"><a href="https://www.tiktok.com/@tonymolyusa" target="_blank">TikTok</a></li>
+                </ul>
+            </div>
+            <div class="site-footer__main mb-60">
+                <nav class="site-footer__nav-column" aria-label="About us">
+                    <h3 class="site-footer__nav-title godamS22W3 mb-24">ABOUT US</h3>
+                    <ul class="site-footer__nav-list roboS14W2">
+                        <li class="site-footer__nav-item"><a href="stock.html">Stockists</a></li>
+                        <li class="site-footer__nav-item"><a href="whole.html">Wholesale</a></li>
+                        <li class="site-footer__nav-item"><a href="https://kr.pinterest.com/tonymolyusa/tonymoly-press/" target="_blank">Press</a></li>
+                    </ul>
+                </nav>
+                <nav class="site-footer__nav-column" aria-label="Support">
+                    <h3 class="site-footer__nav-title godamS22W3 mb-24">SUPPORT</h3>
+                    <ul class="site-footer__nav-list roboS14W2">
+                        <li class="site-footer__nav-item"><a href="https://tony-moly.gorgias.help/en-US" target="_blank">F.A.Q.</a></li>
+                        <li class="site-footer__nav-item"><a href="https://tonymoly.us/apps/redo/returns-portal/login" target="_blank">Returns &amp; Exchanges</a></li>
+                        <li class="site-footer__nav-item"><a href="https://tony-moly.gorgias.help/en-US/contact" target="_blank">Contact Us</a></li>
+                        <li class="site-footer__nav-item"><a href="promotion.html">Promotion Details</a></li>
+                        <li class="site-footer__nav-item"><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </nav>
+                <section class="newsletter-form">
+                    <div id="emailInvalidPopup">
+                        <p class="godamS14W1">Invalid email address</p>
+                        <button type="button" class="closeBtn">btn close</button>
+                    </div>
+                    <div class="emailAlert" id="emailPopup">
+                        <button type="button" class="closeBtn">btn close</button>
+                        <em class="godamS16W4">Thank you for subscribing!</em>
+                        <span class="roboS16W1">You can receive various news about TonyMoly.</span>
+                    </div>
+                    <h3 class="newsletter-form__title godamS22W3 mb-24">JOIN OUR MAILING LIST</h3>
+                    <form class="newsletter-form__form" novalidate>
+                        <input type="email" id="inputEmail" class="newsletter-form__input roboS14W1" placeholder="Enter your email" title="input ur email" required>
+                        <button type="submit" id="btnSend" class="newsletter-form__submit-button roboS14W1" aria-label="Subscribe">Subscribe button</button>
+                    </form>
+                    <span class="roboS12W2">Unlock 15% off your next order!</span>
+                </section>
+            </div>
+            <div class="site-footer__bottom">
+                <hr class="site-footer__divider">
+                <p class="site-footer__copyright roboS14W2">&copy; 2024 TONYMOLY USA. ALL RIGHTS RESERVED.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
