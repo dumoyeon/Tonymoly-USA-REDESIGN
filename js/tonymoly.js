@@ -275,10 +275,14 @@ function updateUserStatus(){
             activeClass("#cartPopup");
         }
       })
+      $('.add-to-cart-button').click(function(){
+        activeClass('#cartPopup')
+      });
       toggleBtn();
     } else{
       $('html').addClass('is-logged-out').removeClass('is-logged-in');
-      $('.product-card__add-to-cart-button, .product-card-wishlist-button').click(function(){
+      $('.add-to-cart-button, .wishlist-button, .wish-button').click(function(e){
+        e.preventDefault();
         activeClass('#loginMovePopup');
       })
     }
