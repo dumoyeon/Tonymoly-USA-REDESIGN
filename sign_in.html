@@ -9,6 +9,18 @@
     <script src="js/tonymoly.js"></script>
     <link rel="shortcut icon" href="images/ico_favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/import.css">
+    <script>
+        (function(){
+            const root = document.documentElement;
+            const isLoggedIn = localStorage.getItem('isLoggedIn');
+
+            if(isLoggedIn === 'true'){
+                root.classList.add('is-logged-in');
+            } else{
+                root.classList.add('is-logged-out');
+            }
+        })();
+    </script>
 </head>
 <body>
     <header class="site-header">
@@ -24,8 +36,10 @@
                     <button type="submit" class="search-form__submit-button" aria-label="Search">Search bar btn</button>
                 </form>
                 <ul class="site-header__actions">
-                    <li class="site-header__action-item"><a href="sign_in.html" aria-label="Sign in"><img src="images/btn_sign_in.svg" alt="sign in btn"></a></li>
-                    <li class="site-header__action-item"><a href="sign_up.html" aria-label="Sign up"><img src="images/btn_sign_up.svg" alt="sign up btn"></a></li>
+                    <li class="site-header__action-item logged-out"><a href="sign_in.html" aria-label="Sign in"><img src="images/btn_sign_in.svg" alt="sign in btn"></a></li>
+                    <li class="site-header__action-item logged-out"><a href="sign_up.html" aria-label="Sign up"><img src="images/btn_sign_up.svg" alt="sign up btn"></a></li>
+                    <li class="site-header__action-item logged-in"><a href="cart.html" aria-label="Cart List"><img src="images/btn_cart.svg" alt="cart btn"></a></li>
+                    <li class="site-header__action-item logged-in"><a href="orders.html"aria-label="Orders page"><img src="images/btn_account.svg" alt="my account btn"></a></li>
                     <li class="site-header__action-item"><button type="button" id="mnav" class="site-header__mobile-menu-trigger mui">mobile user interface</button></li>
                 </ul>
             </div>
@@ -112,7 +126,7 @@
         <section class="sign-in-form">
             <h2 class="sign-in-form__title roboS22W3">Welcome Back!</h2>
             <p class="sign-in-form__sub-title godamS14W1 color-gray4">Please enter login details below</p>
-            <form class="sign-in-form__form inputBox" action="index_after.html">
+            <form class="sign-in-form__form inputBox" action="index.html">
                 <div class="form-group">
                     <input type="email" id="userEmail" class="form-group__input" placeholder="Enter the email">
                     <label for="userEmail" class="form-group__label">Enter the email</label>

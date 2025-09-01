@@ -52,9 +52,6 @@
     .hero-slider .bx-controls .bx-pager .bx-pager-item{
         width: 25%;
     }
-    .product-carousel__pager .bx-pager .bx-pager-item{
-        width: 20%;
-    }
 
 @media screen and (max-width:767px){
     .hero-slider .bx-controls{
@@ -97,9 +94,10 @@
     }
 }
 @media screen and (min-width:768px){
-    .product-carousel__prev-button,
-    .product-carousel__next-button{
+    .product-carousel__prev-button a,
+    .product-carousel__next-button a{
         display: block; text-indent: -9999px; width: 100%; height: 100%;
+        position: absolute; left: 0; top: 0;
     }
     .indexContainer ul[class*='productList']>li{
         width: 328px;
@@ -107,26 +105,28 @@
 }
 @media screen and (min-width:1440px){
     .hero-slider .btnConMain{
-        max-width: 1400px; margin: 0 auto;
+        max-width: 1400px; margin: 0 auto; position: relative;
         padding: 0; z-index: 1; top: 250px;
     }
-    .hero-slider .btnConMain>*{
-        position: absolute; background-size: contain; background-repeat: no-repeat; background-position: center;
+    .hero-slider .btnConMain button{
+        position: absolute; background-size: contain; z-index: 10;
+        width: 36px; height: 36px; text-indent: -9999px; 
+        background-repeat: no-repeat; background-position: center;
     }
     .hero-slider .btnConMain .next_btn_main{
         background-image: url('../images/btn_next.svg');
         right: -16px;
     }
     .hero-slider .btnConMain .prev_btn_main{
-        left: -16px; 
+        left: -16px;
         background-image: url('../images/btn_prev.svg');
     }
-    .hero-slider .btnConMain div a{
-        display: block; width: 36px; height: 36px; text-indent: -9999px; 
+    .hero-slider .btnConMain button a{
+        display: block; width: 36px; height: 36px;
     }
     /* control */
     .hero-slider .bx-controls{
-        max-width: 1280px; margin: 0 auto; bottom: 100px;
+        margin: 0 auto; bottom: 100px; width: 1280px;
     }
     .hero-slider .bx-controls .bx-pager{
         width: 240px;

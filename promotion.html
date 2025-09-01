@@ -9,12 +9,29 @@
     <script src="js/tonymoly.js"></script>
     <link rel="shortcut icon" href="images/ico_favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/import.css">
+    <script>
+        (function(){
+            const root = document.documentElement;
+            const isLoggedIn = localStorage.getItem('isLoggedIn');
+
+            if(isLoggedIn === 'true'){
+                root.classList.add('is-logged-in');
+            } else{
+                root.classList.add('is-logged-out');
+            }
+        })();
+    </script>
 </head>
 <body>
+    <div id="textCopySuccessPopup" class="defaultPopup">
+        <button type="button" class="closeBtn">btn close</button>
+        <p class="roboS14W2">Your discount code has been copied successfully!</p>
+        <button type="button" class="closeBtn default__action">OK</button>
+    </div>
     <header class="site-header">
         <div class="site-header__inner px-global">
             <h1 class="site-header__logo">
-                <a href="index_after.html">
+                <a href="index.html">
                     <img src="images/logo_header.svg" alt="Welcome Tonymoly">
                 </a>
             </h1>
@@ -24,8 +41,10 @@
                     <button type="submit" class="search-form__submit-button" aria-label="Search">Search bar btn</button>
                 </form>
                 <ul class="site-header__actions">
-                    <li class="site-header__action-item"><a href="cart.html" aria-label="Cart List"><img src="images/btn_cart.svg" alt="cart btn"></a></li>
-                    <li class="site-header__action-item"><a href="orders.html"aria-label="Orders page"><img src="images/btn_account.svg" alt="my account btn"></a></li>
+                    <li class="site-header__action-item logged-out"><a href="sign_in.html" aria-label="Sign in"><img src="images/btn_sign_in.svg" alt="sign in btn"></a></li>
+                    <li class="site-header__action-item logged-out"><a href="sign_up.html" aria-label="Sign up"><img src="images/btn_sign_up.svg" alt="sign up btn"></a></li>
+                    <li class="site-header__action-item logged-in"><a href="cart.html" aria-label="Cart List"><img src="images/btn_cart.svg" alt="cart btn"></a></li>
+                    <li class="site-header__action-item logged-in"><a href="orders.html"aria-label="Orders page"><img src="images/btn_account.svg" alt="my account btn"></a></li>
                     <li class="site-header__action-item"><button type="button" id="mnav" class="site-header__mobile-menu-trigger mui">mobile user interface</button></li>
                 </ul>
             </div>
@@ -183,12 +202,12 @@
             <div class="promo-code-showcase__item">
                 <h3 class="promo-code-showcase__title godamS32W3">10% off your next order</h3>
                 <p class="promo-code-showcase__text roboS14W1">Code is valid for 10% off your next order on the TONYMOLY app or website. Discount applies to full priced merchandise only and cannot be applied to previous purchases or combined with other promo codes. Sale items and value sets are not eligible for additional discounts and are excluded from this promotion. Conditions may apply.</p>
-                <button type="button" value="APP20" class="promo-code-showcase__button btn btn-mainfill mb-center">PROMO CODE: APP20</button> 
+                <button type="button" value="APP20" class="promo-code-showcase__button btn btn-mainfill mb-center">PROMO CODE: <span class="promo-code-showcase__code">11042</span></button> 
             </div>
             <div class="promo-code-showcase__item">
                 <h3 class="promo-code-showcase__title godamS32W3">Free Shipping over $50</h3>
                 <p class="promo-code-showcase__text roboS14W1">15% off your first order</p>
-                <button type="button" value="COMEBACK10" class="promo-code-showcase__button btn btn-mainfill mb-center">PROMO CODE: COMEBACK10</button> 
+                <button type="button" value="COMEBACK10" class="promo-code-showcase__button btn btn-mainfill mb-center">COMEBACK PROMO CODE: <span class="promo-code-showcase__code">07245</span></button> 
             </div>
         </section>
     </main>

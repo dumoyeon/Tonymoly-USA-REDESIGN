@@ -9,12 +9,24 @@
     <script src="js/tonymoly.js"></script>
     <link rel="shortcut icon" href="images/ico_favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/import.css">
+    <script>
+        (function(){
+            const root = document.documentElement;
+            const isLoggedIn = localStorage.getItem('isLoggedIn');
+
+            if(isLoggedIn === 'true'){
+                root.classList.add('is-logged-in');
+            } else{
+                root.classList.add('is-logged-out');
+            }
+        })();
+    </script>
 </head>
-<body class="grayBackcolor">
+<body class="bg-gray13">
     <header class="site-header">
         <div class="site-header__inner px-global">
             <h1 class="site-header__logo">
-                <a href="index_after.html">
+                <a href="index.html">
                     <img src="images/logo_header.svg" alt="Welcome Tonymoly">
                 </a>
             </h1>

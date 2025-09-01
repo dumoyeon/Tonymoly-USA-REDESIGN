@@ -458,12 +458,12 @@ input[id^='user']:not(:placeholder-shown)+label{
     z-index: 1000; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);
     display: none;
 }
-[class*='Popup']>.closeBtn,
+[class*='Popup']>.closeBtn:first-child,
 .afterpay-popup__close-button{
     display: block; position: absolute; right: var(--spX21); top: var(--spY21);
     border-style: none; text-indent: -9999px; 
 }
-[class*='Popup']>.closeBtn{
+[class*='Popup']>.closeBtn:first-child{
     width: 24px; height: 24px; background: url('../images/btn_close.svg') no-repeat center/contain;
 }
 .defaultPopup b{

@@ -1,4 +1,8 @@
 $(document).ready(function () {
+  $('body').addClass('is-logged-out');
+  updateUserStatus();
+  logedInContol();
+  
   validateEmailForm();
   closePopup();
 
@@ -6,8 +10,6 @@ $(document).ready(function () {
   searchTag();
   searchRemoveVal();
 
-  addToCartList();
-  toggleBtn();
   accordionControl();
 
   detailImgChange();
@@ -31,6 +33,7 @@ $(document).ready(function () {
   setDefaultAddress();
   initAddressPopup();
   // address
+  promoCodeCopy();
 
   passwordCheck();
   summaryDiscount();
@@ -48,6 +51,7 @@ $(document).ready(function () {
   phoneHyphen();
   cardSlash();
   inputText();
+  
 
   handleResponsiveFunctions();
   $(window).on("resize", function () {
@@ -106,7 +110,7 @@ function handleResponsiveFunctions() {
   }
   
   if (newState === "pc") {
-    $(document).off('click', ".instagram-feed__item, .product-card");
+    $(document).off('click', ".instagram-feed__item, .product-card, .hero-slider__slide");
     $(document).off('click', '.order-summary__toggle-button');
     $('.order-summary__toggle-button').removeClass('js-active').attr('aria-expanded', 'false');
     imgListHover();
@@ -257,6 +261,40 @@ function carouselCon2() {
 }
 // bx slider 
 
+function updateUserStatus(){
+    const isLoggedIn = localStorage.getItem('isLoggedIn');
+
+    if(isLoggedIn === 'true'){
+      $('html').addClass('is-logged-in').removeClass('is-logged-out');
+      $('.call-to-action__button').click(function(e){
+        e.preventDefault();
+        activeClass('#loggedPopup');
+      })
+      $(".product-card__add-to-cart-button").click(function(){
+        if (!$(this).hasClass("js-active")) {
+            activeClass("#cartPopup");
+        }
+      })
+      toggleBtn();
+    } else{
+      $('html').addClass('is-logged-out').removeClass('is-logged-in');
+      $('.product-card__add-to-cart-button, .product-card-wishlist-button').click(function(){
+        activeClass('#loginMovePopup');
+      })
+    }
+  }
+
+function logedInContol(){
+  $('.sign-in-form__form').on('submit', function(){
+    localStorage.setItem('isLoggedIn', 'true');
+    updateUserStatus();
+  })
+  $('.loged-out-form').on('submit', function(){
+    localStorage.removeItem('isLoggedIn');
+    updateUserStatus();
+  })
+}
+
 function removeActiveClass(target) {
   $(target).removeClass("js-active");
 }
@@ -315,12 +353,11 @@ function backEvent() {
 // btn - back
 
 function openPopup() {
-  $(document).on('click', "button[data-popname]", function(){
+  $(document).on('click.popup', "button[data-popname]", function(){
     const popName = $(this).data("popname");
     activeClass(`#${popName}Popup`);
   })
 }
-
 
 function initWishPopup(){
   $(document).on('click', "button[data-popName='clearWishComplete']", function(){
@@ -415,14 +452,6 @@ function searchRemoveVal() {
 // search
 
 
-function addToCartList() {
-  $(".product-card__add-to-cart-button").click(function(){
-    if (!$(this).hasClass("js-active")) {
-        activeClass("#cartPopup");
-      }
-  })
-}
-// cart button click
 
 
 function detailImgChange() {
@@ -733,7 +762,6 @@ function addressEdit(){
     e.preventDefault();
     const addressID = $('#editingAddressId').val();
 
-
     const $newCountry = $('.custom-select__list--country li.active');
     const $newProvince = $('.custom-select__list--province li.active');
     const newCountryText = $newCountry.text();
@@ -858,6 +886,27 @@ function updateAddressCount(){
 }
 // address list count 
 
+function promoCodeCopy(){
+  $('.promo-code-showcase__button').click(function(){
+    const $button = $(this);
+    const textCopy = $button.find('.promo-code-showcase__code').text();
+    const tempTextarea = $('<textarea>');
+    $('.promotion-page').append(tempTextarea);
+    tempTextarea.val(textCopy).select();
+
+    try{
+      var successful = document.execCommand('copy');
+      var msg = successful ? '성공' : '실패';
+      if(successful){
+        activeClass('#textCopySuccessPopup');
+        console.log(msg)
+      }
+    } catch(err){
+      alert('이 브라우저에서는 복사 기능을 지원하지 않습니다.');
+    }
+    tempTextarea.remove();
+  });
+}
 
 /**
  * 입력 필터링을 위한 범용 함수
@@ -880,8 +929,6 @@ function inputText() {
   //숫자만 허용 
 
   restrictInput("#userCardName", /[^a-zA-Z0-9]/g);
-  restrictInput("#userFirstname", /[^a-zA-Z0-9]/g);
-  restrictInput("#userLastname", /[^a-zA-Z0-9]/g);
   restrictInput("#userCity", /[^a-zA-Z0-9]/g);
   //영문, 숫자만 허용
 
@@ -892,6 +939,8 @@ function inputText() {
 
 const emailCheck = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i;
 const numbEngCheck = /^[a-zA-Z0-9]*$/;
+const firstNameCheck = /^[A-Za-z]+(?:['\-][A-Za-z]+)*$/; // 대소문자,하이픈, 아포스트로피 허용
+const lastNameCheck = /^[A-Za-z]+(?:[ '-][A-Za-z]+)*$/;  // 대소문자, 공백, 하이픈, 아포스트로피 허용
 const phoneCheck = /^\(\d{3}\)\d{3}-\d{4}$/;
 const sumCheck = /^\d+$/;
 const cardDateCheck = /^(0[1-9]|1[0-2])\/\d{2}$/;
@@ -901,19 +950,19 @@ const signupRules = [
     {
       selector: '#userFirstname',
       errorSelector: "label[for='userFirstname']+mark",
-      validate: (val) => val.length >= 2, //이름 2글자 이상
+      validate: (val) => val.length >= 2 && firstNameCheck.test(val),
     },{
       selector: '#userLastname',
       errorSelector: "label[for='userLastname']+mark",
-      validate: (val) => val.length >= 2, // 성 2글자 이상
+      validate: (val) => val.length >= 2 && lastNameCheck.test(val),
     },{
       selector: '#userEmail',
       errorSelector: "label[for='userEmail']+mark",
-      validate: (val) => emailCheck.test(val), // 이메일 형식 테스트
+      validate: (val) => emailCheck.test(val),
     },{
       selector: '#userPassword',
       errorSelector: "#pwVisible+mark",
-      validate: (val) => val.length >= 5 && numbEngCheck.test(val), // 5글자 이상, 영문/숫자 형식 테스트
+      validate: (val) => val.length >= 5 && numbEngCheck.test(val),
     },
 ];
 
@@ -921,11 +970,11 @@ const signinRulse = [
   {
     selector: '#userEmail',
     errorSelector: "label[for='userEmail']+mark",
-    validate: (val) => emailCheck.test(val), // 이메일 형식 테스트
+    validate: (val) => emailCheck.test(val),
   },{
     selector: '#userPassword',
     errorSelector: "#pwVisible+mark",
-    validate: (val) => val.length >= 5 && numbEngCheck.test(val), // 5글자 이상, 영문/숫자 형식 테스트
+    validate: (val) => val.length >= 5 && numbEngCheck.test(val),
   },
 ]
 
@@ -933,11 +982,11 @@ const addressRules = [
   {
     selector: '#userFirstname',
     errorSelector: "label[for='userFirstname']+mark",
-    validate: (val) => val.length >= 2, //이름 2글자 이상
+    validate: (val) => val.length >= 2 && firstNameCheck.test(val),
   },{
     selector: '#userLastname',
     errorSelector: "label[for='userLastname']+mark",
-    validate: (val) => val.length >= 2, // 성 2글자 이상
+    validate: (val) => val.length >= 2 && lastNameCheck.test(val),
   },{
     selector: '#userAddress',
     errorSelector: "label[for='userAddress']+mark",
@@ -1260,7 +1309,7 @@ function asideHover() {
 
 
 function mnavControl() {
-  $(document).off('click').on('click', '.mui', function(){
+  $(document).off('click#mnav').on('click', '.mui', function(){
     console.log(this);
     $(this).toggleClass("js-active");
     $('.main-nav').toggleClass("js-active");
@@ -1303,9 +1352,9 @@ function asideScroll() {
 }
 
 function imgListClick() {
-  $(document).off('click', '.instagram-feed__item, .product-card');
+  $(document).off('click.imgLink', '.instagram-feed__item, .product-card, .hero-slider__slide');
 
-  $(document).on('click', '.instagram-feed__item, .product-card', function(event){
+  $(document).on('click.imgLink', '.instagram-feed__item, .product-card, .hero-slider__slide', function(event){
     if($(event.target).closest('button').length){
       return;
     }

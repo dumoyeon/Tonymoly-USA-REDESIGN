@@ -5,12 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TONYMOLY</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
     <script src="js/jquery.bxslider.js"></script>
     <script src="js/tonymoly.js"></script>
     <link rel="shortcut icon" href="images/ico_favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/import.css">
+    <script>
+        (function(){
+            const root = document.documentElement;
+            const isLoggedIn = localStorage.getItem('isLoggedIn');
+
+            if(isLoggedIn === 'true'){
+                root.classList.add('is-logged-in');
+            } else{
+                root.classList.add('is-logged-out');
+            }
+        })();
+    </script>
 </head>
 <body>
     <header class="site-header">
@@ -26,8 +37,10 @@
                     <button type="submit" class="search-form__submit-button" aria-label="Search">Search bar btn</button>
                 </form>
                 <ul class="site-header__actions">
-                    <li class="site-header__action-item"><a href="sign_in.html" aria-label="Sign in"><img src="images/btn_sign_in.svg" alt="sign in btn"></a></li>
-                    <li class="site-header__action-item"><a href="sign_up.html" aria-label="Sign up"><img src="images/btn_sign_up.svg" alt="sign up btn"></a></li>
+                    <li class="site-header__action-item logged-out"><a href="sign_in.html" aria-label="Sign in"><img src="images/btn_sign_in.svg" alt="sign in btn"></a></li>
+                    <li class="site-header__action-item logged-out"><a href="sign_up.html" aria-label="Sign up"><img src="images/btn_sign_up.svg" alt="sign up btn"></a></li>
+                    <li class="site-header__action-item logged-in"><a href="cart.html" aria-label="Cart List"><img src="images/btn_cart.svg" alt="cart btn"></a></li>
+                    <li class="site-header__action-item logged-in"><a href="orders.html"aria-label="Orders page"><img src="images/btn_account.svg" alt="my account btn"></a></li>
                     <li class="site-header__action-item"><button type="button" id="mnav" class="site-header__mobile-menu-trigger mui">mobile user interface</button></li>
                 </ul>
             </div>
@@ -115,7 +128,7 @@
                 <button type="button" class="hero-slider__prev-button prev_btn_main"></button>
                 <button type="button" class="hero-slider__next-button next_btn_main"></button>
             </div>
-            <ul class="hero-slider__slides indexSlider sliderMain">
+            <ul class="hero-slider__slides sliderMain">
                 <li class="hero-slider__slide">
                     <div class="hero-slider__slide-content">
                         <div class="mb-center">
