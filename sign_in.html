@@ -126,11 +126,12 @@
         <section class="sign-in-form">
             <h2 class="sign-in-form__title roboS22W3">Welcome Back!</h2>
             <p class="sign-in-form__sub-title godamS14W1 color-gray4">Please enter login details below</p>
-            <form class="sign-in-form__form inputBox" action="index.html">
+            <form id="signInForm" class="sign-in-form__form inputBox" action="index.html">
                 <div class="form-group">
                     <input type="email" id="userEmail" class="form-group__input" placeholder="Enter the email">
                     <label for="userEmail" class="form-group__label">Enter the email</label>
                     <mark class="form-group__error-message">Enter a valid email address</mark>
+                    <mark class="form-group__error-message email-not-found-message">This email could not be found</mark>
                 </div>
                 <div class="form-group">
                     <input type="password" id="userPassword" class="form-group__input" placeholder="5+ characters">
@@ -138,7 +139,8 @@
                     <button type="button" class="form-group__visibility-toggle js-toggle-password" id="pwVisible">비밀번호 보기</button>
                     <mark class="form-group__error-message">The password must be at least 5 characters in English and numbers.</mark>
                 </div>
-                <button type="submit" class="sign-in-form__submit-button btn btn-mainfill">SIGN IN</button>
+                <button type="submit" class="sign-in-form__submit-button btn btn-mainfill mb-20">SIGN IN</button>
+                <button type="submit" class="sign-in-form__guest-button btn btn-grayline">GUEST SIGN IN</button>
             </form>
             <a href="forgot_password.html" class="sign-in-form__forgot-button roboS14W2 color-main3">Forgot your password?</a>
             <span class="godamS14W1 text-center">Don't have an account?<a href="sign_up.html" class="roboS14W2 color-main3">Sign up</a></span>

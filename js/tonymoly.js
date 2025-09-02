@@ -3,6 +3,7 @@ $(document).ready(function () {
   logedInContol();
   bindUserActions();
   accountChangeCheck();
+  addStorageVal();
   
   validateEmailForm();
   closePopup();
@@ -312,12 +313,13 @@ function bindUserActions(){
 }
 
 function logedInContol(){
-  $('.sign-in-form__form').on('submit', function(){
-    localStorage.setItem('isLoggedIn', 'true');
-    updateUserStatus();
-  })
   $('.loged-out-form').on('submit', function(){
     localStorage.removeItem('isLoggedIn');
+    localStorage.removeItem('userEmail');
+    localStorage.removeItem('userInfo');
+    localStorage.removeItem('userFirstname');
+    localStorage.removeItem('userLastname');
+
     updateUserStatus();
   })
 }
@@ -943,30 +945,23 @@ function accountChangeCheck(){
   const $lastNameInput = $('#userLastname');
 
   function loadUserInfo(){
-    const saveUserInfo = localStorage.getItem('userInfo');
-    console.log(saveUserInfo)
-    if(saveUserInfo){
-      const userInfo = JSON.parse(saveUserInfo);
-      $firstNameInput.val(userInfo.firstName);
-      $lastNameInput.val(userInfo.lastName);
+    const userFirstname = localStorage.getItem('userFirstname');
+    const userLastname = localStorage.getItem('userLastname');
+    if(userFirstname && userLastname){
+      $firstNameInput.val(userFirstname);
+      $lastNameInput.val(userLastname);
     }
   }
-
   loadUserInfo();
-
 
   $('#accountSaveForm').on("submit", function(e){
     e.preventDefault();
 
     const newFirstName = $firstNameInput.val();
     const newLastName = $lastNameInput.val();
+    localStorage.setItem('userFirstname', newFirstName);
+    localStorage.setItem('userLastname', newLastName)
 
-    const userInfo = {
-      firstName: newFirstName,
-      lastName: newLastName
-    };
-
-    localStorage.setItem('userInfo', JSON.stringify(userInfo));
     activeClass('#savechangePopup');
   });
 
@@ -1070,12 +1065,12 @@ const signinRulse = [
 
 const addressRules = [
   {
-    selector: '#userFirstname',
-    errorSelector: "label[for='userFirstname']+mark",
+    selector: '#userNewFirstname',
+    errorSelector: "label[for='userNewFirstname']+mark",
     validate: (val) => val.length >= 2 && firstNameCheck.test(val),
   },{
-    selector: '#userLastname',
-    errorSelector: "label[for='userLastname']+mark",
+    selector: '#userNewLastname',
+    errorSelector: "label[for='userNewLastname']+mark",
     validate: (val) => val.length >= 2 && lastNameCheck.test(val),
   },{
     selector: '#userAddress',
@@ -1170,26 +1165,71 @@ function validateForm(rules){
   return isFormValid;
 }
 
+function addStorageVal(){
+  if($('.account-layout').length > 0){
+    const savedEmail = localStorage.getItem('userEmail');
+    const savedFirstName = localStorage.getItem('userFirstname');
+    const savedLastName = localStorage.getItem('userLastname');
+
+    if(savedEmail){
+      $('#userEmail').val(savedEmail);
+      $('.userEmailText').text(savedEmail);
+    }
+    if(savedFirstName){
+      $('#userFirstname').val(savedFirstName);
+    }
+    if(savedLastName){
+      $('#userLastname').val(savedLastName);
+    }
+  }
+}
 
 function signinValCheck() {
-  $(".sign-in-form__form").on("submit", function (e) {
+  $('.sign-in-form__submit-button').on('click', function(e){
+    e.preventDefault();
     const isFormValid = validateForm(signinRulse);
+    const inputEmail = $('#userEmail').val();
+    const savedEmail = localStorage.getItem('userEmail');
     if(!isFormValid){
-      e.preventDefault();
+      return;
     }
+    if(!savedEmail || inputEmail !== savedEmail){
+      activeClass('.email-not-found-message');
+      return;
+    }
+    localStorage.setItem('isLoggedIn', 'true');
+    $('#signInForm').submit();
+  });
+
+  $('.sign-in-form__guest-button').on('click', function(e){
+    e.preventDefault();
+    const guestEmail = 'guest@test.com';
+    const guestFirstName = 'Guest';
+    const guestLastName = 'User';
+    localStorage.setItem('userEmail', guestEmail);
+    localStorage.setItem('userFirstname', guestFirstName);
+    localStorage.setItem('userLastname', guestLastName);
+    localStorage.setItem('isLoggedIn', 'true');
+    $('#signInForm').submit();
   });
 }
 
 function signupValCheck(){
   $(".sign-up-form__submit-button").on("click", function(){
     const isFormValid = validateForm(signupRules);
-
     if(isFormValid){
       activeClass('#signupPopup');
     }
   });
+
   $('.sign-up-button').on('click', function(){
+    const userFirstname = $('#userFirstname').val();
+    const userLastName = $('#userLastname').val();
+    const userEmail = $('#userEmail').val();
     $('#signUpForm').submit();
+    localStorage.setItem('userEmail', userEmail);
+    localStorage.setItem('userFirstname', userFirstname);
+    localStorage.setItem('userLastname', userLastName);
   });
 }
 
@@ -1333,11 +1373,14 @@ function passwordType() {
 
 
 function forgotEmailCheck() {
-  $("form#forgotPwForm").on("submit", function (e) {
+  $("#forgotPwForm").on("submit", function (e) {
     e.preventDefault();
     const isFormValid = validateForm(emailRules);
-    if(isFormValid){
-      activeClass("label[for='userEmail']+mark");
+    const inputEmail = $('#userEmail').val();
+    const userEmail = localStorage.getItem('userEmail');
+    if(!isFormValid || inputEmail !== userEmail){
+      activeClass("#forgotPwForm .form-group__error-message");
+    }else{
       this.submit();
     }
   });
