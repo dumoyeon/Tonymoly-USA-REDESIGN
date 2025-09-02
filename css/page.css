@@ -1549,7 +1549,7 @@ div.trackPopup dl{
         width: 90%;
     }
     .cart-items__quantity-selector{
-        order: 1; width: 104px;
+        order: 1;
     }
     .cart-items__subtotal-price{
         order: 2;
@@ -1644,9 +1644,6 @@ div.trackPopup dl{
         display: block;
     }
     /* 폰트 14 -> 12 */
-    .account-nav__logout-form button[type='submit']{
-        min-width: 100px;
-    }
     .order-card__img{
         max-width: 96px;
     }
@@ -1794,7 +1791,7 @@ div.trackPopup dl{
         width: 95%;
     }
     .account-nav__logout-form{
-        width: 15%;
+        width: 15%; min-width: 100px;
     }
     .hero-slider__slide-content a,
     .instagram-feed__item-overlay{

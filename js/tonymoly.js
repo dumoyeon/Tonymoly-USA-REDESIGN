@@ -1,11 +1,11 @@
 $(document).ready(function () {
-  $('body').addClass('is-logged-out');
   updateUserStatus();
   logedInContol();
+  bindUserActions();
+  accountChangeCheck();
   
   validateEmailForm();
   closePopup();
-
   searchCateCon();
   searchTag();
   searchRemoveVal();
@@ -17,6 +17,8 @@ $(document).ready(function () {
   customSelect();
 
   openPopup();
+  initWishPopup();
+  wishProductRemove();
   // popup
 
   cartQuant();
@@ -266,27 +268,48 @@ function updateUserStatus(){
 
     if(isLoggedIn === 'true'){
       $('html').addClass('is-logged-in').removeClass('is-logged-out');
-      $('.call-to-action__button').click(function(e){
-        e.preventDefault();
-        activeClass('#loggedPopup');
-      })
-      $(".product-card__add-to-cart-button").click(function(){
-        if (!$(this).hasClass("js-active")) {
-            activeClass("#cartPopup");
-        }
-      })
-      $('.add-to-cart-button').click(function(){
-        activeClass('#cartPopup')
-      });
-      toggleBtn();
     } else{
       $('html').addClass('is-logged-out').removeClass('is-logged-in');
-      $('.add-to-cart-button, .wishlist-button, .wish-button').click(function(e){
-        e.preventDefault();
-        activeClass('#loginMovePopup');
-      })
+      
     }
-  }
+}
+
+function bindUserActions(){
+  $('.is-logged-in .call-to-action__button').click(function(e){
+    e.preventDefault();
+    activeClass('#loggedPopup');
+  });
+
+  $(".is-logged-in .product-card__add-to-cart-button").click(function(){
+    if (!$(this).hasClass("js-active")) {
+      activeClass("#cartPopup");
+    }
+  });
+
+  $('.is-logged-in .product-info__actions .add-to-cart-button').click(function(){
+    activeClass('#cartPopup')
+  });
+
+  $('.is-logged-in .account-delete-button').click(function(){
+    $('html').addClass('is-logged-out').removeClass('is-logged-in');
+  });
+
+  $('.account-delete-button').click(function(e){
+    e.preventDefault();
+    localStorage.removeItem('isLoggedIn');
+    updateUserStatus();
+    window.location.href = $(this).attr('href');
+  })
+  // is-logged-in
+
+  $('.is-logged-out .add-to-cart-button, .is-logged-out .wishlist-button, .is-logged-out .wish-button').click(function(e){
+    e.preventDefault();
+    activeClass('#loginMovePopup');
+  })
+  // is-logged-out
+
+  toggleBtn();
+}
 
 function logedInContol(){
   $('.sign-in-form__form').on('submit', function(){
@@ -308,7 +331,7 @@ function activeClass(target) {
 }
 
 function toggleBtn(){
-    $(".toggleBtn").click(function(){
+    $(".is-logged-in .toggleBtn").click(function(){
       $(this).toggleClass("js-active");
     });
 }
@@ -364,14 +387,40 @@ function openPopup() {
 }
 
 function initWishPopup(){
-  $(document).on('click', "button[data-popName='clearWishComplete']", function(){
-    $(".product-grid--wish").removeClass("js-grid");
+  $(document).on('click', "button[data-popname='clearWishComplete']", function(){
+    $('.product-grid--wish .product-card').remove();
     removeActiveClass("#removeAllPopup");
     activeClass("#clearCompletePopup, .wishListempty");
-    $("#wishCount").text("0");
+
+    updateWishCount();
   })
 }
 // pop up 
+
+function wishProductRemove(){
+  $(document).on('click', '.product-grid--wish .wishlist-button', function(){
+    const $this = $(this);
+    if(!$this.hasClass('js-active')){
+      $this.closest('.product-card').remove();
+    }
+    updateWishCount();
+  })
+}
+
+function updateWishCount(){
+  const $wishGrid = $('.product-grid--wish');
+  const wishLength = $wishGrid.find('.product-card').length;
+
+  $('#wishCount').text(wishLength);
+
+  if(wishLength == 0){
+      activeClass(".wishListempty");
+      $wishGrid.removeClass('js-grid');
+  } else{
+    $('.wishListempty').removeClass('js-active');
+    $wishGrid.addClass('js-active');
+  }
+}
 
 
 function customSelect() {
@@ -890,6 +939,44 @@ function updateAddressCount(){
 }
 // address list count 
 
+function accountChangeCheck(){
+  const $firstNameInput = $('#userFirstname');
+  const $lastNameInput = $('#userLastname');
+
+  function loadUserInfo(){
+    const saveUserInfo = localStorage.getItem('userInfo');
+    console.log(saveUserInfo)
+    if(saveUserInfo){
+      const userInfo = JSON.parse(saveUserInfo);
+      $firstNameInput.val(userInfo.firstName);
+      $lastNameInput.val(userInfo.lastName);
+    }
+  }
+
+  loadUserInfo();
+
+
+  $('#accountSaveForm').on("submit", function(e){
+    e.preventDefault();
+
+    const newFirstName = $firstNameInput.val();
+    const newLastName = $lastNameInput.val();
+
+    const userInfo = {
+      firstName: newFirstName,
+      lastName: newLastName
+    };
+
+    localStorage.setItem('userInfo', JSON.stringify(userInfo));
+    activeClass('#savechangePopup');
+  });
+
+  $('.address-cancel-button').on('click', function(){
+    loadUserInfo();
+  });
+}
+// account change
+
 function promoCodeCopy(){
   $('.promo-code-showcase__button').click(function(){
     const $button = $(this);
@@ -1101,6 +1188,9 @@ function signupValCheck(){
     if(isFormValid){
       activeClass('#signupPopup');
     }
+  });
+  $('.sign-up-button').on('click', function(){
+    $('#signUpForm').submit();
   });
 }
 

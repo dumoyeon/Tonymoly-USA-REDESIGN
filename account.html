@@ -42,7 +42,7 @@
         <button type="button" class="closeBtn">btn close</button>
         <b class="roboS18W3">Your account is deleted!</b>
         <p class="roboS14W2">Thanks for using our product! <br>We look forward to seeing you again.</p>
-        <a href="index.html" class="default__action">OK</a>
+        <a href="index.html" class="account-delete-button default__action">OK</a>
     </div>
     <div id="deleteAlertPopup" class="defaultPopup iconPopup">
         <button type="button" class="closeBtn">btn close</button>
@@ -57,7 +57,7 @@
             </div>
         </form>
         <div class="default__actions">
-            <button type="button" class="closeBtn">Cancel</button>
+            <button type="button" class="address-cancel-button closeBtn">Cancel</button>
             <button type="button" data-popName="deleteComplete">Delete</button>
         </div>
     </div>
@@ -177,26 +177,26 @@
         </aside>
         <main class="account-layout__main account-details">
             <h2 class="account-details__title godamS32W3">Account</h2>
-            <form class="account-details__form inputBox">
+            <form id="accountSaveForm" class="account-details__form inputBox">
                 <div class="form-group">
-                    <input type="email" id="userEmail" class="form-group__input" value="leej119898" readonly>
+                    <input type="email" id="userEmail" class="form-group__input" value="leej119898@naver.com" readonly>
                     <label for="userEmail" class="form-group__label color-gray1">Email</label>
                 </div>
                 <div class="form-group">
-                    <input type="text" id="userFirstname" class="form-group__input" placeholder="LEE" value="LEE">
+                    <input type="text" id="userFirstname" class="form-group__input" value="LEE">
                     <label for="userFirstname" class="form-group__label color-gray1">LEE</label>
                     <mark class="form-group__error-message">Enter First Name</mark>
                 </div>
                 <div class="form-group">
-                    <input type="text" id="userLastname" class="form-group__input" placeholder="Seung yeon" value="Seung yeon">
+                    <input type="text" id="userLastname" class="form-group__input" value="Seung yeon">
                     <label for="userLastname" class="form-group__label color-gray1">Seung yeon</label>
                     <mark class="form-group__error-message">Enter Last Name</mark>
                 </div>
+                <div class="account-details__actions">
+                    <button type="button" class="btn btn-darkline" data-popName="cancel">Cancel</button>
+                    <button type="submit" class="btn btn-mainfill" class="account-details__save-button">Save Change</button>
+                </div>
             </form>
-            <div class="account-details__actions ">
-                <button type="button" class="btn btn-darkline" data-popName="cancel">Cancel</button>
-                <button type="button" class="btn btn-mainfill" data-popName="savechange">Save Change</button>
-            </div>
             <a href="forgot_password.html" class="account-details__change-password-button btn btn-maintext">change your password?</a>
             <div class="account-details__delete-section">
                 <span class="godamS14W1 block">Do you want to leave Tony Moly?</span>
