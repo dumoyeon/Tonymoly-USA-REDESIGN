@@ -660,7 +660,7 @@ body{
 }
 .search-results__header,
 .address-form__form{
-    margin: 0 auto var(--spY20);
+    margin: 0 auto var(--spY48);
 }
 .search-results__count mark{
     background-color: transparent;
@@ -1156,9 +1156,6 @@ div.trackPopup dl{
 }
 .address-card__customer-section button[type='button']{
     font-size: var(--S14); text-align: left;
-}
-.address-form__form .form-group--checkbox{
-    text-align: right; margin: 0 auto var(--spY48);
 }
 #addressEditContainer{
     display: none;

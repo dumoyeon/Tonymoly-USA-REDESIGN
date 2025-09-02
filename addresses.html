@@ -320,14 +320,14 @@
                     <mark class="form-group__error-message">Code must be a number</mark>
                 </div>
                 <div class="form-group form-group--phone">
+                    <div id="phoneHelpPopup" class="form-group__help-popup">
+                        <button type="button" class="closeBtn">btn close</button>
+                        <p class="roS16W1 color-gray1">In case we need to contact you about your order</p>
+                    </div>
                     <input placeholder="Phone" type="tel" class="form-group__input" id="userPhone" maxlength="13">
                     <label for="userPhone" class="form-group__label">Phone</label>
                     <button type="button" class="form-group__phone-alert-button" data-popname="phoneHelp">phoneHelp</button>
                     <mark class="form-group__error-message">Phone number must be a number</mark>
-                </div>
-                <div class="form-group form-group--checkbox">
-                    <input type="checkbox" id="defaultAddress">
-                    <label for="defaultAddress" class="form-group__label godamS14W1">Set as default address</label>
                 </div>
             </form>
             <div class="address-form__actions flex-wrap justify-center mb-center">

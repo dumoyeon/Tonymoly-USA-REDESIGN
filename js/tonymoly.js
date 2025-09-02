@@ -30,7 +30,6 @@ $(document).ready(function () {
   initCartItemId();
   //cart 
 
-  addressInfoCheck();
   addressEdit();
   addressLeavePopup();
   setDefaultAddress();
@@ -756,12 +755,13 @@ function initAddressPopup(){
 }
 
 function setDefaultAddress() {
-  $(".address-card__set-default-button").click(function () {
+  $(document).on('click', ".address-card__set-default-button", function () {
     $(".address-card").removeClass('address-card--default');
     $(this).closest(".address-card").addClass('address-card--default');
   });
 }
 // address - default 주소 설정 
+
 
 function addressEdit(){
   $(document).on('click', '.edit-button', function(){
@@ -790,13 +790,12 @@ function addressEdit(){
     $('#userAddress').val(userAddress);
     $('#userCode').val(postalCode);
     $('#userCity').val(userCity);
-    if(userDetailAddress){
+    if(detailAddress){
       $('#userDetailAddress').val(detailAddress);
     }
     if(companyAddress){
       $('#userCompany').val(companyAddress);
     }
-
     $('#addressListContainer').hide();
     $('#addressEditContainer').show();
   });
@@ -804,16 +803,21 @@ function addressEdit(){
   $('.addresses-page__address-add-button').click(function(){
     $('.address-form__title').text('Add Address');
     $('#editingAddressId').val('');
-
     $('#editAddress')[0].reset();
 
     $('#addressListContainer').hide();
     $('#addressEditContainer').show();
   })
 
-
   $('#saveAddresses').click(function(e){
     e.preventDefault();
+
+    const isFormValid = validateForm(addressEditRules);
+    if(isFormValid){
+      activeClass("#saveAddressesPopup");
+    }else{
+      return;
+    }
     const addressID = $('#editingAddressId').val();
 
     const $newCountry = $('.custom-select__list--country li.active');
@@ -856,7 +860,6 @@ function addressEdit(){
       }else{
         newDetailAddress = '';
       }
-
       if(newCompany){
         $targetCard.data('company-address', newCompany);
       }else{
@@ -1090,6 +1093,34 @@ const addressRules = [
       validate: (val) => val.trim() !== "" && val.length >= 2 && phoneCheck.test(val),
   },
 ];
+
+const addressEditRules = [
+  {
+    selector: '#userFirstname',
+    errorSelector: "label[for='userFirstname']+mark",
+    validate: (val) => val.length >= 2 && firstNameCheck.test(val),
+  },{
+    selector: '#userLastname',
+    errorSelector: "label[for='userLastname']+mark",
+    validate: (val) => val.length >= 2 && lastNameCheck.test(val),
+  },{
+    selector: '#userAddress',
+    errorSelector: "label[for='userAddress']+mark",
+    validate: (val) => val.trim() !== "" && val.length >= 2,
+  },{
+      selector: '#userCity',
+      errorSelector: "label[for='userCity']+mark",
+      validate: (val) => val.trim() !== "" && val.length >= 2,
+  },{
+      selector: '#userCode',
+      errorSelector: "label[for='userCode']+mark",
+      validate: (val) => val.trim() !== "" && val.length >= 2,
+  },{
+      selector: '#userPhone',
+      errorSelector: "button[data-popName='phoneHelp']+mark",
+      validate: (val) => val.trim() !== "" && val.length >= 2 && phoneCheck.test(val),
+  },
+]
 
 const emailRules = [
   {
@@ -1400,15 +1431,7 @@ function passwordCheck() {
 // account delete
 
 
-function addressInfoCheck() {
-  $("#saveAddresses").on("click", function () {
-    const isFormValid = validateForm(addressRules);
-    if(isFormValid){
-      activeClass("#saveAddressesPopup");
-    }
-  });
-}
-// address info check
+
 
 
 
