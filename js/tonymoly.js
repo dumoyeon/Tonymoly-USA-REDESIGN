@@ -506,7 +506,6 @@ function searchRemoveVal() {
 
 
 
-
 function detailImgChange() {
   $(document).on('click', ".product-gallery__thumbnails > li", function(){
     const $galleryLi = $(".product-gallery__thumbnails > li");
@@ -648,7 +647,7 @@ function addCartProduct() {
                             </div>
                             <div class="cart-items__quantity-selector flex-wrap justify-center">
                                 <button type="button" data-cart-price="quantSub" class="cart-items__quantity-selector-button cart-items__quantity-selector-button--sub">Subtract one product button</button>
-                                <span data-cart-price="quantValue" class="goW2">1</span>
+                                <span data-cart-price="quantValue" class="godamW2">1</span>
                                 <button type="button" data-cart-price="quantAdd" class="cart-items__quantity-selector-button cart-items__quantity-selector-button--add">Add one product button</button>
                             </div>
                             <strong class="cart-items__subtotal-price godamS20W3" data-cart-price="subTotalPrice">${priceText}</strong>

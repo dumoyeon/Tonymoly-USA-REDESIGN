@@ -1894,7 +1894,7 @@ div.trackPopup dl{
     .order-summary__toggle-button{
         font-weight: var(--W2); font-size: var(--S16); text-align: left;
         padding: var(--spY20) var(--spX20); width: 100%;
-        border-bottom: 1px solid var(--Gray10);
+        border-bottom: 1px solid var(--Gray10); color: var(--Gray1);
     }
     .account-layout__main {
         margin: var(--spY96) 0;

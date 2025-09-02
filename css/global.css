@@ -29,7 +29,7 @@ html.is-logged-in .site-header__actions .logged-out {
 }
 
 .main-nav__link{
-    background-color: transparent; border: none;
+    background-color: transparent; border: none; color: var(--Gray1);
 }
 
 input::-ms-clear,input::-ms-reveal{
