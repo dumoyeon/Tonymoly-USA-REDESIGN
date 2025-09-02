@@ -430,7 +430,7 @@ input[id^='user']:not(:placeholder-shown)+label{
     box-sizing: border-box; background-repeat: no-repeat; background-position: center; background-size: contain;
 }
 .form-group--checkbox input[type='checkbox']:checked{
-    background-image: url('../images/btn_checkbox_active.svg');
+    background-image: url('../images/btn_checkBox_active.svg');
 }
 .cart-order-summary__policy input[type='checkbox']:checked{
     background-image: url('../images/btn_checkBox_active.svg');
