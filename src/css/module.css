@@ -230,7 +230,7 @@
 .review-star li,
 .loyalty-tiers__tier-checkmark{
     background-position: center; background-repeat: no-repeat; background-size: contain;
-    background-image: url('../images/ico_star_empty.svg'); text-indent: -9999px;
+    background-image: url('../../images/ico_star_empty.svg'); text-indent: -9999px;
 }
 
 .review-star:not(.review-star--popup) li,
@@ -248,7 +248,7 @@
 .star2 li:nth-child(n+1):nth-child(-n+2),
 .star1 li:first-child,
 .loyalty-tiers__tier-checkmark--included{
-    background-image : url('../images/ico_star_fill.svg');
+    background-image : url('../../images/ico_star_fill.svg');
 }
 /* star  */
 
@@ -298,25 +298,25 @@ a[href='#top']{
     display: block; width: 48px; height: 48px; margin: 0 auto var(--spY5);
     text-indent: -9999px; background-repeat: no-repeat; background-position: center; background-size: contain;
 }
-[class*='Leaf']{background-image: url('../images/ico_leaf.svg');}
-[class*='Fruit']{background-image: url('../images/ico_fruits.svg');}
-[class*='Nature']{background-image: url('../images/ico_nature.svg');}
-[class*='Sea']{background-image: url('../images/ico_sea.svg');}
-[class*='Vita']{background-image: url('../images/ico_vita.svg');}
-[class*='Water']{background-image: url('../images/ico_water.svg');}
-[class*='Bean']{background-image: url('../images/ico_bean.svg');}
-[class*='Chemi']{background-image: url('../images/ico_chemistry.svg');}
-[class*='Dia']{background-image: url('../images/ico_dia.svg');}
-[class*='Flower']{background-image: url('../images/ico_flower.svg');}
+[class*='Leaf']{background-image: url('../../images/ico_leaf.svg');}
+[class*='Fruit']{background-image: url('../../images/ico_fruits.svg');}
+[class*='Nature']{background-image: url('../../images/ico_nature.svg');}
+[class*='Sea']{background-image: url('../../images/ico_sea.svg');}
+[class*='Vita']{background-image: url('../../images/ico_vita.svg');}
+[class*='Water']{background-image: url('../../images/ico_water.svg');}
+[class*='Bean']{background-image: url('../../images/ico_bean.svg');}
+[class*='Chemi']{background-image: url('../../images/ico_chemistry.svg');}
+[class*='Dia']{background-image: url('../../images/ico_dia.svg');}
+[class*='Flower']{background-image: url('../../images/ico_flower.svg');}
 /* ingredient */
 
 .accordion h4 button{
     padding: var(--spY20) 0; background-color: transparent; display: block; width: 100%; text-align: left; border-style: none;
-    background-image: url('../images/ico_arrow_line.svg'); background-size: 20px 20px; background-repeat: no-repeat; background-position: center right var(--spX15);
+    background-image: url('../../images/ico_arrow_line.svg'); background-size: 20px 20px; background-repeat: no-repeat; background-position: center right var(--spX15);
     background-position: right 10px center;
 }
 .accordion h4 button.js-active{
-    background-image: url('../images/ico_arrow_line_top.svg');
+    background-image: url('../../images/ico_arrow_line_top.svg');
 }
 .accordion ul li>b,
 .accordion ul li>h4{
@@ -346,7 +346,7 @@ a[href='#top']{
     display: inline-block; padding-left: 18px; position: relative;
 }
 .accordion ul li>b::before{
-    content: url('../images/ico_bull.svg'); width: 18px; height: 18px; position: absolute; left: 0;
+    content: url('../../images/ico_bull.svg'); width: 18px; height: 18px; position: absolute; left: 0;
 }
 #set-accordion-panel li{
     position: relative;
@@ -356,7 +356,7 @@ a[href='#top']{
     width: 100%; height: 100%;  text-indent: -9999px; left: 0; top: 0; z-index: 10;
 }
 #set-accordion-panel li b{
-    background-image: url('../images/ico_arrow_line_right.svg');
+    background-image: url('../../images/ico_arrow_line_right.svg');
     background-repeat: no-repeat; background-size: contain; background-position: right center; padding-right: 20px; 
 }
 /* accordion */
@@ -379,20 +379,20 @@ input[id^='user']:not(:placeholder-shown)+label{
 }
 .form-group__error-message{
     display: none; color: var(--Red); font-family: var(--FCRobo); font-size: var(--S12); font-weight: var(--H18);
-    padding-left: 21px; background: url('../images/ico_alert.svg') no-repeat left / 12px; margin-top: var(--spY5);
+    padding-left: 21px; background: url('../../images/ico_alert.svg') no-repeat left / 12px; margin-top: var(--spY5);
     text-align: left;
 }
 .form-group button[type='button']{
     border-style: none; right: var(--spX12); top: var(--spY12);
 }
 .form-group__visibility-toggle{
-    background: url('../images/ico_visibility_off.svg') no-repeat center/contain; 
+    background: url('../../images/ico_visibility_off.svg') no-repeat center/contain; 
 }
 .form-group__visibility-toggle.js-active{
-    background: url('../images/ico_visibility_on.svg') no-repeat center/contain; 
+    background: url('../../images/ico_visibility_on.svg') no-repeat center/contain; 
 }
 .form-group__phone-alert-button{
-    background: url('../images/ico_ques.svg') no-repeat center / contain;
+    background: url('../../images/ico_ques.svg') no-repeat center / contain;
 }
 .form-group{
     position: relative;
@@ -426,18 +426,18 @@ input[id^='user']:not(:placeholder-shown)+label{
 }
 
 .form-group--checkbox input[type='checkbox']{
-    appearance: none; background-image: url('../images/btn_checkBox_disabled.svg');
+    appearance: none; background-image: url('../../images/btn_checkBox_disabled.svg');
     box-sizing: border-box; background-repeat: no-repeat; background-position: center; background-size: contain;
 }
 .form-group--checkbox input[type='checkbox']:checked{
-    background-image: url('../images/btn_checkBox_active.svg');
+    background-image: url('../../images/btn_checkBox_active.svg');
 }
 .cart-order-summary__policy input[type='checkbox']:checked{
-    background-image: url('../images/btn_checkBox_active.svg');
+    background-image: url('../../images/btn_checkBox_active.svg');
 }
 .cart-order-summary__policy input[type='checkbox']{
     appearance: none; display: block; width: 24px; height: 24px;
-    background-image: url('../images/btn_checkBox_disabled.svg'); background-repeat: no-repeat; background-size: contain;
+    background-image: url('../../images/btn_checkBox_disabled.svg'); background-repeat: no-repeat; background-size: contain;
 }
 .checkout-layout__main>section:last-of-type ul li input[type='radio'],
 .form-group--checkbox input[type='checkbox']{
@@ -447,10 +447,10 @@ input[id^='user']:not(:placeholder-shown)+label{
 /* form-group--checkbox */
 
 .wishlist-button{
-    background-image: url('../images/btn_heart.svg');
+    background-image: url('../../images/btn_heart.svg');
 }
 .wishlist-button.js-active{
-    background-image: url('../images/btn_heart_active.svg');
+    background-image: url('../../images/btn_heart_active.svg');
 }
 [class*='Popup']{
     text-align: center; background-color: var(--Gray15);
@@ -464,7 +464,7 @@ input[id^='user']:not(:placeholder-shown)+label{
     border-style: none; text-indent: -9999px; 
 }
 [class*='Popup']>.closeBtn:first-child{
-    width: 24px; height: 24px; background: url('../images/btn_close.svg') no-repeat center/contain;
+    width: 24px; height: 24px; background: url('../../images/btn_close.svg') no-repeat center/contain;
 }
 .defaultPopup b{
     display: block; margin-bottom: var(--spY5); color: var(--Gray1);
@@ -508,9 +508,9 @@ input[id^='user']:not(:placeholder-shown)+label{
 #savechangePopup>b,
 #saveAddressesPopup>b,
 #resetPopup>b,
-#signupPopup>b{background-image: url('../images/ico_success.svg');}
-#deleteAlertPopup>b{background-image: url('../images/ico_alert.svg');}
-#deleteCompletePopup>b{background-image: url('../images/ico_delete.svg');}
+#signupPopup>b{background-image: url('../../images/ico_success.svg');}
+#deleteAlertPopup>b{background-image: url('../../images/ico_alert.svg');}
+#deleteCompletePopup>b{background-image: url('../../images/ico_delete.svg');}
 
 
 
@@ -519,10 +519,10 @@ input[id^='user']:not(:placeholder-shown)+label{
     z-index: 10; color: var(--Gray15); position: absolute;
 }
 .afterpay-popup__close-button{
-    background: url('../images/btn_close_white.svg') no-repeat right / contain; 
+    background: url('../../images/btn_close_white.svg') no-repeat right / contain; 
 }
 .afterpay-popup__logo{
-    margin-bottom: var(--spY5); text-indent: -9999px; background: url('../images/logo_afterpay_white.png') no-repeat center / contain;
+    margin-bottom: var(--spY5); text-indent: -9999px; background: url('../../images/logo_afterpay_white.png') no-repeat center / contain;
 }
 .afterpay-popup__tagline{
     display: block; margin-bottom: var(--spY24); text-align: center;
@@ -535,10 +535,10 @@ input[id^='user']:not(:placeholder-shown)+label{
     display: flex; background-repeat: no-repeat; background-position: left center; box-sizing: border-box;
     height: 68px; align-items: center; padding-left: 68px;
 }
-.afterpay-popup__step:first-child{background-image: url('../images/ico_afterPay_01.svg');}
-.afterpay-popup__step:nth-child(2){background-image: url('../images/ico_afterPay_02.svg');}
-.afterpay-popup__step:nth-child(3){background-image: url('../images/ico_afterPay_03.svg');}
-.afterpay-popup__step:last-child{background-image: url('../images/ico_afterPay_04.svg');}
+.afterpay-popup__step:first-child{background-image: url('../../images/ico_afterPay_01.svg');}
+.afterpay-popup__step:nth-child(2){background-image: url('../../images/ico_afterPay_02.svg');}
+.afterpay-popup__step:nth-child(3){background-image: url('../../images/ico_afterPay_03.svg');}
+.afterpay-popup__step:last-child{background-image: url('../../images/ico_afterPay_04.svg');}
 
 .afterpay-popup__legal-notice:first-of-type{
     margin-bottom: var(--spY10);
@@ -617,10 +617,10 @@ div.listContainer [class*='productList'],
     float: left;
 }
 .product-card__add-to-cart-button{
-    background-image: url('../images/btn_addCart.svg'); 
+    background-image: url('../../images/btn_addCart.svg'); 
 }
 .product-card__add-to-cart-button.js-active{
-    background-image: url('../images/btn_addCart_active.svg');
+    background-image: url('../../images/btn_addCart_active.svg');
 }
 .product-card figure figcaption>div:first-of-type>b{
     width: 95%;
@@ -689,7 +689,7 @@ div.listContainer [class*='productList'],
 }
 .cart-items__empty-message strong,
 .search-results__empty-message strong{
-    background-image: url('../images/img_cart_empty.png');
+    background-image: url('../../images/img_cart_empty.png');
 }
 .wishListempty,
 .search-results__empty-message{
@@ -702,11 +702,11 @@ div.listContainer [class*='productList'],
     background-color: var(--Gray13);
 }
 .wishListempty strong{
-    background-image: url('../images/img_wish_empty.png');
+    background-image: url('../../images/img_wish_empty.png');
 }
 .grayleafBox{
     background-color: var(--Gray12); padding: var(--spY86) 0; text-align: center;  background-repeat: no-repeat;
-    background-image: url('../images/ico_leaf_left.svg'), url('../images/ico_leaf_right.svg');
+    background-image: url('../../images/ico_leaf_left.svg'), url('../../images/ico_leaf_right.svg');
 }
 .grayleafBox h3{
     margin-bottom: var(--spY15); color: var(--Main2);
@@ -727,11 +727,11 @@ div.listContainer [class*='productList'],
 }
 button.backBtn{
     display: block; text-indent: -9999px; border-style: none;
-    position: absolute; background: url('../images/ico_back.svg') no-repeat center / contain;
+    position: absolute; background: url('../../images/ico_back.svg') no-repeat center / contain;
 }
 .hero-banner{
     background-color: var(--Main5); text-align: center; padding: var(--spY86) 0;
-    background-image: url('../images/ico_shape_round.svg'),url('../images/ico_shape_round.svg'),url('../images/ico_shape_round.svg');
+    background-image: url('../../images/ico_shape_round.svg'),url('../../images/ico_shape_round.svg'),url('../../images/ico_shape_round.svg');
     background-repeat: no-repeat;
 }
 .hero-banner>div{
@@ -776,16 +776,16 @@ button.backBtn{
 }
 .selectComponent li.active{
     color: var(--Gray1); display: block; border: 1px solid var(--Gray8);
-    background-image: url('../images/ico_arrow_line_down_black.svg');
+    background-image: url('../../images/ico_arrow_line_down_black.svg');
 }
 .selectComponent.active li{
     background-image: none; display: block; border-style: none;
 }
 .selectComponent.active li.active{
-    background-image: url('../images/ico_check_line.svg'); background-color: var(--Gray12);
+    background-image: url('../../images/ico_check_line.svg'); background-color: var(--Gray12);
 }
 .selectComponent.active li:first-child{
-    background-image: url('../images/ico_arrow_line_top.svg');
+    background-image: url('../../images/ico_arrow_line_top.svg');
     border-bottom: 1px solid var(--Gray11);
 }
 .selectList{
@@ -1182,7 +1182,7 @@ button.backBtn{
         display: block;
         width:34px; height:34px;
         content: ''; position: absolute;
-        background: url('../images/ico_step_arrow.png') no-repeat center / contain;
+        background: url('../../images/ico_step_arrow.png') no-repeat center / contain;
     }
     /* how */
     .hero-banner button.backBtn{
@@ -1251,7 +1251,7 @@ button.backBtn{
         background-size: 100% 100%;
     }
     .wishlist-button:hover{
-        background-image: url('../images/btn_heart_hover.svg');
+        background-image: url('../../images/btn_heart_hover.svg');
     }
     div.listContainer [class*='productList'],
     .search-page .productList,
@@ -1260,7 +1260,7 @@ button.backBtn{
     }
     .product-card figure figcaption>a,
     .product-carousel--reward .product-carousel__slider .product-carousel-card figure figcaption>a{
-        width: 36px; height: 36px; background-image: url("../images/btn_more.svg");
+        width: 36px; height: 36px; background-image: url("../../images/btn_more.svg");
         background-repeat: no-repeat; background-size: 32px; background-position: center;
         transition: all 0.2s ease-in; background-color: var(--Gray4); border-radius: 18px; box-shadow: 6px 8px 8px rgba(156, 142, 142, 0.1); 
     }
@@ -1268,26 +1268,26 @@ button.backBtn{
     .product-carousel--reward .product-carousel__slider .product-carousel-card figure figcaption>a:hover{
         animation: moreBtn 0.3s linear;
         background-color: var(--Main2);
-        background-image: url("../images/btn_more_hover_05.svg");
+        background-image: url("../../images/btn_more_hover_05.svg");
     }
     @keyframes moreBtn{
         0%{
-            background-image: url("../images/btn_more_hover_01.svg");
+            background-image: url("../../images/btn_more_hover_01.svg");
         }25%{
-            background-image: url("../images/btn_more_hover_02.svg");
+            background-image: url("../../images/btn_more_hover_02.svg");
         }50%{
-            background-image: url("../images/btn_more_hover_03.svg");
+            background-image: url("../../images/btn_more_hover_03.svg");
         }75%{
-            background-image: url("../images/btn_more_hover_04.svg");
+            background-image: url("../../images/btn_more_hover_04.svg");
         }100%{
-            background-image: url("../images/btn_more_hover_05.svg");
+            background-image: url("../../images/btn_more_hover_05.svg");
         }
     }
     .product-card figure figcaption>div:nth-of-type(2)>span button[type='button']{
         transition: background-image 0.1s ease-in-out;
     }
     .product-card__add-to-cart-button:hover{
-        background-image: url('../images/btn_addCart_hover.svg');
+        background-image: url('../../images/btn_addCart_hover.svg');
     }
     .pagination{
         width: 44.78%;
@@ -1313,7 +1313,7 @@ button.backBtn{
     .usage-guide__steps li:nth-child(6)::after,
     .usage-guide__steps li:nth-child(5)::after{
         display: block; width: 34px; height: 34px;
-        content: ''; position: absolute; background: url('../images/ico_step_arrow.png') no-repeat center / contain;
+        content: ''; position: absolute; background: url('../../images/ico_step_arrow.png') no-repeat center / contain;
     }
     .grayleafBox p{
         max-width: 1026px; margin: 0 auto;
