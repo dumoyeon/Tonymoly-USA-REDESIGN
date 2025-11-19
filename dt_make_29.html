@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,18 +11,19 @@
     <link rel="shortcut icon" href="images/ico_favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="dist/css/import.css">
     <script>
-        (function(){
+        (function () {
             const root = document.documentElement;
             const isLoggedIn = localStorage.getItem('isLoggedIn');
 
-            if(isLoggedIn === 'true'){
+            if (isLoggedIn === 'true') {
                 root.classList.add('is-logged-in');
-            } else{
+            } else {
                 root.classList.add('is-logged-out');
             }
         })();
     </script>
 </head>
+
 <body>
     <div id="cartPopup" class="defaultPopup">
         <button type="button" class="closeBtn">btn close</button>
@@ -48,15 +50,21 @@
             </h1>
             <div class="site-header__main-controls">
                 <form action="search.html" class="search-form">
-                    <input type="search" name="query" id="searchInput" class="search-form__input roboS14W1" placeholder="Aloe" title="Enter product name">
+                    <input type="search" name="query" id="searchInput" class="search-form__input roboS14W1"
+                        placeholder="Aloe" title="Enter product name">
                     <button type="submit" class="search-form__submit-button" aria-label="Search">Search bar btn</button>
                 </form>
                 <ul class="site-header__actions">
-                    <li class="site-header__action-item logged-out"><a href="sign_in.html" aria-label="Sign in"><img src="images/btn_sign_in.svg" alt="sign in btn"></a></li>
-                    <li class="site-header__action-item logged-out"><a href="sign_up.html" aria-label="Sign up"><img src="images/btn_sign_up.svg" alt="sign up btn"></a></li>
-                    <li class="site-header__action-item logged-in"><a href="cart.html" aria-label="Cart List"><img src="images/btn_cart.svg" alt="cart btn"></a></li>
-                    <li class="site-header__action-item logged-in"><a href="orders.html"aria-label="Orders page"><img src="images/btn_account.svg" alt="my account btn"></a></li>
-                    <li class="site-header__action-item"><button type="button" id="mnav" class="site-header__mobile-menu-trigger mui">mobile user interface</button></li>
+                    <li class="site-header__action-item logged-out"><a href="sign_in.html" aria-label="Sign in"><img
+                                src="images/btn_sign_in.svg" alt="sign in btn"></a></li>
+                    <li class="site-header__action-item logged-out"><a href="sign_up.html" aria-label="Sign up"><img
+                                src="images/btn_sign_up.svg" alt="sign up btn"></a></li>
+                    <li class="site-header__action-item logged-in"><a href="cart.html" aria-label="Cart List"><img
+                                src="images/btn_cart.svg" alt="cart btn"></a></li>
+                    <li class="site-header__action-item logged-in"><a href="orders.html" aria-label="Orders page"><img
+                                src="images/btn_account.svg" alt="my account btn"></a></li>
+                    <li class="site-header__action-item"><button type="button" id="mnav"
+                            class="site-header__mobile-menu-trigger mui">mobile user interface</button></li>
                 </ul>
             </div>
         </div>
@@ -65,7 +73,7 @@
                 <ul class="main-nav__primary-list godamS16W3" id="mnavList">
                     <li class="main-nav__item px-global">
                         <a class="main-nav__link" href="list_new_01.html">NEW</a>
-                    </li> 
+                    </li>
                     <li class="main-nav__item px-global">
                         <a class="main-nav__link" href="list_best_01.html">BEST</a>
                     </li>
@@ -75,16 +83,24 @@
                             <div class="main-nav__dropdown-inner">
                                 <h2 class="main-nav__dropdown-title godamS32W3">
                                     SKINCARE
-                                    <a href="list_skin_01.html" class="main-nav__dropdown-view-all godamS14W2">View All Products</a>
+                                    <a href="list_skin_01.html" class="main-nav__dropdown-view-all godamS14W2">View All
+                                        Products</a>
                                 </h2>
                                 <ol class="main-nav__sublist">
-                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_skin_01.html">View All Products</a></li>
-                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_skin_clean_01.html">Cleansing</a></li>
-                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_skin_toner_01.html">Toner</a></li>
-                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_skin_treat_01.html">Treatments</a></li>
-                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_skin_eye_01.html">Eye Care</a></li>
-                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_skin_lip_01.html">Lip Care</a></li>
-                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_skin_body_01.html">Body</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink"
+                                            href="list_skin_01.html">View All Products</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink"
+                                            href="list_skin_clean_01.html">Cleansing</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink"
+                                            href="list_skin_toner_01.html">Toner</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink"
+                                            href="list_skin_treat_01.html">Treatments</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink"
+                                            href="list_skin_eye_01.html">Eye Care</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink"
+                                            href="list_skin_lip_01.html">Lip Care</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink"
+                                            href="list_skin_body_01.html">Body</a></li>
                                 </ol>
                             </div>
                         </div>
@@ -95,15 +111,21 @@
                             <div class="main-nav__dropdown-inner">
                                 <h2 class="main-nav__dropdown-title godamS32W3">
                                     MAKEUP
-                                    <a href="list_make_01.html" class="main-nav__dropdown-view-all godamS14W2">View All Products</a>
+                                    <a href="list_make_01.html" class="main-nav__dropdown-view-all godamS14W2">View All
+                                        Products</a>
                                 </h2>
                                 <ol class="main-nav__sublist">
-                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_make_01.html">View All Products</a></li>
-                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_make_eye_01.html">Eyes</a></li>
-                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_make_lip_01.html">Lips</a></li>
-                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_make_face_01.html">Face</a></li>
-                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_make_tool_01.html">Tools</a></li>
-                                </ol>    
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink"
+                                            href="list_make_01.html">View All Products</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink"
+                                            href="list_make_eye_01.html">Eyes</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink"
+                                            href="list_make_lip_01.html">Lips</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink"
+                                            href="list_make_face_01.html">Face</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink"
+                                            href="list_make_tool_01.html">Tools</a></li>
+                                </ol>
                             </div>
                         </div>
                     </li>
@@ -113,14 +135,20 @@
                             <div class="main-nav__dropdown-inner">
                                 <h2 class="main-nav__dropdown-title godamS32W3">
                                     MASK BAR
-                                    <a href="list_mask_01.html" class="main-nav__dropdown-view-all godamS14W2">View All Products</a>
+                                    <a href="list_mask_01.html" class="main-nav__dropdown-view-all godamS14W2">View All
+                                        Products</a>
                                 </h2>
                                 <ol class="main-nav__sublist">
-                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_mask_01.html">View All Products</a></li>
-                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_mask_sheet_01.html">Sheet Masks</a></li>
-                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_mask_wash_01.html">Wash Off Masks</a></li>
-                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_mask_sleep_01.html">Sleeping Masks</a></li>
-                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_mask_eye_01.html">Eye Masks</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink"
+                                            href="list_mask_01.html">View All Products</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink"
+                                            href="list_mask_sheet_01.html">Sheet Masks</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink"
+                                            href="list_mask_wash_01.html">Wash Off Masks</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink"
+                                            href="list_mask_sleep_01.html">Sleeping Masks</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink"
+                                            href="list_mask_eye_01.html">Eye Masks</a></li>
                                 </ol>
                             </div>
                         </div>
@@ -131,8 +159,11 @@
                 </ul>
                 <ul class="main-nav__secondary-list">
                     <li class="main-nav__item px-global"><a class="main-nav__link" href="rewards.html">Rewards</a></li>
-                    <li class="main-nav__item px-global"><a class="main-nav__link" href="ourStory.html">Our Story</a></li>
-                    <li class="main-nav__item px-global"><a class="main-nav__link" href="https://tony-moly.gorgias.help/en-US/articles/shipping-delivery-92434" target="_blank">Shipping &amp; Delivery</a></li>
+                    <li class="main-nav__item px-global"><a class="main-nav__link" href="ourStory.html">Our Story</a>
+                    </li>
+                    <li class="main-nav__item px-global"><a class="main-nav__link"
+                            href="https://tony-moly.gorgias.help/en-US/articles/shipping-delivery-92434"
+                            target="_blank">Shipping &amp; Delivery</a></li>
                 </ul>
             </div>
         </nav>
@@ -140,7 +171,8 @@
     <main class="product-detail-page" id="top">
         <div class="product-detail-page__main-content px-global">
             <section class="product-gallery">
-                <img class="product-gallery__main-image" src="images/make_product_29.jpg" alt="make product 29 detail img">
+                <img class="product-gallery__main-image" src="images/make_product_29.jpg"
+                    alt="make product 29 detail img">
                 <ul class="product-gallery__thumbnails">
                     <li class="active"><img src="images/make_product_29.jpg" alt="make product detail img 01"></li>
                     <li><img src="images/make_product_26_dt_01.jpg" alt="make product detail img 02"></li>
@@ -148,8 +180,9 @@
                 </ul>
             </section>
             <section class="product-info">
-                <header class="product-info__header mb-20 border-bottom pb-20">
-                    <button type="button" class="product-info__wishlist-button wishlist-button toggleBtn">Add to wish list btn</button>
+                <div class="product-info__header mb-20 border-bottom pb-20">
+                    <button type="button" class="product-info__wishlist-button wishlist-button toggleBtn">Add to wish
+                        list btn</button>
                     <small class="product-info__category godamS14W2 mb-5 block">MAKEUP</small>
                     <h3 class="product-info__title godamS20W2 mb-10">Perfect Lips Shocking Lip - PETAL SHOCKING</h3>
                     <div class="product-info__meta">
@@ -163,7 +196,7 @@
                         <b class="product-info__review-number godamS14W1 ml-10">18&nbsp;</b>
                         <strong class="product-info__price godamS22W3 block">$19.00</strong>
                     </div>
-                </header>
+                </div>
                 <div class="product-info__description-group mb-20 relative">
                     <div id="afterpayPopup" class="afterpay-popup roboS12W2">
                         <button type="button" class="afterpay-popup__close-button closeBtn">btn close</button>
@@ -183,13 +216,22 @@
                                 <p>Select Afterpay at checkout</p>
                             </li>
                         </ul>
-                        <p class="afterpay-popup__legal-notice">You must be over 18, a resident of the U.S. and meet additional eligibility criteria to qualify. Late fees may apply. Estimated payment amounts shown on product pages exclude taxes and shipping charges, which are added at checkout.</p>
-                        <p class="afterpay-popup__legal-notice">Loans to California residents made or arranged pursuant to a California Finance Lenders Law license. ©&copy; 2020 Afterpay</p>
+                        <p class="afterpay-popup__legal-notice">You must be over 18, a resident of the U.S. and meet
+                            additional eligibility criteria to qualify. Late fees may apply. Estimated payment
+                            amounts shown on product pages exclude taxes and shipping charges, which are added at
+                            checkout.</p>
+                        <p class="afterpay-popup__legal-notice">Loans to California residents made or arranged
+                            pursuant to a California Finance Lenders Law license. ©&copy; 2020 Afterpay</p>
                     </div>
                     <div class="product-info__payment-option mb-20 pb-20 border-bottom">
-                        <button type="button" class="product-info__payment-option-trigger" data-popName="afterpay">afterpay</button>
+                        <button type="button" class="product-info__payment-option-trigger"
+                            data-popName="afterpay">afterpay</button>
                     </div>
-                    <p class="product-info__description roboS14W1 mb-20">True to its name, this super long lasting and highly pigmented formula stains lips like a tattoo, lasting all day without needing much touch up! And don't be fooled by the light texture - this formula is jam packed with lip-friendly oils that keep lips hydrated throughout the day so lips not only look perfectly shocking, but shockingly perfect.</p>
+                    <p class="product-info__description roboS14W1 mb-20">True to its name, this super long lasting
+                        and highly pigmented formula stains lips like a tattoo, lasting all day without needing much
+                        touch up! And don't be fooled by the light texture - this formula is jam packed with
+                        lip-friendly oils that keep lips hydrated throughout the day so lips not only look perfectly
+                        shocking, but shockingly perfect.</p>
                     <dl class="product-info__specs godamS14W1">
                         <dt class="product-info__specs-key">size</dt>
                         <dd class="product-info__specs-value ml-10">7g</dd>
@@ -198,12 +240,18 @@
                 <div class="product-info__purchase-section border-bottom">
                     <span class="product-info__variant-name godamS14W2 block mb-15">PETAL SHOCKING</span>
                     <ul class="product-info__variant-list">
-                        <li><a href="dt_make_26.html"><img src="images/make_product_26.jpg" alt="make_product_26"></a></li>
-                        <li><a href="dt_make_27.html"><img src="images/make_product_27.jpg" alt="make_product_27"></a></li>
-                        <li><a href="dt_make_28.html"><img src="images/make_product_28.jpg" alt="make_product_28"></a></li>
-                        <li><a href="dt_make_29.html" class="active"><img src="images/make_product_29.jpg" alt="make_product_29"></a></li>
-                        <li><a href="dt_make_30.html"><img src="images/make_product_30.jpg" alt="make_product_30"></a></li>
-                        <li><a href="dt_make_31.html"><img src="images/make_product_31.jpg" alt="make_product_31"></a></li>
+                        <li><a href="dt_make_26.html"><img src="images/make_product_26.jpg" alt="make_product_26"></a>
+                        </li>
+                        <li><a href="dt_make_27.html"><img src="images/make_product_27.jpg" alt="make_product_27"></a>
+                        </li>
+                        <li><a href="dt_make_28.html"><img src="images/make_product_28.jpg" alt="make_product_28"></a>
+                        </li>
+                        <li><a href="dt_make_29.html" class="active"><img src="images/make_product_29.jpg"
+                                    alt="make_product_29"></a></li>
+                        <li><a href="dt_make_30.html"><img src="images/make_product_30.jpg" alt="make_product_30"></a>
+                        </li>
+                        <li><a href="dt_make_31.html"><img src="images/make_product_31.jpg" alt="make_product_31"></a>
+                        </li>
                     </ul>
                     <div class="product-info__actions">
                         <button type="button" class="add-to-cart-button btn btn-darkline">ADD TO BAG</button>
@@ -212,26 +260,61 @@
                 </div>
                 <div id="ingreAccordion" class="accordion ingredient-accordion">
                     <h4 class="ingredient-accordion__title godamS14W2">
-                        <button type="button" id="ingredient-trigger" class="accordion-trigger" aria-expanded="false" aria-controls="ingredient-panel">
+                        <button type="button" id="ingredient-trigger" class="accordion-trigger" aria-expanded="false"
+                            aria-controls="ingredient-panel">
                             INGREDIENTS
                         </button>
                     </h4>
-                    <ul id="ingredient-panel" class="accordion-panel" role="region" aria-labelledby="ingredient-trigger">
+                    <ul id="ingredient-panel" class="accordion-panel" role="region"
+                        aria-labelledby="ingredient-trigger">
                         <li>
                             <b class="godamS12W3">PINK SHOCKING</b>
-                            <p class="roboS12W1">Water, Octyldodecanol, Butylene Glycol, Caprylic/Capric Triglyceride, Glycerin, Ethylcellulose, Sodium Acrylate/Sodium Acryloyldimethyl Taurate Copolymer, Pentylene Glycol, PEG-60 Hydrogenated Castor Oil, Red 27 (CI 45410:1), Hydrogenated Didecene, Phenoxyethanol, Alcohol, Fragrance, Hydroxypropyl Guar, Cetearyl Alcohol, Sorbitan Stearate, Benzophenone-9, Laureth-8, Disodium EDTA, Caprylyl Glycol, Argania Spinosa Kernel Oil, Ascorbic Acid, ButyroboSpermum Parkii (Shea) Butter, Simmondsia Chinensis (Jojoba) Seed Oil, Tocopheryl Acetate, Carthamus Tinctorius (Safflower) Seed Extract, roboSa Canina Fruit Extract, Hydrolyzed Collagen, Sodium Hyaluronate</p>
+                            <p class="roboS12W1">Water, Octyldodecanol, Butylene Glycol, Caprylic/Capric
+                                Triglyceride, Glycerin, Ethylcellulose, Sodium Acrylate/Sodium Acryloyldimethyl
+                                Taurate Copolymer, Pentylene Glycol, PEG-60 Hydrogenated Castor Oil, Red 27 (CI
+                                45410:1), Hydrogenated Didecene, Phenoxyethanol, Alcohol, Fragrance, Hydroxypropyl
+                                Guar, Cetearyl Alcohol, Sorbitan Stearate, Benzophenone-9, Laureth-8, Disodium EDTA,
+                                Caprylyl Glycol, Argania Spinosa Kernel Oil, Ascorbic Acid, ButyroboSpermum Parkii
+                                (Shea) Butter, Simmondsia Chinensis (Jojoba) Seed Oil, Tocopheryl Acetate, Carthamus
+                                Tinctorius (Safflower) Seed Extract, roboSa Canina Fruit Extract, Hydrolyzed
+                                Collagen, Sodium Hyaluronate</p>
                         </li>
                         <li>
                             <b class="godamS12W3">RED SHOCKING</b>
-                            <p class="roboS12W1">Water, Octyldodecanol, Butylene Glycol, Caprylic/Capric Triglyceride, Ethylcellulose, Sodium Acrylate/Sodium Acryloyldimethyl Taurate Copolymer, Pentylene Glycol, PEG-60 Hydrogenated Castor Oil, Glycerin, Red 40 (CI 16035), CI16185, Hydrogenated Didecene, Phenoxyethanol, Red 27 (CI 45410:1), Yellow 6 (CI 15985), Alcohol, Fragrance, Hydroxypropyl Guar, Cetearyl Alcohol, Sorbitan Stearate, Benzophenone-9, Laureth-8, Disodium EDTA, Caprylyl Glycol, Argania Spinosa Kernel Oil, Ascorbic Acid, ButyroboSpermum Parkii (Shea) Butter, Simmondsia Chinensis (Jojoba) Seed Oil, Tocopheryl Acetate, Carthamus Tinctorius (Safflower) Seed Extract, roboSa Canina Fruit Extract, Hydrolyzed Collagen, Sodium Hyaluronate</p>
+                            <p class="roboS12W1">Water, Octyldodecanol, Butylene Glycol, Caprylic/Capric
+                                Triglyceride, Ethylcellulose, Sodium Acrylate/Sodium Acryloyldimethyl Taurate
+                                Copolymer, Pentylene Glycol, PEG-60 Hydrogenated Castor Oil, Glycerin, Red 40 (CI
+                                16035), CI16185, Hydrogenated Didecene, Phenoxyethanol, Red 27 (CI 45410:1), Yellow
+                                6 (CI 15985), Alcohol, Fragrance, Hydroxypropyl Guar, Cetearyl Alcohol, Sorbitan
+                                Stearate, Benzophenone-9, Laureth-8, Disodium EDTA, Caprylyl Glycol, Argania Spinosa
+                                Kernel Oil, Ascorbic Acid, ButyroboSpermum Parkii (Shea) Butter, Simmondsia
+                                Chinensis (Jojoba) Seed Oil, Tocopheryl Acetate, Carthamus Tinctorius (Safflower)
+                                Seed Extract, roboSa Canina Fruit Extract, Hydrolyzed Collagen, Sodium Hyaluronate
+                            </p>
                         </li>
                         <li>
                             <b class="godamS12W3">RUBY SHOCKING</b>
-                            <p class="roboS12W1">Water, Octyldodecanol, Butylene Glycol, Caprylic/Capric Triglyceride, Glycerin, Pentylene Glycol, Ethylcellulose, PEG-60 Hydrogenated Castor Oil, Sodium Acrylate/Sodium Acryloyldimethyl Taurate Copolymer, CI 15510, Hydrogenated Didecene, Fragrance, Alcohol, Red 27 (CI 45410:1), Hydroxypropyl Guar, Phenoxyethanol, Cetearyl Alcohol, Sorbitan Stearate, Benzophenone-9, Laureth-8, Disodium EDTA, Caprylyl Glycol, Argania Spinosa Kernel Oil, Ascorbic Acid, ButyroboSpermum Parkii (Shea) Butter, Simmondsia Chinensis (Jojoba) Seed Oil, Tocopheryl Acetate, Carthamus Tinctorius (Safflower) Seed Extract, roboSa Canina Fruit Extract, Hydrolyzed Collagen, Sodium Hyaluronate</p>
+                            <p class="roboS12W1">Water, Octyldodecanol, Butylene Glycol, Caprylic/Capric
+                                Triglyceride, Glycerin, Pentylene Glycol, Ethylcellulose, PEG-60 Hydrogenated Castor
+                                Oil, Sodium Acrylate/Sodium Acryloyldimethyl Taurate Copolymer, CI 15510,
+                                Hydrogenated Didecene, Fragrance, Alcohol, Red 27 (CI 45410:1), Hydroxypropyl Guar,
+                                Phenoxyethanol, Cetearyl Alcohol, Sorbitan Stearate, Benzophenone-9, Laureth-8,
+                                Disodium EDTA, Caprylyl Glycol, Argania Spinosa Kernel Oil, Ascorbic Acid,
+                                ButyroboSpermum Parkii (Shea) Butter, Simmondsia Chinensis (Jojoba) Seed Oil,
+                                Tocopheryl Acetate, Carthamus Tinctorius (Safflower) Seed Extract, roboSa Canina
+                                Fruit Extract, Hydrolyzed Collagen, Sodium Hyaluronate</p>
                         </li>
                         <li>
                             <b class="godamS12W3">PETAL SHOCKING</b>
-                            <p class="roboS12W1">Water, Octyldodecanol, Butylene Glycol, Caprylic/Capric Triglyceride, Ethylcellulose, Sodium Acrylate/Sodium Acryloyldimethyl Taurate Copolymer, Pentylene Glycol, PEG-60 Hydrogenated Castor Oil, Glycerin, Hydrogenated Didecene, CI 15510, Phenoxyethanol, Fragrance, Alcohol, Hydroxypropyl Guar, Cetearyl Alcohol, Sorbitan Stearate, Benzophenone-9, Laureth-8, Disodium EDTA, Red 27 (CI 45410:1), Caprylyl Glycol, Argania Spinosa Kernel Oil, Ascorbic Acid, ButyroboSpermum Parkii (Shea) Butter, Simmondsia Chinensis (Jojoba) Seed Oil, Tocopheryl Acetate, Carthamus Tinctorius (Safflower) Seed Extract, roboSa Canina Fruit Extract, Hydrolyzed Collagen, Sodium Hyaluronate</p>
+                            <p class="roboS12W1">Water, Octyldodecanol, Butylene Glycol, Caprylic/Capric
+                                Triglyceride, Ethylcellulose, Sodium Acrylate/Sodium Acryloyldimethyl Taurate
+                                Copolymer, Pentylene Glycol, PEG-60 Hydrogenated Castor Oil, Glycerin, Hydrogenated
+                                Didecene, CI 15510, Phenoxyethanol, Fragrance, Alcohol, Hydroxypropyl Guar, Cetearyl
+                                Alcohol, Sorbitan Stearate, Benzophenone-9, Laureth-8, Disodium EDTA, Red 27 (CI
+                                45410:1), Caprylyl Glycol, Argania Spinosa Kernel Oil, Ascorbic Acid,
+                                ButyroboSpermum Parkii (Shea) Butter, Simmondsia Chinensis (Jojoba) Seed Oil,
+                                Tocopheryl Acetate, Carthamus Tinctorius (Safflower) Seed Extract, roboSa Canina
+                                Fruit Extract, Hydrolyzed Collagen, Sodium Hyaluronate</p>
                         </li>
                     </ul>
                 </div>
@@ -251,36 +334,45 @@
                         </strong>
                         <em class="promo-banner__tagline godamS18W3 bg-gray15">THIS WEEKEND ONLY!</em>
                         <h3 class="promo-banner__title">Strawberry Launched!</h3>
-                        <b class="promo-banner__subtitle roboS18W1 color-gray1">Our brand new Strawberry Hand Cream is back!</b>
+                        <b class="promo-banner__subtitle roboS18W1 color-gray1">Our brand new Strawberry Hand Cream is
+                            back!</b>
                     </span>
                 </div>
-                <span class="promo-banner__cta-wrap"><a href="dt_skin_122.html" class="promo-banner__cta-link godamS16W3 mb-center">SHOP NOW</a></span>
+                <span class="promo-banner__cta-wrap"><a href="dt_skin_122.html"
+                        class="promo-banner__cta-link godamS16W3 mb-center">SHOP NOW</a></span>
             </section>
             <section class="info-section whatBox text-center">
                 <h3 class="info-section__title godamS32W3">WHAT MAKES IT GOOD!</h3>
-                <p class="info-section__text roboS14W2"><span>This long-lasting tint will keep your lips hydrated all day long! Contains deeply moisturizing ingredients like Shea Butter, roboSehip Oil, Argan Oil, and Jojoba Oil.</span></p>
+                <p class="info-section__text roboS14W2"><span>This long-lasting tint will keep your lips hydrated all
+                        day long! Contains deeply moisturizing ingredients like Shea Butter, roboSehip Oil, Argan Oil,
+                        and Jojoba Oil.</span></p>
             </section>
             <section class="key-ingredients keyBox text-center bg-gray13 py-86 mb-86">
                 <h3 class="key-ingredients__title godamS32W3 mb-32">KEY INFREDIENTS</h3>
                 <ul class="key-ingredients__list roboS12W2 px-global flex-wrap justify-center mb-32">
                     <li class="key-ingredients__item">
                         <span class="key-ingredients__item-icon keyicoLeaf">leaf icon</span>
-                        <p class="key-ingredients__item-text">Shea Butter - Rich in vitamins and fatty acids to nourish, soften and protect lips.</p>
+                        <p class="key-ingredients__item-text">Shea Butter - Rich in vitamins and fatty acids to nourish,
+                            soften and protect lips.</p>
                     </li>
                     <li class="key-ingredients__item">
                         <span class="key-ingredients__item-icon keyicoWater">Water iconicon</span>
-                        <p class="key-ingredients__item-text">roboSehip Oil - Full of Silica, provides hydration and strengthens the skin.</p>
+                        <p class="key-ingredients__item-text">roboSehip Oil - Full of Silica, provides hydration and
+                            strengthens the skin.</p>
                     </li>
                     <li class="key-ingredients__item">
                         <span class="key-ingredients__item-icon keyicoWater">Water iconicon</span>
-                        <p class="key-ingredients__item-text">Argan Oil - Firms, hydrates, and protects skin against free-radical damage.</p>
+                        <p class="key-ingredients__item-text">Argan Oil - Firms, hydrates, and protects skin against
+                            free-radical damage.</p>
                     </li>
                     <li class="key-ingredients__item">
                         <span class="key-ingredients__item-icon keyicoWater">Water iconicon</span>
-                        <p class="key-ingredients__item-text">Jojoba Oil - High in antioxidants, protects skin from damage.</p>
+                        <p class="key-ingredients__item-text">Jojoba Oil - High in antioxidants, protects skin from
+                            damage.</p>
                     </li>
                 </ul>
-                <a href="#ingreAccordion" class="key-ingredients__view-all-button btn btn-mainline mb-center">VIEW ALL INGREDIENTS</a>
+                <a href="#ingreAccordion" class="key-ingredients__view-all-button btn btn-mainline mb-center">VIEW ALL
+                    INGREDIENTS</a>
             </section>
             <section class="usage-guide useBox px-global mb-center86">
                 <h3 class="usage-guide__title godamS32W3 mb-32 text-center">HOW TO USE?</h3>
@@ -296,7 +388,8 @@
                         </li>
                         <li>
                             <b class="godamS24W4">FINISH</b>
-                            <p class="roboS14W2">For a more natural look, carefully blend out tint on lips. Apply a second coat if more intense color is desired.</p>
+                            <p class="roboS14W2">For a more natural look, carefully blend out tint on lips. Apply a
+                                second coat if more intense color is desired.</p>
                         </li>
                     </ol>
                 </div>
@@ -363,7 +456,8 @@
                         </figure>
                     </li>
                 </ul>
-                <a href="#descriptBar" class="more-products__view-description-button btn btn-mainline">VIEW DESCRIPTION</a>
+                <a href="#descriptBar" class="more-products__view-description-button btn btn-mainline">VIEW
+                    DESCRIPTION</a>
             </section>
         </div>
     </main>
@@ -373,9 +467,12 @@
             <div class="site-footer__top">
                 <h2 class="site-footer__logo mb-25"><img src="images/logo_footer.svg" alt="Goodbye, TONYMOLY!"></h2>
                 <ul class="site-footer__social-list flex">
-                    <li class="site-footer__social-item"><a href="https://www.instagram.com/tonymoly.us_official/" target="_blank">Instargram</a></li>
-                    <li class="site-footer__social-item"><a href="https://kr.pinterest.com/tonymolyusa/" target="_blank">Pinterest</a></li>
-                    <li class="site-footer__social-item"><a href="https://www.tiktok.com/@tonymolyusa" target="_blank">TikTok</a></li>
+                    <li class="site-footer__social-item"><a href="https://www.instagram.com/tonymoly.us_official/"
+                            target="_blank">Instargram</a></li>
+                    <li class="site-footer__social-item"><a href="https://kr.pinterest.com/tonymolyusa/"
+                            target="_blank">Pinterest</a></li>
+                    <li class="site-footer__social-item"><a href="https://www.tiktok.com/@tonymolyusa"
+                            target="_blank">TikTok</a></li>
                 </ul>
             </div>
             <div class="site-footer__main mb-60">
@@ -384,15 +481,19 @@
                     <ul class="site-footer__nav-list roboS14W2">
                         <li class="site-footer__nav-item"><a href="stock.html">Stockists</a></li>
                         <li class="site-footer__nav-item"><a href="whole.html">Wholesale</a></li>
-                        <li class="site-footer__nav-item"><a href="https://kr.pinterest.com/tonymolyusa/tonymoly-press/" target="_blank">Press</a></li>
+                        <li class="site-footer__nav-item"><a href="https://kr.pinterest.com/tonymolyusa/tonymoly-press/"
+                                target="_blank">Press</a></li>
                     </ul>
                 </nav>
                 <nav class="site-footer__nav-column" aria-label="Support">
                     <h3 class="site-footer__nav-title godamS22W3 mb-24">SUPPORT</h3>
                     <ul class="site-footer__nav-list roboS14W2">
-                        <li class="site-footer__nav-item"><a href="https://tony-moly.gorgias.help/en-US" target="_blank">F.A.Q.</a></li>
-                        <li class="site-footer__nav-item"><a href="https://tonymoly.us/apps/redo/returns-portal/login" target="_blank">Returns &amp; Exchanges</a></li>
-                        <li class="site-footer__nav-item"><a href="https://tony-moly.gorgias.help/en-US/contact" target="_blank">Contact Us</a></li>
+                        <li class="site-footer__nav-item"><a href="https://tony-moly.gorgias.help/en-US"
+                                target="_blank">F.A.Q.</a></li>
+                        <li class="site-footer__nav-item"><a href="https://tonymoly.us/apps/redo/returns-portal/login"
+                                target="_blank">Returns &amp; Exchanges</a></li>
+                        <li class="site-footer__nav-item"><a href="https://tony-moly.gorgias.help/en-US/contact"
+                                target="_blank">Contact Us</a></li>
                         <li class="site-footer__nav-item"><a href="promotion.html">Promotion Details</a></li>
                         <li class="site-footer__nav-item"><a href="privacy.html">Privacy Policy</a></li>
                     </ul>
@@ -409,8 +510,10 @@
                     </div>
                     <h3 class="newsletter-form__title godamS22W3 mb-24">JOIN OUR MAILING LIST</h3>
                     <form class="newsletter-form__form" novalidate>
-                        <input type="email" id="inputEmail" class="newsletter-form__input roboS14W1" placeholder="Enter your email" title="input ur email" required>
-                        <button type="submit" id="btnSend" class="newsletter-form__submit-button roboS14W1" aria-label="Subscribe">Subscribe button</button>
+                        <input type="email" id="inputEmail" class="newsletter-form__input roboS14W1"
+                            placeholder="Enter your email" title="input ur email" required>
+                        <button type="submit" id="btnSend" class="newsletter-form__submit-button roboS14W1"
+                            aria-label="Subscribe">Subscribe button</button>
                     </form>
                     <span class="roboS12W2">Unlock 15% off your next order!</span>
                 </section>
@@ -422,4 +525,5 @@
         </div>
     </footer>
 </body>
+
 </html>

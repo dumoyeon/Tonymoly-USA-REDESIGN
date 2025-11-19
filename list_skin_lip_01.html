@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,18 +11,19 @@
     <link rel="shortcut icon" href="images/ico_favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="dist/css/import.css">
     <script>
-        (function(){
+        (function () {
             const root = document.documentElement;
             const isLoggedIn = localStorage.getItem('isLoggedIn');
 
-            if(isLoggedIn === 'true'){
+            if (isLoggedIn === 'true') {
                 root.classList.add('is-logged-in');
-            } else{
+            } else {
                 root.classList.add('is-logged-out');
             }
         })();
     </script>
 </head>
+
 <body>
     <div id="cartPopup" class="defaultPopup">
         <button type="button" class="closeBtn">btn close</button>
@@ -48,15 +50,21 @@
             </h1>
             <div class="site-header__main-controls">
                 <form action="search.html" class="search-form">
-                    <input type="search" name="query" id="searchInput" class="search-form__input roboS14W1" placeholder="Aloe" title="Enter product name">
+                    <input type="search" name="query" id="searchInput" class="search-form__input roboS14W1"
+                        placeholder="Aloe" title="Enter product name">
                     <button type="submit" class="search-form__submit-button" aria-label="Search">Search bar btn</button>
                 </form>
                 <ul class="site-header__actions">
-                    <li class="site-header__action-item logged-out"><a href="sign_in.html" aria-label="Sign in"><img src="images/btn_sign_in.svg" alt="sign in btn"></a></li>
-                    <li class="site-header__action-item logged-out"><a href="sign_up.html" aria-label="Sign up"><img src="images/btn_sign_up.svg" alt="sign up btn"></a></li>
-                    <li class="site-header__action-item logged-in"><a href="cart.html" aria-label="Cart List"><img src="images/btn_cart.svg" alt="cart btn"></a></li>
-                    <li class="site-header__action-item logged-in"><a href="orders.html"aria-label="Orders page"><img src="images/btn_account.svg" alt="my account btn"></a></li>
-                    <li class="site-header__action-item"><button type="button" id="mnav" class="site-header__mobile-menu-trigger mui">mobile user interface</button></li>
+                    <li class="site-header__action-item logged-out"><a href="sign_in.html" aria-label="Sign in"><img
+                                src="images/btn_sign_in.svg" alt="sign in btn"></a></li>
+                    <li class="site-header__action-item logged-out"><a href="sign_up.html" aria-label="Sign up"><img
+                                src="images/btn_sign_up.svg" alt="sign up btn"></a></li>
+                    <li class="site-header__action-item logged-in"><a href="cart.html" aria-label="Cart List"><img
+                                src="images/btn_cart.svg" alt="cart btn"></a></li>
+                    <li class="site-header__action-item logged-in"><a href="orders.html" aria-label="Orders page"><img
+                                src="images/btn_account.svg" alt="my account btn"></a></li>
+                    <li class="site-header__action-item"><button type="button" id="mnav"
+                            class="site-header__mobile-menu-trigger mui">mobile user interface</button></li>
                 </ul>
             </div>
         </div>
@@ -65,7 +73,7 @@
                 <ul class="main-nav__primary-list godamS16W3" id="mnavList">
                     <li class="main-nav__item px-global">
                         <a class="main-nav__link" href="list_new_01.html">NEW</a>
-                    </li> 
+                    </li>
                     <li class="main-nav__item px-global">
                         <a class="main-nav__link" href="list_best_01.html">BEST</a>
                     </li>
@@ -75,16 +83,24 @@
                             <div class="main-nav__dropdown-inner">
                                 <h2 class="main-nav__dropdown-title godamS32W3">
                                     SKINCARE
-                                    <a href="list_skin_01.html" class="main-nav__dropdown-view-all godamS14W2">View All Products</a>
+                                    <a href="list_skin_01.html" class="main-nav__dropdown-view-all godamS14W2">View All
+                                        Products</a>
                                 </h2>
                                 <ol class="main-nav__sublist">
-                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_skin_01.html">View All Products</a></li>
-                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_skin_clean_01.html">Cleansing</a></li>
-                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_skin_toner_01.html">Toner</a></li>
-                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_skin_treat_01.html">Treatments</a></li>
-                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_skin_eye_01.html">Eye Care</a></li>
-                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_skin_lip_01.html">Lip Care</a></li>
-                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_skin_body_01.html">Body</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink"
+                                            href="list_skin_01.html">View All Products</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink"
+                                            href="list_skin_clean_01.html">Cleansing</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink"
+                                            href="list_skin_toner_01.html">Toner</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink"
+                                            href="list_skin_treat_01.html">Treatments</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink"
+                                            href="list_skin_eye_01.html">Eye Care</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink"
+                                            href="list_skin_lip_01.html">Lip Care</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink"
+                                            href="list_skin_body_01.html">Body</a></li>
                                 </ol>
                             </div>
                         </div>
@@ -95,15 +111,21 @@
                             <div class="main-nav__dropdown-inner">
                                 <h2 class="main-nav__dropdown-title godamS32W3">
                                     MAKEUP
-                                    <a href="list_make_01.html" class="main-nav__dropdown-view-all godamS14W2">View All Products</a>
+                                    <a href="list_make_01.html" class="main-nav__dropdown-view-all godamS14W2">View All
+                                        Products</a>
                                 </h2>
                                 <ol class="main-nav__sublist">
-                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_make_01.html">View All Products</a></li>
-                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_make_eye_01.html">Eyes</a></li>
-                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_make_lip_01.html">Lips</a></li>
-                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_make_face_01.html">Face</a></li>
-                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_make_tool_01.html">Tools</a></li>
-                                </ol>    
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink"
+                                            href="list_make_01.html">View All Products</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink"
+                                            href="list_make_eye_01.html">Eyes</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink"
+                                            href="list_make_lip_01.html">Lips</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink"
+                                            href="list_make_face_01.html">Face</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink"
+                                            href="list_make_tool_01.html">Tools</a></li>
+                                </ol>
                             </div>
                         </div>
                     </li>
@@ -113,14 +135,20 @@
                             <div class="main-nav__dropdown-inner">
                                 <h2 class="main-nav__dropdown-title godamS32W3">
                                     MASK BAR
-                                    <a href="list_mask_01.html" class="main-nav__dropdown-view-all godamS14W2">View All Products</a>
+                                    <a href="list_mask_01.html" class="main-nav__dropdown-view-all godamS14W2">View All
+                                        Products</a>
                                 </h2>
                                 <ol class="main-nav__sublist">
-                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_mask_01.html">View All Products</a></li>
-                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_mask_sheet_01.html">Sheet Masks</a></li>
-                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_mask_wash_01.html">Wash Off Masks</a></li>
-                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_mask_sleep_01.html">Sleeping Masks</a></li>
-                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_mask_eye_01.html">Eye Masks</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink"
+                                            href="list_mask_01.html">View All Products</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink"
+                                            href="list_mask_sheet_01.html">Sheet Masks</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink"
+                                            href="list_mask_wash_01.html">Wash Off Masks</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink"
+                                            href="list_mask_sleep_01.html">Sleeping Masks</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink"
+                                            href="list_mask_eye_01.html">Eye Masks</a></li>
                                 </ol>
                             </div>
                         </div>
@@ -131,8 +159,11 @@
                 </ul>
                 <ul class="main-nav__secondary-list">
                     <li class="main-nav__item px-global"><a class="main-nav__link" href="rewards.html">Rewards</a></li>
-                    <li class="main-nav__item px-global"><a class="main-nav__link" href="ourStory.html">Our Story</a></li>
-                    <li class="main-nav__item px-global"><a class="main-nav__link" href="https://tony-moly.gorgias.help/en-US/articles/shipping-delivery-92434" target="_blank">Shipping &amp; Delivery</a></li>
+                    <li class="main-nav__item px-global"><a class="main-nav__link" href="ourStory.html">Our Story</a>
+                    </li>
+                    <li class="main-nav__item px-global"><a class="main-nav__link"
+                            href="https://tony-moly.gorgias.help/en-US/articles/shipping-delivery-92434"
+                            target="_blank">Shipping &amp; Delivery</a></li>
                 </ul>
             </div>
         </nav>
@@ -150,33 +181,50 @@
                     <li class="category-nav__item">
                         <a href="list_skin_01.html" class="category-nav__link godamS32W3 active">SKINCARE</a>
                         <ol class="category-nav__sublist godamS14W1 active">
-                            <li class="category-nav__subitem"><a class="category-nav__sublink" href="list_skin_01.html">View All Products</a></li>
-                            <li class="category-nav__subitem"><a class="category-nav__sublink" href="list_skin_clean_01.html">Cleansing</a></li>
-                            <li class="category-nav__subitem"><a class="category-nav__sublink" href="list_skin_toner_01.html">Toner</a></li>
-                            <li class="category-nav__subitem"><a class="category-nav__sublink" href="list_skin_treat_01.html">Treatments</a></li>
-                            <li class="category-nav__subitem"><a class="category-nav__sublink" href="list_skin_eye_01.html">Eye Care</a></li>
-                            <li class="category-nav__subitem"><a class="category-nav__sublink godamS14W4 active" href="list_skin_lip_01.html">Lip Care</a></li>
-                            <li class="category-nav__subitem"><a class="category-nav__sublink" href="list_skin_body_01.html">Body</a></li>
+                            <li class="category-nav__subitem"><a class="category-nav__sublink"
+                                    href="list_skin_01.html">View All Products</a></li>
+                            <li class="category-nav__subitem"><a class="category-nav__sublink"
+                                    href="list_skin_clean_01.html">Cleansing</a></li>
+                            <li class="category-nav__subitem"><a class="category-nav__sublink"
+                                    href="list_skin_toner_01.html">Toner</a></li>
+                            <li class="category-nav__subitem"><a class="category-nav__sublink"
+                                    href="list_skin_treat_01.html">Treatments</a></li>
+                            <li class="category-nav__subitem"><a class="category-nav__sublink"
+                                    href="list_skin_eye_01.html">Eye Care</a></li>
+                            <li class="category-nav__subitem"><a class="category-nav__sublink godamS14W4 active"
+                                    href="list_skin_lip_01.html">Lip Care</a></li>
+                            <li class="category-nav__subitem"><a class="category-nav__sublink"
+                                    href="list_skin_body_01.html">Body</a></li>
                         </ol>
                     </li>
                     <li class="category-nav__item">
                         <a href="list_make_01.html" class="category-nav__link godamS18W3">MAKEUP</a>
                         <ol class="category-nav__sublist godamS14W1">
-                            <li class="category-nav__subitem"><a class="category-nav__sublink" href="list_make_01.html">View All Products</a></li>
-                            <li class="category-nav__subitem"><a class="category-nav__sublink" href="list_make_eye_01.html">Eyes</a></li>
-                            <li class="category-nav__subitem"><a class="category-nav__sublink" href="list_make_lip_01.html">Lips</a></li>
-                            <li class="category-nav__subitem"><a class="category-nav__sublink" href="list_make_face_01.html">Face</a></li>
-                            <li class="category-nav__subitem"><a class="category-nav__sublink" href="list_make_tool_01.html">Tools</a></li>
+                            <li class="category-nav__subitem"><a class="category-nav__sublink"
+                                    href="list_make_01.html">View All Products</a></li>
+                            <li class="category-nav__subitem"><a class="category-nav__sublink"
+                                    href="list_make_eye_01.html">Eyes</a></li>
+                            <li class="category-nav__subitem"><a class="category-nav__sublink"
+                                    href="list_make_lip_01.html">Lips</a></li>
+                            <li class="category-nav__subitem"><a class="category-nav__sublink"
+                                    href="list_make_face_01.html">Face</a></li>
+                            <li class="category-nav__subitem"><a class="category-nav__sublink"
+                                    href="list_make_tool_01.html">Tools</a></li>
                         </ol>
                     </li>
                     <li class="category-nav__item">
                         <a href="list_mask_01.html" class="category-nav__link godamS18W3">MASK BAR</a>
                         <ol class="category-nav__sublist godamS14W1">
-                            <li class="category-nav__subitem"><a class="category-nav__sublink" href="list_mask_01.html">View All Products</a></li>
-                            <li class="category-nav__subitem"><a class="category-nav__sublink" href="list_mask_sheet_01.html">Sheet Masks</a></li>
-                            <li class="category-nav__subitem"><a class="category-nav__sublink" href="list_mask_wash_01.html">Wash Off Masks</a></li>
-                            <li class="category-nav__subitem"><a class="category-nav__sublink" href="list_mask_sleep_01.html">Sleeping Masks</a></li>
-                            <li class="category-nav__subitem"><a class="category-nav__sublink" href="list_mask_eye_01.html">Eye Masks</a></li>
+                            <li class="category-nav__subitem"><a class="category-nav__sublink"
+                                    href="list_mask_01.html">View All Products</a></li>
+                            <li class="category-nav__subitem"><a class="category-nav__sublink"
+                                    href="list_mask_sheet_01.html">Sheet Masks</a></li>
+                            <li class="category-nav__subitem"><a class="category-nav__sublink"
+                                    href="list_mask_wash_01.html">Wash Off Masks</a></li>
+                            <li class="category-nav__subitem"><a class="category-nav__sublink"
+                                    href="list_mask_sleep_01.html">Sleeping Masks</a></li>
+                            <li class="category-nav__subitem"><a class="category-nav__sublink"
+                                    href="list_mask_eye_01.html">Eye Masks</a></li>
                         </ol>
                     </li>
                     <li class="category-nav__item">
@@ -186,7 +234,7 @@
             </nav>
         </aside>
         <main class="product-listing-layout__main px-global">
-            <header class="product-grid-header mb-20">
+            <div class="product-grid-header mb-20">
                 <div class="product-grid-header__count">
                     <mark class="godamS14W4">27</mark>
                     <span class="godamS14W2">products</span>
@@ -204,7 +252,7 @@
                         </select>
                     </span>
                 </form>
-            </header>
+            </div>
             <ul class="product-grid productList mb-60">
                 <li class="product-card">
                     <figure>
@@ -228,8 +276,12 @@
                                     <b>8</b>
                                 </div>
                                 <span>
-                                    <button type="button" class="product-card__add-to-cart-button add-to-cart-button toggleBtn">Add to bag btn</button>
-                                    <button type="button" class="product-card-wishlist-button wishlist-button toggleBtn">Add to wish list btn</button>
+                                    <button type="button"
+                                        class="product-card__add-to-cart-button add-to-cart-button toggleBtn">Add to
+                                        bag btn</button>
+                                    <button type="button"
+                                        class="product-card-wishlist-button wishlist-button toggleBtn">Add to wish
+                                        list btn</button>
                                 </span>
                             </div>
                         </figcaption>
@@ -260,8 +312,12 @@
                                     <b>58</b>
                                 </div>
                                 <span>
-                                    <button type="button" class="product-card__add-to-cart-button add-to-cart-button toggleBtn">Add to bag btn</button>
-                                    <button type="button" class="product-card-wishlist-button wishlist-button toggleBtn">Add to wish list btn</button>
+                                    <button type="button"
+                                        class="product-card__add-to-cart-button add-to-cart-button toggleBtn">Add to
+                                        bag btn</button>
+                                    <button type="button"
+                                        class="product-card-wishlist-button wishlist-button toggleBtn">Add to wish
+                                        list btn</button>
                                 </span>
                             </div>
                         </figcaption>
@@ -289,8 +345,12 @@
                                     <b>83</b>
                                 </div>
                                 <span>
-                                    <button type="button" class="product-card__add-to-cart-button add-to-cart-button toggleBtn">Add to bag btn</button>
-                                    <button type="button" class="product-card-wishlist-button wishlist-button toggleBtn">Add to wish list btn</button>
+                                    <button type="button"
+                                        class="product-card__add-to-cart-button add-to-cart-button toggleBtn">Add to
+                                        bag btn</button>
+                                    <button type="button"
+                                        class="product-card-wishlist-button wishlist-button toggleBtn">Add to wish
+                                        list btn</button>
                                 </span>
                             </div>
                         </figcaption>
@@ -318,8 +378,12 @@
                                     <b>83</b>
                                 </div>
                                 <span>
-                                    <button type="button" class="product-card__add-to-cart-button add-to-cart-button toggleBtn">Add to bag btn</button>
-                                    <button type="button" class="product-card-wishlist-button wishlist-button toggleBtn">Add to wish list btn</button>
+                                    <button type="button"
+                                        class="product-card__add-to-cart-button add-to-cart-button toggleBtn">Add to
+                                        bag btn</button>
+                                    <button type="button"
+                                        class="product-card-wishlist-button wishlist-button toggleBtn">Add to wish
+                                        list btn</button>
                                 </span>
                             </div>
                         </figcaption>
@@ -347,8 +411,12 @@
                                     <b>83</b>
                                 </div>
                                 <span>
-                                    <button type="button" class="product-card__add-to-cart-button add-to-cart-button toggleBtn">Add to bag btn</button>
-                                    <button type="button" class="product-card-wishlist-button wishlist-button toggleBtn">Add to wish list btn</button>
+                                    <button type="button"
+                                        class="product-card__add-to-cart-button add-to-cart-button toggleBtn">Add to
+                                        bag btn</button>
+                                    <button type="button"
+                                        class="product-card-wishlist-button wishlist-button toggleBtn">Add to wish
+                                        list btn</button>
                                 </span>
                             </div>
                         </figcaption>
@@ -376,8 +444,12 @@
                                     <b>83</b>
                                 </div>
                                 <span>
-                                    <button type="button" class="product-card__add-to-cart-button add-to-cart-button toggleBtn">Add to bag btn</button>
-                                    <button type="button" class="product-card-wishlist-button wishlist-button toggleBtn">Add to wish list btn</button>
+                                    <button type="button"
+                                        class="product-card__add-to-cart-button add-to-cart-button toggleBtn">Add to
+                                        bag btn</button>
+                                    <button type="button"
+                                        class="product-card-wishlist-button wishlist-button toggleBtn">Add to wish
+                                        list btn</button>
                                 </span>
                             </div>
                         </figcaption>
@@ -405,8 +477,12 @@
                                     <b>83</b>
                                 </div>
                                 <span>
-                                    <button type="button" class="product-card__add-to-cart-button add-to-cart-button toggleBtn">Add to bag btn</button>
-                                    <button type="button" class="product-card-wishlist-button wishlist-button toggleBtn">Add to wish list btn</button>
+                                    <button type="button"
+                                        class="product-card__add-to-cart-button add-to-cart-button toggleBtn">Add to
+                                        bag btn</button>
+                                    <button type="button"
+                                        class="product-card-wishlist-button wishlist-button toggleBtn">Add to wish
+                                        list btn</button>
                                 </span>
                             </div>
                         </figcaption>
@@ -434,8 +510,12 @@
                                     <b>83</b>
                                 </div>
                                 <span>
-                                    <button type="button" class="product-card__add-to-cart-button add-to-cart-button toggleBtn">Add to bag btn</button>
-                                    <button type="button" class="product-card-wishlist-button wishlist-button toggleBtn">Add to wish list btn</button>
+                                    <button type="button"
+                                        class="product-card__add-to-cart-button add-to-cart-button toggleBtn">Add to
+                                        bag btn</button>
+                                    <button type="button"
+                                        class="product-card-wishlist-button wishlist-button toggleBtn">Add to wish
+                                        list btn</button>
                                 </span>
                             </div>
                         </figcaption>
@@ -463,8 +543,12 @@
                                     <b>32</b>
                                 </div>
                                 <span>
-                                    <button type="button" class="product-card__add-to-cart-button add-to-cart-button toggleBtn">Add to bag btn</button>
-                                    <button type="button" class="product-card-wishlist-button wishlist-button toggleBtn">Add to wish list btn</button>
+                                    <button type="button"
+                                        class="product-card__add-to-cart-button add-to-cart-button toggleBtn">Add to
+                                        bag btn</button>
+                                    <button type="button"
+                                        class="product-card-wishlist-button wishlist-button toggleBtn">Add to wish
+                                        list btn</button>
                                 </span>
                             </div>
                         </figcaption>
@@ -495,8 +579,12 @@
                                     <b>63</b>
                                 </div>
                                 <span>
-                                    <button type="button" class="product-card__add-to-cart-button add-to-cart-button toggleBtn">Add to bag btn</button>
-                                    <button type="button" class="product-card-wishlist-button wishlist-button toggleBtn">Add to wish list btn</button>
+                                    <button type="button"
+                                        class="product-card__add-to-cart-button add-to-cart-button toggleBtn">Add to
+                                        bag btn</button>
+                                    <button type="button"
+                                        class="product-card-wishlist-button wishlist-button toggleBtn">Add to wish
+                                        list btn</button>
                                 </span>
                             </div>
                         </figcaption>
@@ -524,8 +612,12 @@
                                     <b>63</b>
                                 </div>
                                 <span>
-                                    <button type="button" class="product-card__add-to-cart-button add-to-cart-button toggleBtn">Add to bag btn</button>
-                                    <button type="button" class="product-card-wishlist-button wishlist-button toggleBtn">Add to wish list btn</button>
+                                    <button type="button"
+                                        class="product-card__add-to-cart-button add-to-cart-button toggleBtn">Add to
+                                        bag btn</button>
+                                    <button type="button"
+                                        class="product-card-wishlist-button wishlist-button toggleBtn">Add to wish
+                                        list btn</button>
                                 </span>
                             </div>
                         </figcaption>
@@ -553,8 +645,12 @@
                                     <b>63</b>
                                 </div>
                                 <span>
-                                    <button type="button" class="product-card__add-to-cart-button add-to-cart-button toggleBtn">Add to bag btn</button>
-                                    <button type="button" class="product-card-wishlist-button wishlist-button toggleBtn">Add to wish list btn</button>
+                                    <button type="button"
+                                        class="product-card__add-to-cart-button add-to-cart-button toggleBtn">Add to
+                                        bag btn</button>
+                                    <button type="button"
+                                        class="product-card-wishlist-button wishlist-button toggleBtn">Add to wish
+                                        list btn</button>
                                 </span>
                             </div>
                         </figcaption>
@@ -563,17 +659,26 @@
             </ul>
             <nav class="pagination">
                 <div class="pagination__controls pagination__controls--prev">
-                    <a class="pagination__control pagination__control--first pagination__control--disabled" aria-label="First page" aria-disabled="true"><img src="images/btn_chevrons_left_disabled.svg" alt="cheverons left btn disabled"></a>
-                    <a class="pagination__control pagination__control--prev pagination__control--disabled" aria-label="Previous page" aria-disabled="true"><img src="images/btn_chevron_left_disabled.svg" alt="cheveron left btn disabled"></a>
+                    <a class="pagination__control pagination__control--first pagination__control--disabled"
+                        aria-label="First page" aria-disabled="true"><img src="images/btn_chevrons_left_disabled.svg"
+                            alt="cheverons left btn disabled"></a>
+                    <a class="pagination__control pagination__control--prev pagination__control--disabled"
+                        aria-label="Previous page" aria-disabled="true"><img src="images/btn_chevron_left_disabled.svg"
+                            alt="cheveron left btn disabled"></a>
                 </div>
                 <ol class="pagination__list godamS14W1 flex-wrap justify-center">
-                    <li class="pagination__item godamS14W4"><a class="pagination__link active" href="list_skin_lip_01.html">1</a></li>
+                    <li class="pagination__item godamS14W4"><a class="pagination__link active"
+                            href="list_skin_lip_01.html">1</a></li>
                     <li class="pagination__item"><a class="pagination__link" href="list_skin_lip_02.html">2</a></li>
                     <li class="pagination__item"><a class="pagination__link" href="list_skin_lip_03.html">3</a></li>
                 </ol>
                 <div class="pagination__controls pagination__controls--next">
-                    <a class="pagination__control pagination__control--next" aria-label="Next page" href="list_skin_lip_02.html"><img src="images/btn_chevron_right.svg" alt="btn cheveron right"></a>
-                    <a class="pagination__control pagination__control--last" aria-label="Last page" href="list_skin_lip_03.html"><img src="images/btn_chevrons_right.svg" alt="btn cheverons right"></a>
+                    <a class="pagination__control pagination__control--next" aria-label="Next page"
+                        href="list_skin_lip_02.html"><img src="images/btn_chevron_right.svg"
+                            alt="btn cheveron right"></a>
+                    <a class="pagination__control pagination__control--last" aria-label="Last page"
+                        href="list_skin_lip_03.html"><img src="images/btn_chevrons_right.svg"
+                            alt="btn cheverons right"></a>
                 </div>
             </nav>
         </main>
@@ -584,9 +689,12 @@
             <div class="site-footer__top">
                 <h2 class="site-footer__logo mb-25"><img src="images/logo_footer.svg" alt="Goodbye, TONYMOLY!"></h2>
                 <ul class="site-footer__social-list flex">
-                    <li class="site-footer__social-item"><a href="https://www.instagram.com/tonymoly.us_official/" target="_blank">Instargram</a></li>
-                    <li class="site-footer__social-item"><a href="https://kr.pinterest.com/tonymolyusa/" target="_blank">Pinterest</a></li>
-                    <li class="site-footer__social-item"><a href="https://www.tiktok.com/@tonymolyusa" target="_blank">TikTok</a></li>
+                    <li class="site-footer__social-item"><a href="https://www.instagram.com/tonymoly.us_official/"
+                            target="_blank">Instargram</a></li>
+                    <li class="site-footer__social-item"><a href="https://kr.pinterest.com/tonymolyusa/"
+                            target="_blank">Pinterest</a></li>
+                    <li class="site-footer__social-item"><a href="https://www.tiktok.com/@tonymolyusa"
+                            target="_blank">TikTok</a></li>
                 </ul>
             </div>
             <div class="site-footer__main mb-60">
@@ -595,15 +703,19 @@
                     <ul class="site-footer__nav-list roboS14W2">
                         <li class="site-footer__nav-item"><a href="stock.html">Stockists</a></li>
                         <li class="site-footer__nav-item"><a href="whole.html">Wholesale</a></li>
-                        <li class="site-footer__nav-item"><a href="https://kr.pinterest.com/tonymolyusa/tonymoly-press/" target="_blank">Press</a></li>
+                        <li class="site-footer__nav-item"><a href="https://kr.pinterest.com/tonymolyusa/tonymoly-press/"
+                                target="_blank">Press</a></li>
                     </ul>
                 </nav>
                 <nav class="site-footer__nav-column" aria-label="Support">
                     <h3 class="site-footer__nav-title godamS22W3 mb-24">SUPPORT</h3>
                     <ul class="site-footer__nav-list roboS14W2">
-                        <li class="site-footer__nav-item"><a href="https://tony-moly.gorgias.help/en-US" target="_blank">F.A.Q.</a></li>
-                        <li class="site-footer__nav-item"><a href="https://tonymoly.us/apps/redo/returns-portal/login" target="_blank">Returns &amp; Exchanges</a></li>
-                        <li class="site-footer__nav-item"><a href="https://tony-moly.gorgias.help/en-US/contact" target="_blank">Contact Us</a></li>
+                        <li class="site-footer__nav-item"><a href="https://tony-moly.gorgias.help/en-US"
+                                target="_blank">F.A.Q.</a></li>
+                        <li class="site-footer__nav-item"><a href="https://tonymoly.us/apps/redo/returns-portal/login"
+                                target="_blank">Returns &amp; Exchanges</a></li>
+                        <li class="site-footer__nav-item"><a href="https://tony-moly.gorgias.help/en-US/contact"
+                                target="_blank">Contact Us</a></li>
                         <li class="site-footer__nav-item"><a href="promotion.html">Promotion Details</a></li>
                         <li class="site-footer__nav-item"><a href="privacy.html">Privacy Policy</a></li>
                     </ul>
@@ -620,8 +732,10 @@
                     </div>
                     <h3 class="newsletter-form__title godamS22W3 mb-24">JOIN OUR MAILING LIST</h3>
                     <form class="newsletter-form__form" novalidate>
-                        <input type="email" id="inputEmail" class="newsletter-form__input roboS14W1" placeholder="Enter your email" title="input ur email" required>
-                        <button type="submit" id="btnSend" class="newsletter-form__submit-button roboS14W1" aria-label="Subscribe">Subscribe button</button>
+                        <input type="email" id="inputEmail" class="newsletter-form__input roboS14W1"
+                            placeholder="Enter your email" title="input ur email" required>
+                        <button type="submit" id="btnSend" class="newsletter-form__submit-button roboS14W1"
+                            aria-label="Subscribe">Subscribe button</button>
                     </form>
                     <span class="roboS12W2">Unlock 15% off your next order!</span>
                 </section>
@@ -633,4 +747,5 @@
         </div>
     </footer>
 </body>
+
 </html>

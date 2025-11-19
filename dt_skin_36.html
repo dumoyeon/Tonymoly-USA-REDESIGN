@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,18 +11,19 @@
     <link rel="shortcut icon" href="images/ico_favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="dist/css/import.css">
     <script>
-        (function(){
+        (function () {
             const root = document.documentElement;
             const isLoggedIn = localStorage.getItem('isLoggedIn');
 
-            if(isLoggedIn === 'true'){
+            if (isLoggedIn === 'true') {
                 root.classList.add('is-logged-in');
-            } else{
+            } else {
                 root.classList.add('is-logged-out');
             }
         })();
     </script>
 </head>
+
 <body>
     <div id="cartPopup" class="defaultPopup">
         <button type="button" class="closeBtn">btn close</button>
@@ -48,15 +50,21 @@
             </h1>
             <div class="site-header__main-controls">
                 <form action="search.html" class="search-form">
-                    <input type="search" name="query" id="searchInput" class="search-form__input roboS14W1" placeholder="Aloe" title="Enter product name">
+                    <input type="search" name="query" id="searchInput" class="search-form__input roboS14W1"
+                        placeholder="Aloe" title="Enter product name">
                     <button type="submit" class="search-form__submit-button" aria-label="Search">Search bar btn</button>
                 </form>
                 <ul class="site-header__actions">
-                    <li class="site-header__action-item logged-out"><a href="sign_in.html" aria-label="Sign in"><img src="images/btn_sign_in.svg" alt="sign in btn"></a></li>
-                    <li class="site-header__action-item logged-out"><a href="sign_up.html" aria-label="Sign up"><img src="images/btn_sign_up.svg" alt="sign up btn"></a></li>
-                    <li class="site-header__action-item logged-in"><a href="cart.html" aria-label="Cart List"><img src="images/btn_cart.svg" alt="cart btn"></a></li>
-                    <li class="site-header__action-item logged-in"><a href="orders.html"aria-label="Orders page"><img src="images/btn_account.svg" alt="my account btn"></a></li>
-                    <li class="site-header__action-item"><button type="button" id="mnav" class="site-header__mobile-menu-trigger mui">mobile user interface</button></li>
+                    <li class="site-header__action-item logged-out"><a href="sign_in.html" aria-label="Sign in"><img
+                                src="images/btn_sign_in.svg" alt="sign in btn"></a></li>
+                    <li class="site-header__action-item logged-out"><a href="sign_up.html" aria-label="Sign up"><img
+                                src="images/btn_sign_up.svg" alt="sign up btn"></a></li>
+                    <li class="site-header__action-item logged-in"><a href="cart.html" aria-label="Cart List"><img
+                                src="images/btn_cart.svg" alt="cart btn"></a></li>
+                    <li class="site-header__action-item logged-in"><a href="orders.html" aria-label="Orders page"><img
+                                src="images/btn_account.svg" alt="my account btn"></a></li>
+                    <li class="site-header__action-item"><button type="button" id="mnav"
+                            class="site-header__mobile-menu-trigger mui">mobile user interface</button></li>
                 </ul>
             </div>
         </div>
@@ -65,7 +73,7 @@
                 <ul class="main-nav__primary-list godamS16W3" id="mnavList">
                     <li class="main-nav__item px-global">
                         <a class="main-nav__link" href="list_new_01.html">NEW</a>
-                    </li> 
+                    </li>
                     <li class="main-nav__item px-global">
                         <a class="main-nav__link" href="list_best_01.html">BEST</a>
                     </li>
@@ -75,16 +83,24 @@
                             <div class="main-nav__dropdown-inner">
                                 <h2 class="main-nav__dropdown-title godamS32W3">
                                     SKINCARE
-                                    <a href="list_skin_01.html" class="main-nav__dropdown-view-all godamS14W2">View All Products</a>
+                                    <a href="list_skin_01.html" class="main-nav__dropdown-view-all godamS14W2">View All
+                                        Products</a>
                                 </h2>
                                 <ol class="main-nav__sublist">
-                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_skin_01.html">View All Products</a></li>
-                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_skin_clean_01.html">Cleansing</a></li>
-                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_skin_toner_01.html">Toner</a></li>
-                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_skin_treat_01.html">Treatments</a></li>
-                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_skin_eye_01.html">Eye Care</a></li>
-                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_skin_lip_01.html">Lip Care</a></li>
-                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_skin_body_01.html">Body</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink"
+                                            href="list_skin_01.html">View All Products</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink"
+                                            href="list_skin_clean_01.html">Cleansing</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink"
+                                            href="list_skin_toner_01.html">Toner</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink"
+                                            href="list_skin_treat_01.html">Treatments</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink"
+                                            href="list_skin_eye_01.html">Eye Care</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink"
+                                            href="list_skin_lip_01.html">Lip Care</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink"
+                                            href="list_skin_body_01.html">Body</a></li>
                                 </ol>
                             </div>
                         </div>
@@ -95,15 +111,21 @@
                             <div class="main-nav__dropdown-inner">
                                 <h2 class="main-nav__dropdown-title godamS32W3">
                                     MAKEUP
-                                    <a href="list_make_01.html" class="main-nav__dropdown-view-all godamS14W2">View All Products</a>
+                                    <a href="list_make_01.html" class="main-nav__dropdown-view-all godamS14W2">View All
+                                        Products</a>
                                 </h2>
                                 <ol class="main-nav__sublist">
-                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_make_01.html">View All Products</a></li>
-                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_make_eye_01.html">Eyes</a></li>
-                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_make_lip_01.html">Lips</a></li>
-                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_make_face_01.html">Face</a></li>
-                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_make_tool_01.html">Tools</a></li>
-                                </ol>    
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink"
+                                            href="list_make_01.html">View All Products</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink"
+                                            href="list_make_eye_01.html">Eyes</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink"
+                                            href="list_make_lip_01.html">Lips</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink"
+                                            href="list_make_face_01.html">Face</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink"
+                                            href="list_make_tool_01.html">Tools</a></li>
+                                </ol>
                             </div>
                         </div>
                     </li>
@@ -113,14 +135,20 @@
                             <div class="main-nav__dropdown-inner">
                                 <h2 class="main-nav__dropdown-title godamS32W3">
                                     MASK BAR
-                                    <a href="list_mask_01.html" class="main-nav__dropdown-view-all godamS14W2">View All Products</a>
+                                    <a href="list_mask_01.html" class="main-nav__dropdown-view-all godamS14W2">View All
+                                        Products</a>
                                 </h2>
                                 <ol class="main-nav__sublist">
-                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_mask_01.html">View All Products</a></li>
-                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_mask_sheet_01.html">Sheet Masks</a></li>
-                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_mask_wash_01.html">Wash Off Masks</a></li>
-                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_mask_sleep_01.html">Sleeping Masks</a></li>
-                                    <li class="main-nav__subitem"><a class="main-nav__sublink" href="list_mask_eye_01.html">Eye Masks</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink"
+                                            href="list_mask_01.html">View All Products</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink"
+                                            href="list_mask_sheet_01.html">Sheet Masks</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink"
+                                            href="list_mask_wash_01.html">Wash Off Masks</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink"
+                                            href="list_mask_sleep_01.html">Sleeping Masks</a></li>
+                                    <li class="main-nav__subitem"><a class="main-nav__sublink"
+                                            href="list_mask_eye_01.html">Eye Masks</a></li>
                                 </ol>
                             </div>
                         </div>
@@ -131,8 +159,11 @@
                 </ul>
                 <ul class="main-nav__secondary-list">
                     <li class="main-nav__item px-global"><a class="main-nav__link" href="rewards.html">Rewards</a></li>
-                    <li class="main-nav__item px-global"><a class="main-nav__link" href="ourStory.html">Our Story</a></li>
-                    <li class="main-nav__item px-global"><a class="main-nav__link" href="https://tony-moly.gorgias.help/en-US/articles/shipping-delivery-92434" target="_blank">Shipping &amp; Delivery</a></li>
+                    <li class="main-nav__item px-global"><a class="main-nav__link" href="ourStory.html">Our Story</a>
+                    </li>
+                    <li class="main-nav__item px-global"><a class="main-nav__link"
+                            href="https://tony-moly.gorgias.help/en-US/articles/shipping-delivery-92434"
+                            target="_blank">Shipping &amp; Delivery</a></li>
                 </ul>
             </div>
         </nav>
@@ -140,15 +171,17 @@
     <main class="product-detail-page" id="top">
         <div class="product-detail-page__main-content px-global">
             <section class="product-gallery">
-                <img class="product-gallery__main-image" src="images/skin_product_36.jpg" alt="skin product 36 detail img">
+                <img class="product-gallery__main-image" src="images/skin_product_36.jpg"
+                    alt="skin product 36 detail img">
                 <ul class="product-gallery__thumbnails">
                     <li class="active"><img src="images/skin_product_36.jpg" alt="skin product detail img 01"></li>
                     <li><img src="images/skin_product_36_dt_01.jpg" alt="skin product detail img 02"></li>
                 </ul>
             </section>
             <section class="product-info">
-                <header class="product-info__header mb-20 border-bottom pb-20">
-                    <button type="button" class="product-info__wishlist-button wishlist-button toggleBtn">Add to wish list btn</button>
+                <div class="product-info__header mb-20 border-bottom pb-20">
+                    <button type="button" class="product-info__wishlist-button wishlist-button toggleBtn">Add to wish
+                        list btn</button>
                     <small class="product-info__category godamS14W2 mb-5 block">SKINCARE</small>
                     <h3 class="product-info__title godamS20W2 mb-10">Vital Vita 12 Ampoules - SYNERGY</h3>
                     <div class="product-info__meta">
@@ -162,7 +195,7 @@
                         <b class="product-info__review-number godamS14W1 ml-10">1648&nbsp;</b>
                         <strong class="product-info__price godamS22W3 block">$20.00</strong>
                     </div>
-                </header>
+                </div>
                 <div class="product-info__description-group mb-20 relative">
                     <div id="afterpayPopup" class="afterpay-popup roboS12W2">
                         <button type="button" class="afterpay-popup__close-button closeBtn">btn close</button>
@@ -182,15 +215,26 @@
                                 <p>Select Afterpay at checkout</p>
                             </li>
                         </ul>
-                        <p class="afterpay-popup__legal-notice">You must be over 18, a resident of the U.S. and meet additional eligibility criteria to qualify. Late fees may apply. Estimated payment amounts shown on product pages exclude taxes and shipping charges, which are added at checkout.</p>
-                        <p class="afterpay-popup__legal-notice">Loans to California residents made or arranged pursuant to a California Finance Lenders Law license. ©&copy; 2020 Afterpay</p>
+                        <p class="afterpay-popup__legal-notice">You must be over 18, a resident of the U.S. and meet
+                            additional eligibility criteria to qualify. Late fees may apply. Estimated payment
+                            amounts shown on product pages exclude taxes and shipping charges, which are added at
+                            checkout.</p>
+                        <p class="afterpay-popup__legal-notice">Loans to California residents made or arranged
+                            pursuant to a California Finance Lenders Law license. ©&copy; 2020 Afterpay</p>
                     </div>
                     <div class="product-info__payment-option mb-20 pb-20 border-bottom">
-                        <button type="button" class="product-info__payment-option-trigger" data-popName="afterpay">afterpay</button>
+                        <button type="button" class="product-info__payment-option-trigger"
+                            data-popName="afterpay">afterpay</button>
                     </div>
-                    <p class="product-info__description roboS14W1 mb-20">Our SuperFood Bowl Mask Set contains a special mixture of the best superfood masks that are guaranteed to replenish, hydrate and boost tired skin! (original value $18)</p>
-                    <p class="roboS14W1">The newest addition to our Vital Vita 12 Collection, meet our new Vital Vita 12 Ampoules! Packed full of vitamins, these provide an all-around solution for many common skin concerns. Mix and match formulas to target your specific skin needs!</p>
-                    <p class="roboS14W1">Vitamin C Synergy Ampoule - Brighten and improve skin's elasticity with our Synergy Ampoule! Containing Vitamin C and Squalane, to reveal a more radiant and youthful complexion.</p>
+                    <p class="product-info__description roboS14W1 mb-20">Our SuperFood Bowl Mask Set contains a
+                        special mixture of the best superfood masks that are guaranteed to replenish, hydrate and
+                        boost tired skin! (original value $18)</p>
+                    <p class="roboS14W1">The newest addition to our Vital Vita 12 Collection, meet our new Vital
+                        Vita 12 Ampoules! Packed full of vitamins, these provide an all-around solution for many
+                        common skin concerns. Mix and match formulas to target your specific skin needs!</p>
+                    <p class="roboS14W1">Vitamin C Synergy Ampoule - Brighten and improve skin's elasticity with our
+                        Synergy Ampoule! Containing Vitamin C and Squalane, to reveal a more radiant and youthful
+                        complexion.</p>
                     <dl class="product-info__specs godamS14W1">
                         <dt class="product-info__specs-key">size</dt>
                         <dd class="product-info__specs-value ml-10">30ml</dd>
@@ -199,12 +243,18 @@
                 <div class="product-info__purchase-section border-bottom">
                     <span class="product-info__variant-name godamS14W2 block mb-15">SYNERGY</span>
                     <ul class="product-info__variant-list">
-                        <li><a href="dt_skin_35.html"><img src="images/skin_product_35.jpg" alt="skin_product_35"></a></li>
-                        <li><a href="dt_skin_36.html" class="active"><img src="images/skin_product_36.jpg" alt="skin_product_36"></a></li>
-                        <li><a href="dt_skin_37.html"><img src="images/skin_product_37.jpg" alt="skin_product_37"></a></li>
-                        <li><a href="dt_skin_38.html"><img src="images/skin_product_38.jpg" alt="skin_product_38"></a></li>
-                        <li><a href="dt_skin_39.html"><img src="images/skin_product_39.jpg" alt="skin_product_39"></a></li>
-                        <li><a href="dt_skin_40.html"><img src="images/skin_product_40.jpg" alt="skin_product_40"></a></li>
+                        <li><a href="dt_skin_35.html"><img src="images/skin_product_35.jpg" alt="skin_product_35"></a>
+                        </li>
+                        <li><a href="dt_skin_36.html" class="active"><img src="images/skin_product_36.jpg"
+                                    alt="skin_product_36"></a></li>
+                        <li><a href="dt_skin_37.html"><img src="images/skin_product_37.jpg" alt="skin_product_37"></a>
+                        </li>
+                        <li><a href="dt_skin_38.html"><img src="images/skin_product_38.jpg" alt="skin_product_38"></a>
+                        </li>
+                        <li><a href="dt_skin_39.html"><img src="images/skin_product_39.jpg" alt="skin_product_39"></a>
+                        </li>
+                        <li><a href="dt_skin_40.html"><img src="images/skin_product_40.jpg" alt="skin_product_40"></a>
+                        </li>
                     </ul>
                     <div class="product-info__actions">
                         <button type="button" class="add-to-cart-button btn btn-darkline">ADD TO BAG</button>
@@ -213,13 +263,40 @@
                 </div>
                 <div id="ingreAccordion" class="accordion ingredient-accordion">
                     <h4 class="ingredient-accordion__title godamS14W2">
-                        <button type="button" id="ingredient-trigger" class="accordion-trigger" aria-expanded="false" aria-controls="ingredient-panel">
+                        <button type="button" id="ingredient-trigger" class="accordion-trigger" aria-expanded="false"
+                            aria-controls="ingredient-panel">
                             INGREDIENTS
                         </button>
                     </h4>
-                    <ul id="ingredient-panel" class="accordion-panel" role="region" aria-labelledby="ingredient-trigger">
+                    <ul id="ingredient-panel" class="accordion-panel" role="region"
+                        aria-labelledby="ingredient-trigger">
                         <li>
-                            <p class="roboS12W2">Water, Butylene Glycol, Glycerin, Niacinamide, PEG/PPG-17/6 Copolymer, Bis-PEG-15 Methyl Ether Dimethicone, PEG-60 Hydrogenated Castor Oil, Hydroxyacetophenone, 1,2-Hexanediol, Panthenol, Centella Asiatica Extract, Ethylhexylglycerin, Xanthan Gum, Citrus Limon (Lemon) Peel Oil, Portulaca Oleracea Extract, Melia Azadirachta Leaf Extract, Adenosine, Sodium Hyaluronate, Camellia Sinensis Leaf Extract, Disodium EDTA, Melia Azadirachta Flower Extract, Curcuma Longa (Turmeric) Root Extract, Chamomilla Recutita (Matricaria) Flower Extract, Vitex Agnus-Castus Extract, 3-O-Ethyl Ascorbic Acid, Citrus Aurantium Bergamia (Bergamot) Fruit Oil, Arctium Lappa Root Extract, Phellinus Linteus Extract, Ocimum Sanctum Leaf Extract, Olea Europaea (Olive) Fruit Oil, Citrus Aurantium Dulcis (Orange) Oil, Squalane, Corallina Officinalis Extract, Cetyl Ethylhexanoate, Neopentyl Glycol Diheptanoate, Soluble Collagen, Glycyrrhiza Glabra (Licorice) Root Extract, Paeonia Albiflora Root Extract, Pueraria Thunbergiana Root Extract, Aloe Barbadensis Leaf Juice, Cnidium Officinale Root Extract, Hydrogenated Phosphatidylcholine, PEG-35 Castor Oil, Copaifera Officinalis (Balsam Copaiba) Resin, Polyglyceryl-10 Myristate, Cymbopogon Martini Oil, Calcium Pantothenate, Maltodextrin, Sodium Starch Octenylsuccinate, Pelargonium Graveolens Flower Oil, Aesculus Hippocastanum (Horse Chestnut) Seed Extract, Cetearyl Alcohol, Crithmum Maritimum Callus Culture Filtrate, Polyglyceryl-2 Stearate, Stearic Acid, Alcohol, Sodium Ascorbyl Phosphate, Salvia Sclarea (Clary) Oil, Citrus Nobilis (Mandarin Orange) Peel Oil, Carthamus Tinctorius (Safflower) Seed Oil, Oenothera Biennis (Evening PrimroboSe) Oil, Octyldodecanol, Tocopheryl Acetate, Pyridoxine HCl, Polysorbate 20, Tocopherol, Polyquaternium-51, PVP, Ceramide NP, Sodium Acetate, Lecithin, Inositol, Lysine, Retinyl Palmitate, Linoleic Acid, Silica, Oligopeptide-1, Fullerenes, Biotin, Glyceryl Arachidonate, Glyceryl Linolenate, Folic Acid, Pyridoxine, Thiamine HCl, Cyanocobalamin</p>
+                            <p class="roboS12W2">Water, Butylene Glycol, Glycerin, Niacinamide, PEG/PPG-17/6
+                                Copolymer, Bis-PEG-15 Methyl Ether Dimethicone, PEG-60 Hydrogenated Castor Oil,
+                                Hydroxyacetophenone, 1,2-Hexanediol, Panthenol, Centella Asiatica Extract,
+                                Ethylhexylglycerin, Xanthan Gum, Citrus Limon (Lemon) Peel Oil, Portulaca Oleracea
+                                Extract, Melia Azadirachta Leaf Extract, Adenosine, Sodium Hyaluronate, Camellia
+                                Sinensis Leaf Extract, Disodium EDTA, Melia Azadirachta Flower Extract, Curcuma
+                                Longa (Turmeric) Root Extract, Chamomilla Recutita (Matricaria) Flower Extract,
+                                Vitex Agnus-Castus Extract, 3-O-Ethyl Ascorbic Acid, Citrus Aurantium Bergamia
+                                (Bergamot) Fruit Oil, Arctium Lappa Root Extract, Phellinus Linteus Extract, Ocimum
+                                Sanctum Leaf Extract, Olea Europaea (Olive) Fruit Oil, Citrus Aurantium Dulcis
+                                (Orange) Oil, Squalane, Corallina Officinalis Extract, Cetyl Ethylhexanoate,
+                                Neopentyl Glycol Diheptanoate, Soluble Collagen, Glycyrrhiza Glabra (Licorice) Root
+                                Extract, Paeonia Albiflora Root Extract, Pueraria Thunbergiana Root Extract, Aloe
+                                Barbadensis Leaf Juice, Cnidium Officinale Root Extract, Hydrogenated
+                                Phosphatidylcholine, PEG-35 Castor Oil, Copaifera Officinalis (Balsam Copaiba)
+                                Resin, Polyglyceryl-10 Myristate, Cymbopogon Martini Oil, Calcium Pantothenate,
+                                Maltodextrin, Sodium Starch Octenylsuccinate, Pelargonium Graveolens Flower Oil,
+                                Aesculus Hippocastanum (Horse Chestnut) Seed Extract, Cetearyl Alcohol, Crithmum
+                                Maritimum Callus Culture Filtrate, Polyglyceryl-2 Stearate, Stearic Acid, Alcohol,
+                                Sodium Ascorbyl Phosphate, Salvia Sclarea (Clary) Oil, Citrus Nobilis (Mandarin
+                                Orange) Peel Oil, Carthamus Tinctorius (Safflower) Seed Oil, Oenothera Biennis
+                                (Evening PrimroboSe) Oil, Octyldodecanol, Tocopheryl Acetate, Pyridoxine HCl,
+                                Polysorbate 20, Tocopherol, Polyquaternium-51, PVP, Ceramide NP, Sodium Acetate,
+                                Lecithin, Inositol, Lysine, Retinyl Palmitate, Linoleic Acid, Silica,
+                                Oligopeptide-1, Fullerenes, Biotin, Glyceryl Arachidonate, Glyceryl Linolenate,
+                                Folic Acid, Pyridoxine, Thiamine HCl, Cyanocobalamin</p>
                         </li>
                     </ul>
                 </div>
@@ -239,24 +316,30 @@
                         </strong>
                         <em class="promo-banner__tagline godamS18W3 bg-gray15">THIS WEEKEND ONLY!</em>
                         <h3 class="promo-banner__title">Strawberry Launched!</h3>
-                        <b class="promo-banner__subtitle roboS18W1 color-gray1">Our brand new Strawberry Hand Cream is back!</b>
+                        <b class="promo-banner__subtitle roboS18W1 color-gray1">Our brand new Strawberry Hand Cream is
+                            back!</b>
                     </span>
                 </div>
-                <span class="promo-banner__cta-wrap"><a href="dt_skin_122.html" class="promo-banner__cta-link godamS16W3 mb-center">SHOP NOW</a></span>
+                <span class="promo-banner__cta-wrap"><a href="dt_skin_122.html"
+                        class="promo-banner__cta-link godamS16W3 mb-center">SHOP NOW</a></span>
             </section>
             <section class="info-section whatBox text-center">
                 <h3 class="info-section__title godamS32W3">WHAT MAKES IT GOOD!</h3>
-                <p class="info-section__text roboS14W2"><span>The Vital Vita 12 Collection contains a highly effective multi-vitamin blend, which targets many common skin concerns. All ampoules are naturally colored by plant extracts and vitamins, with no artificial fragrances or color additives.</span></p>
+                <p class="info-section__text roboS14W2"><span>The Vital Vita 12 Collection contains a highly effective
+                        multi-vitamin blend, which targets many common skin concerns. All ampoules are naturally colored
+                        by plant extracts and vitamins, with no artificial fragrances or color additives.</span></p>
             </section>
             <section class="key-ingredients keyBox text-center bg-gray13 py-86 mb-86">
                 <h3 class="key-ingredients__title godamS32W3 mb-32">KEY INFREDIENTS</h3>
                 <ul class="key-ingredients__list roboS12W2 px-global flex-wrap justify-center mb-32">
                     <li class="key-ingredients__item">
                         <span class="key-ingredients__item-icon keyicoLeaf">leaf icon</span>
-                        <p class="key-ingredients__item-text">Synergy Ampoule - Vitamin C, Tumeric Root Extract, Niacinamide, Adenosine, Squalane, Neem Tree Extract</p>
+                        <p class="key-ingredients__item-text">Synergy Ampoule - Vitamin C, Tumeric Root Extract,
+                            Niacinamide, Adenosine, Squalane, Neem Tree Extract</p>
                     </li>
                 </ul>
-                <a href="#ingreAccordion" class="key-ingredients__view-all-button btn btn-mainline mb-center">VIEW ALL INGREDIENTS</a>
+                <a href="#ingreAccordion" class="key-ingredients__view-all-button btn btn-mainline mb-center">VIEW ALL
+                    INGREDIENTS</a>
             </section>
             <section class="usage-guide useBox px-global mb-center86">
                 <h3 class="usage-guide__title godamS32W3 mb-32 text-center">HOW TO USE?</h3>
@@ -264,7 +347,8 @@
                     <ol class="usage-guide__steps">
                         <li>
                             <b class="godamS24W4">01</b>
-                            <p class="roboS14W2">After cleansing, apply a few drops to your face and neck to kick start your skincare routine</p>
+                            <p class="roboS14W2">After cleansing, apply a few drops to your face and neck to kick start
+                                your skincare routine</p>
                         </li>
                         <li>
                             <b class="godamS24W4">02</b>
@@ -346,7 +430,8 @@
                         </figure>
                     </li>
                 </ul>
-                <a href="#descriptBar" class="more-products__view-description-button btn btn-mainline">VIEW DESCRIPTION</a>
+                <a href="#descriptBar" class="more-products__view-description-button btn btn-mainline">VIEW
+                    DESCRIPTION</a>
             </section>
         </div>
     </main>
@@ -356,9 +441,12 @@
             <div class="site-footer__top">
                 <h2 class="site-footer__logo mb-25"><img src="images/logo_footer.svg" alt="Goodbye, TONYMOLY!"></h2>
                 <ul class="site-footer__social-list flex">
-                    <li class="site-footer__social-item"><a href="https://www.instagram.com/tonymoly.us_official/" target="_blank">Instargram</a></li>
-                    <li class="site-footer__social-item"><a href="https://kr.pinterest.com/tonymolyusa/" target="_blank">Pinterest</a></li>
-                    <li class="site-footer__social-item"><a href="https://www.tiktok.com/@tonymolyusa" target="_blank">TikTok</a></li>
+                    <li class="site-footer__social-item"><a href="https://www.instagram.com/tonymoly.us_official/"
+                            target="_blank">Instargram</a></li>
+                    <li class="site-footer__social-item"><a href="https://kr.pinterest.com/tonymolyusa/"
+                            target="_blank">Pinterest</a></li>
+                    <li class="site-footer__social-item"><a href="https://www.tiktok.com/@tonymolyusa"
+                            target="_blank">TikTok</a></li>
                 </ul>
             </div>
             <div class="site-footer__main mb-60">
@@ -367,15 +455,19 @@
                     <ul class="site-footer__nav-list roboS14W2">
                         <li class="site-footer__nav-item"><a href="stock.html">Stockists</a></li>
                         <li class="site-footer__nav-item"><a href="whole.html">Wholesale</a></li>
-                        <li class="site-footer__nav-item"><a href="https://kr.pinterest.com/tonymolyusa/tonymoly-press/" target="_blank">Press</a></li>
+                        <li class="site-footer__nav-item"><a href="https://kr.pinterest.com/tonymolyusa/tonymoly-press/"
+                                target="_blank">Press</a></li>
                     </ul>
                 </nav>
                 <nav class="site-footer__nav-column" aria-label="Support">
                     <h3 class="site-footer__nav-title godamS22W3 mb-24">SUPPORT</h3>
                     <ul class="site-footer__nav-list roboS14W2">
-                        <li class="site-footer__nav-item"><a href="https://tony-moly.gorgias.help/en-US" target="_blank">F.A.Q.</a></li>
-                        <li class="site-footer__nav-item"><a href="https://tonymoly.us/apps/redo/returns-portal/login" target="_blank">Returns &amp; Exchanges</a></li>
-                        <li class="site-footer__nav-item"><a href="https://tony-moly.gorgias.help/en-US/contact" target="_blank">Contact Us</a></li>
+                        <li class="site-footer__nav-item"><a href="https://tony-moly.gorgias.help/en-US"
+                                target="_blank">F.A.Q.</a></li>
+                        <li class="site-footer__nav-item"><a href="https://tonymoly.us/apps/redo/returns-portal/login"
+                                target="_blank">Returns &amp; Exchanges</a></li>
+                        <li class="site-footer__nav-item"><a href="https://tony-moly.gorgias.help/en-US/contact"
+                                target="_blank">Contact Us</a></li>
                         <li class="site-footer__nav-item"><a href="promotion.html">Promotion Details</a></li>
                         <li class="site-footer__nav-item"><a href="privacy.html">Privacy Policy</a></li>
                     </ul>
@@ -392,8 +484,10 @@
                     </div>
                     <h3 class="newsletter-form__title godamS22W3 mb-24">JOIN OUR MAILING LIST</h3>
                     <form class="newsletter-form__form" novalidate>
-                        <input type="email" id="inputEmail" class="newsletter-form__input roboS14W1" placeholder="Enter your email" title="input ur email" required>
-                        <button type="submit" id="btnSend" class="newsletter-form__submit-button roboS14W1" aria-label="Subscribe">Subscribe button</button>
+                        <input type="email" id="inputEmail" class="newsletter-form__input roboS14W1"
+                            placeholder="Enter your email" title="input ur email" required>
+                        <button type="submit" id="btnSend" class="newsletter-form__submit-button roboS14W1"
+                            aria-label="Subscribe">Subscribe button</button>
                     </form>
                     <span class="roboS12W2">Unlock 15% off your next order!</span>
                 </section>
@@ -405,4 +499,5 @@
         </div>
     </footer>
 </body>
+
 </html>
