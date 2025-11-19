@@ -4,7 +4,7 @@ $(document).ready(function () {
   bindUserActions();
   accountChangeCheck();
   addStorageVal();
-  
+  mnavControl();
   validateEmailForm();
   closePopup();
   searchCateCon();
@@ -41,7 +41,7 @@ $(document).ready(function () {
   summaryDiscount();
   headerScroll();
   backEvent();
-  
+
   passwordType();
   orderBlank();
   signinValCheck();
@@ -53,7 +53,7 @@ $(document).ready(function () {
   phoneHyphen();
   cardSlash();
   inputText();
-  
+
 
   handleResponsiveFunctions();
   $(window).on("resize", function () {
@@ -107,10 +107,10 @@ function handleResponsiveFunctions() {
   const newState = width >= 1440 ? "pc" : "mobile";
   const newTabletState = width >= 768 ? "tablet" : "mobile";
 
-  if(newState === currentState && tabletState === newTabletState){
+  if (newState === currentState && tabletState === newTabletState) {
     return;
   }
-  
+
   if (newState === "pc") {
     $(document).off('click', ".instagram-feed__item, .product-card, .hero-slider__slide");
     $(document).off('click', '.order-summary__toggle-button');
@@ -121,18 +121,15 @@ function handleResponsiveFunctions() {
     $(".productList li figure img").off("mouseenter mouseleave");
     sumAccordionControl();
     asideScroll();
-    mnavControl();
     mnavList();
     imgListClick();
   }
-  
   if (newTabletState === "tablet") {
     searchBarControl();
-  }else{
+  } else {
     $(".search-form__submit-button").off("click");
     $(".search-form__input").removeClass("opacityClass js-active");
   }
-
   currentState = newState;
   tabletState = newTabletState;
 
@@ -263,38 +260,38 @@ function carouselCon2() {
 }
 // bx slider 
 
-function updateUserStatus(){
-    const isLoggedIn = localStorage.getItem('isLoggedIn');
+function updateUserStatus() {
+  const isLoggedIn = localStorage.getItem('isLoggedIn');
 
-    if(isLoggedIn === 'true'){
-      $('html').addClass('is-logged-in').removeClass('is-logged-out');
-    } else{
-      $('html').addClass('is-logged-out').removeClass('is-logged-in');
-      
-    }
+  if (isLoggedIn === 'true') {
+    $('html').addClass('is-logged-in').removeClass('is-logged-out');
+  } else {
+    $('html').addClass('is-logged-out').removeClass('is-logged-in');
+
+  }
 }
 
-function bindUserActions(){
-  $('.is-logged-in .call-to-action__button').click(function(e){
+function bindUserActions() {
+  $('.is-logged-in .call-to-action__button').click(function (e) {
     e.preventDefault();
     activeClass('#loggedPopup');
   });
 
-  $(".is-logged-in .product-card__add-to-cart-button").click(function(){
+  $(".is-logged-in .product-card__add-to-cart-button").click(function () {
     if (!$(this).hasClass("js-active")) {
       activeClass("#cartPopup");
     }
   });
 
-  $('.is-logged-in .product-info__actions .add-to-cart-button').click(function(){
+  $('.is-logged-in .product-info__actions .add-to-cart-button').click(function () {
     activeClass('#cartPopup')
   });
 
-  $('.is-logged-in .account-delete-button').click(function(){
+  $('.is-logged-in .account-delete-button').click(function () {
     $('html').addClass('is-logged-out').removeClass('is-logged-in');
   });
 
-  $('.account-delete-button').click(function(e){
+  $('.account-delete-button').click(function (e) {
     e.preventDefault();
     localStorage.removeItem('isLoggedIn');
     updateUserStatus();
@@ -302,7 +299,7 @@ function bindUserActions(){
   })
   // is-logged-in
 
-  $('.is-logged-out .add-to-cart-button, .is-logged-out .wishlist-button, .is-logged-out .wish-button').click(function(e){
+  $('.is-logged-out .add-to-cart-button, .is-logged-out .wishlist-button, .is-logged-out .wish-button').click(function (e) {
     e.preventDefault();
     activeClass('#loginMovePopup');
   })
@@ -311,8 +308,8 @@ function bindUserActions(){
   toggleBtn();
 }
 
-function logedInContol(){
-  $('.loged-out-form').on('submit', function(){
+function logedInContol() {
+  $('.loged-out-form').on('submit', function () {
     localStorage.removeItem('isLoggedIn');
     localStorage.removeItem('userEmail');
     localStorage.removeItem('userInfo');
@@ -331,10 +328,10 @@ function activeClass(target) {
   $(target).addClass("js-active");
 }
 
-function toggleBtn(){
-    $(".is-logged-in .toggleBtn").click(function(){
-      $(this).toggleClass("js-active");
-    });
+function toggleBtn() {
+  $(".is-logged-in .toggleBtn").click(function () {
+    $(this).toggleClass("js-active");
+  });
 }
 
 function addblockClick(clickTarget, blockTarget) {
@@ -356,8 +353,8 @@ function headerScroll() {
   let ticking = false;
 
   $(window).on("scroll", function () {
-    if(!ticking){
-      window.requestAnimationFrame(function(){
+    if (!ticking) {
+      window.requestAnimationFrame(function () {
         const scrollPosition = $(window).scrollTop();
 
         if (Math.abs(scrollPosition - lastScrollY) > 5) {
@@ -381,14 +378,14 @@ function backEvent() {
 // btn - back
 
 function openPopup() {
-  $(document).on('click.popup', "button[data-popname]", function(){
+  $(document).on('click.popup', "button[data-popname]", function () {
     const popName = $(this).data("popname");
     activeClass(`#${popName}Popup`);
   })
 }
 
-function initWishPopup(){
-  $(document).on('click', "button[data-popname='clearWishComplete']", function(){
+function initWishPopup() {
+  $(document).on('click', "button[data-popname='clearWishComplete']", function () {
     $('.product-grid--wish .product-card').remove();
     removeActiveClass("#removeAllPopup");
     activeClass("#clearCompletePopup, .wishListempty");
@@ -398,26 +395,26 @@ function initWishPopup(){
 }
 // pop up 
 
-function wishProductRemove(){
-  $(document).on('click', '.product-grid--wish .wishlist-button', function(){
+function wishProductRemove() {
+  $(document).on('click', '.product-grid--wish .wishlist-button', function () {
     const $this = $(this);
-    if(!$this.hasClass('js-active')){
+    if (!$this.hasClass('js-active')) {
       $this.closest('.product-card').remove();
     }
     updateWishCount();
   })
 }
 
-function updateWishCount(){
+function updateWishCount() {
   const $wishGrid = $('.product-grid--wish');
   const wishLength = $wishGrid.find('.product-card').length;
 
   $('#wishCount').text(wishLength);
 
-  if(wishLength == 0){
-      activeClass(".wishListempty");
-      $wishGrid.removeClass('js-grid');
-  } else{
+  if (wishLength == 0) {
+    activeClass(".wishListempty");
+    $wishGrid.removeClass('js-grid');
+  } else {
     $('.wishListempty').removeClass('js-active');
     $wishGrid.addClass('js-active');
   }
@@ -429,10 +426,10 @@ function customSelect() {
   $selectComponent.click(function () {
     $(this).toggleClass("active");
   });
-  $(document).on('click', ".selectComponent > li", function(){
+  $(document).on('click', ".selectComponent > li", function () {
     const $clickedLi = $(this);
-      $clickedLi.siblings().removeClass("active");
-      $clickedLi.addClass("active");
+    $clickedLi.siblings().removeClass("active");
+    $clickedLi.addClass("active");
   })
 }
 // select
@@ -443,10 +440,10 @@ function searchBarControl() {
   const $input = $(".search-form__input");
   $searchBtn.off("click").on("click", function (e) {
     e.preventDefault();
-    if(!$input.hasClass('js-active')){
+    if (!$input.hasClass('js-active')) {
       $input.addClass("opacityClass");
       activeClass($input);
-    }else{
+    } else {
       $('.search-form').submit();
     }
   });
@@ -454,7 +451,7 @@ function searchBarControl() {
 
 
 function searchCateCon() {
-  $(document).on('click', '.togglebtns li', function(){
+  $(document).on('click', '.togglebtns li', function () {
     const $this = $(this);
     const searchCate = $this.text().replace(/\s+/g, "");
 
@@ -463,7 +460,7 @@ function searchCateCon() {
     const $searchListEmpty = $('.searchListempty');
     var totalSearchProductCount = $searchProduct.length;
     let activeSearchList = 0;
-    
+
     $this.siblings().removeClass("js-active");
     $searchProduct.removeClass("js-active");
     $searchListEmpty.removeClass("js-active");
@@ -508,12 +505,12 @@ function searchRemoveVal() {
 
 
 function detailImgChange() {
-  $(document).on('click', ".product-gallery__thumbnails > li", function(){
+  $(document).on('click', ".product-gallery__thumbnails > li", function () {
     const $galleryLi = $(".product-gallery__thumbnails > li");
     const $galleryImg = $(".product-gallery__main-image");
     const $thisThumbnail = $(this);
     const newSrc = $thisThumbnail.find('img').attr("src");
-    
+
     $galleryLi.removeClass('active');
     $thisThumbnail.addClass('active');
     $galleryImg.attr("src", newSrc);
@@ -522,17 +519,17 @@ function detailImgChange() {
 // detail
 
 function accordionControl() {
-  $('.accordion-trigger').click(function(){
+  $('.accordion-trigger').click(function () {
     const $triggerButton = $(this);
     const accordionControl = $triggerButton.attr("aria-controls");
     const $targetPanel = $('#' + accordionControl);
     const accordionExpand = $triggerButton.attr('aria-expanded') === 'true';
 
-    if(accordionExpand){
+    if (accordionExpand) {
       removeActiveClass($targetPanel);
       removeActiveClass($triggerButton);
       $triggerButton.attr('aria-expanded', 'false');
-    }else{
+    } else {
       activeClass($targetPanel);
       activeClass($triggerButton);
       $triggerButton.attr('aria-expanded', 'true');
@@ -541,10 +538,10 @@ function accordionControl() {
 }
 // 범용 accordion
 
-function sumAccordionControl(){
+function sumAccordionControl() {
   $(document).off('click', '.order-summary__toggle-button');
 
-  $(document).on('click', '.order-summary__toggle-button', function(){
+  $(document).on('click', '.order-summary__toggle-button', function () {
     const $button = $(this);
     const $container = $button.closest('.order-summary__title');
     const accordionExpand = $button.attr('aria-expanded') === 'true';
@@ -557,9 +554,9 @@ function sumAccordionControl(){
 
 function removeProduct() {
   $(document).on('click', "button[data-popName='clearAllCartComplete']", function () {
-      activeClass(".cartListempty");
-      removeActiveClass(".cart-items__item");
-      $("#subTotalPrice").text(0);
+    activeClass(".cartListempty");
+    removeActiveClass(".cart-items__item");
+    $("#subTotalPrice").text(0);
   });
 }
 // cart - 모든 btn remove
@@ -569,12 +566,12 @@ function cartSubmitEvent() {
   const $subBtn = $(".cart-order-summary__checkout-button");
   const $checkbox = $(".cart-order-summary__policy-checkbox");
 
-  $checkbox.on("change", function(){
+  $checkbox.on("change", function () {
     $subBtn.toggleClass('js-active', $(this).is(":checked"));
   });
 
-  $form.on('submit', function(e){
-    if(!$checkbox.is(":checked")){
+  $form.on('submit', function (e) {
+    if (!$checkbox.is(":checked")) {
       e.preventDefault();
     }
   });
@@ -584,44 +581,44 @@ function cartSubmitEvent() {
 
 function cartQuant() {
   $(document).on('click', ".cart-items__quantity-selector-button", function () {
-      const $product = $(this).closest(".cart-items__item.js-active");
-      const actionType = $(this).data("cartPrice");
+    const $product = $(this).closest(".cart-items__item.js-active");
+    const actionType = $(this).data("cartPrice");
 
-      const $quant = $product.find("[data-cart-price='quantValue']");
-      const $productPrice = $product.find("[data-cart-price='productPrice']");
-      const $subtotal = $product.find("[data-cart-price='subTotalPrice']");
-      const $total = $("#totalPrice");
+    const $quant = $product.find("[data-cart-price='quantValue']");
+    const $productPrice = $product.find("[data-cart-price='productPrice']");
+    const $subtotal = $product.find("[data-cart-price='subTotalPrice']");
+    const $total = $("#totalPrice");
 
-      let quantVal = parseInt($quant.text());
-      let productVal = parseInt($productPrice.text());
+    let quantVal = parseInt($quant.text());
+    let productVal = parseInt($productPrice.text());
 
-      if(actionType == 'quantSub' && quantVal != 1){
-        quantVal--;
-      } else if(actionType == 'quantAdd' && quantVal != 999){
-        quantVal++;
+    if (actionType == 'quantSub' && quantVal != 1) {
+      quantVal--;
+    } else if (actionType == 'quantAdd' && quantVal != 999) {
+      quantVal++;
+    }
+    const newSubtotalVal = quantVal * productVal;
+
+    let newTotalVal = 0;
+    $(".cart-items__item.js-active").each(function () {
+      const itemSubtotal = parseInt($(this).find("[data-cart-price='subTotalPrice']").text());
+      if ($(this).is($product)) {
+        newTotalVal += newSubtotalVal;
+      } else {
+        newTotalVal += itemSubtotal;
       }
-      const newSubtotalVal = quantVal * productVal;
+    });
 
-      let newTotalVal = 0;
-      $(".cart-items__item.js-active").each(function(){
-        const itemSubtotal = parseInt($(this).find("[data-cart-price='subTotalPrice']").text());
-        if($(this).is($product)){
-          newTotalVal += newSubtotalVal;
-        }else{
-          newTotalVal += itemSubtotal;
-        }
-      });
-
-      $quant.text(quantVal);
-      $subtotal.text(newSubtotalVal);
-      $total.text(newTotalVal);
-  } );
+    $quant.text(quantVal);
+    $subtotal.text(newSubtotalVal);
+    $total.text(newTotalVal);
+  });
 }
 // cart - quant 계산 
 
 
 function addCartProduct() {
-  $(document).on('click', ".addProduct", function(){
+  $(document).on('click', ".addProduct", function () {
     const $product = $(this).closest('.product-recommendations__item');
     const imgSrc = $product.find('img').attr("src");
     const nameText = $product.find(".product-recommendations__item-title").text();
@@ -634,7 +631,7 @@ function addCartProduct() {
     if (cateText && cateText.trim() !== '') {
       categoryHtml = `<dd class="cart-items__product-option godamS14W1 color-gray4">${cateText}</dd>`;
     }
-    
+
     const appendProduct = `
                     <li class="cart-items__item js-active" data-cart-id="${newId}">
                         <div class="cart-items__item-wrapper flex-wrap justify-between">
@@ -667,14 +664,14 @@ function addCartProduct() {
 
 function cartProductRemove() {
   const $popUp = $('#removeProductPopup');
-  $(document).on('click', ".cart-items__remove-item-button", function(){
+  $(document).on('click', ".cart-items__remove-item-button", function () {
     const thisProductId = $(this).closest(".cart-items__item.js-active").data("cartId");
     $popUp.find($("button[data-popName='clearComplete']")).data('target-id', `${thisProductId}`);
   });
 
-  $(document).on('click', "button[data-popName='clearComplete']", function(){
+  $(document).on('click', "button[data-popName='clearComplete']", function () {
     const targetId = $(this).data('target-id');
-    if(targetId){
+    if (targetId) {
       $(`.cart-items__item[data-cart-id="${targetId}"]`).remove();
     }
 
@@ -689,23 +686,23 @@ function cartProductRemove() {
 // cart - product remove 
 
 
-function totalPriceCal(){
+function totalPriceCal() {
   const $total = $("#totalPrice");
   let newTotalVal = 0;
-    $(".cart-items__item.js-active").each(function(){
-      const itemSubtotal = parseInt($(this).find("[data-cart-price='subTotalPrice']").text());
-        if(!isNaN(itemSubtotal)){
-          newTotalVal += itemSubtotal;
-        }
-    });
-    $total.text(newTotalVal);
+  $(".cart-items__item.js-active").each(function () {
+    const itemSubtotal = parseInt($(this).find("[data-cart-price='subTotalPrice']").text());
+    if (!isNaN(itemSubtotal)) {
+      newTotalVal += itemSubtotal;
+    }
+  });
+  $total.text(newTotalVal);
 }
 // cart total 계산 
 
 
-function initCartItemId(){
-  $(".cart-items__item").each(function(index){
-    if(!$(this).attr('data-cart-id')){
+function initCartItemId() {
+  $(".cart-items__item").each(function (index) {
+    if (!$(this).attr('data-cart-id')) {
       const cartId = Date.now() + index;
       $(this).attr('data-cart-id', cartId);
     }
@@ -721,31 +718,31 @@ function reviewProduct() {
     const starRating = clickedIndex + 1;
 
     $reviewProduct.removeClass('star1 star2 star3 star4 star5');
-    $reviewProduct.addClass('star'+starRating);
+    $reviewProduct.addClass('star' + starRating);
   });
 }
 // orders - review 팝업
 
-function initAddressPopup(){
-  $(document).on('click', "button[data-popName='clearAllAddressComplete']", function(){
+function initAddressPopup() {
+  $(document).on('click', "button[data-popName='clearAllAddressComplete']", function () {
     removeActiveClass("#removeAddressesPopup");
     activeClass("#clearCompletePopup");
     $(".address-card:not(.address-card--default)").remove();
     updateAddressCount();
   });
-  
-  $(document).on('click', "button[data-popName='removeAddress']", function(){
-    const $addressCard  = $(this).closest('.address-card');
-    if($addressCard.hasClass('.address-card--default')){
+
+  $(document).on('click', "button[data-popName='removeAddress']", function () {
+    const $addressCard = $(this).closest('.address-card');
+    if ($addressCard.hasClass('.address-card--default')) {
       return;
     }
     const addressId = $addressCard.data('address-id');
     $('#removeAddressPopup').find("button[data-popName='clearAddressComplete']").data('target-id', addressId);
   });
 
-  $(document).on('click', "button[data-popName='clearAddressComplete']", function(){
+  $(document).on('click', "button[data-popName='clearAddressComplete']", function () {
     const targetId = $(this).data('target-id');
-    if(targetId){
+    if (targetId) {
       $(`.address-card[data-address-id='${targetId}']`).remove();
       updateAddressCount();
     }
@@ -763,8 +760,8 @@ function setDefaultAddress() {
 // address - default 주소 설정 
 
 
-function addressEdit(){
-  $(document).on('click', '.edit-button', function(){
+function addressEdit() {
+  $(document).on('click', '.edit-button', function () {
     const $card = $(this).closest('.address-card');
     $('.custom-select__list li').removeClass('active');
 
@@ -779,7 +776,7 @@ function addressEdit(){
     const postalCode = $card.data('postal-code');
     const userCity = $card.data('city');
     const province = $card.data('province');
-    
+
     $('.address-form__title').text('Edit Address');
     $('#editingAddressId').val(listId)
     $('#' + country).addClass('active');
@@ -790,17 +787,17 @@ function addressEdit(){
     $('#userAddress').val(userAddress);
     $('#userCode').val(postalCode);
     $('#userCity').val(userCity);
-    if(detailAddress){
+    if (detailAddress) {
       $('#userDetailAddress').val(detailAddress);
     }
-    if(companyAddress){
+    if (companyAddress) {
       $('#userCompany').val(companyAddress);
     }
     $('#addressListContainer').hide();
     $('#addressEditContainer').show();
   });
 
-  $('.addresses-page__address-add-button').click(function(){
+  $('.addresses-page__address-add-button').click(function () {
     $('.address-form__title').text('Add Address');
     $('#editingAddressId').val('');
     $('#editAddress')[0].reset();
@@ -809,13 +806,13 @@ function addressEdit(){
     $('#addressEditContainer').show();
   })
 
-  $('#saveAddresses').click(function(e){
+  $('#saveAddresses').click(function (e) {
     e.preventDefault();
 
     const isFormValid = validateForm(addressEditRules);
-    if(isFormValid){
+    if (isFormValid) {
       activeClass("#saveAddressesPopup");
-    }else{
+    } else {
       return;
     }
     const addressID = $('#editingAddressId').val();
@@ -824,7 +821,7 @@ function addressEdit(){
     const $newProvince = $('.custom-select__list--province li.active');
     const newCountryText = $newCountry.text();
     const newProvinceText = $newProvince.text();
-    
+
     const newCountryID = $newCountry.attr('id');
     const newProvinceId = $newProvince.attr('id');
 
@@ -852,20 +849,20 @@ function addressEdit(){
     const fullAddress = addressParts.filter(Boolean).join(' ');
     const fullNameAddress = nameParts.filter(Boolean).join(' ');
 
-    if(addressID){
+    if (addressID) {
       const $targetCard = $(`.address-card[data-address-id="${addressID}"]`);
-      
-      if(newDetailAddress){
+
+      if (newDetailAddress) {
         $targetCard.data('detail-address', newDetailAddress);
-      }else{
+      } else {
         newDetailAddress = '';
       }
-      if(newCompany){
+      if (newCompany) {
         $targetCard.data('company-address', newCompany);
-      }else{
+      } else {
         newCompany = '';
       }
-      
+
       $targetCard.data('first-name', newFirstName);
       $targetCard.data('last-name', newLastName);
       $targetCard.data('country', newCountryID);
@@ -874,19 +871,19 @@ function addressEdit(){
       $targetCard.data('city', newCity);
       $targetCard.data('postal-code', newPostalCode);
       $targetCard.data('phone-number', newPhoneNum);
-      
+
       $targetCard.find('.address-card__owner-name').text(fullNameAddress);
       $targetCard.find('.address-card__phone-number').text(newPhoneNum);
       $targetCard.find('.address-card__address').text(fullAddress);
     }
-    else{
+    else {
       const newId = 'attr-' + Date.now();
       let newCompanyHTML = '';
       let newDetailAddressHTML = '';
-      if(newCompany && newCompany.length > 1){
+      if (newCompany && newCompany.length > 1) {
         newCompanyHTML = `data-company-address="${newCompany}"`;
       }
-      if(newDetailAddress && newDetailAddress.length > 1){
+      if (newDetailAddress && newDetailAddress.length > 1) {
         newDetailAddressHTML = `data-detail-address="${newDetailAddress}"`;
       }
       const newAddressHTML = `
@@ -916,48 +913,48 @@ function addressEdit(){
                     </div>
                 </li>
       `;
-    $('.addresses-page__list').append(newAddressHTML);
-    updateAddressCount();
-  }
+      $('.addresses-page__list').append(newAddressHTML);
+      updateAddressCount();
+    }
   })
 
-  $('.saveAlertButton').click(function(){
+  $('.saveAlertButton').click(function () {
     $('#addressEditContainer').hide();
     $('#addressListContainer').show();
   });
-  
+
 }
 
-function addressLeavePopup(){
-  $('.addressLeaveBtn').click(function(){
-  removeActiveClass("#cancelPopup");
-  $('#addressEditContainer').hide();
-  $('#addressListContainer').show();
-  $('#editAddressForm')[0].reset();
-});
+function addressLeavePopup() {
+  $('.addressLeaveBtn').click(function () {
+    removeActiveClass("#cancelPopup");
+    $('#addressEditContainer').hide();
+    $('#addressListContainer').show();
+    $('#editAddressForm')[0].reset();
+  });
 }
 
-function updateAddressCount(){
+function updateAddressCount() {
   const addressLength = $(".address-card").length;
-    $('#addressCount').text(addressLength);
+  $('#addressCount').text(addressLength);
 }
 // address list count 
 
-function accountChangeCheck(){
+function accountChangeCheck() {
   const $firstNameInput = $('#userFirstname');
   const $lastNameInput = $('#userLastname');
 
-  function loadUserInfo(){
+  function loadUserInfo() {
     const userFirstname = localStorage.getItem('userFirstname');
     const userLastname = localStorage.getItem('userLastname');
-    if(userFirstname && userLastname){
+    if (userFirstname && userLastname) {
       $firstNameInput.val(userFirstname);
       $lastNameInput.val(userLastname);
     }
   }
   loadUserInfo();
 
-  $('#accountSaveForm').on("submit", function(e){
+  $('#accountSaveForm').on("submit", function (e) {
     e.preventDefault();
 
     const newFirstName = $firstNameInput.val();
@@ -968,28 +965,27 @@ function accountChangeCheck(){
     activeClass('#savechangePopup');
   });
 
-  $('.address-cancel-button').on('click', function(){
+  $('.address-cancel-button').on('click', function () {
     loadUserInfo();
   });
 }
 // account change
 
-function promoCodeCopy(){
-  $('.promo-code-showcase__button').click(function(){
+function promoCodeCopy() {
+  $('.promo-code-showcase__button').click(function () {
     const $button = $(this);
     const textCopy = $button.find('.promo-code-showcase__code').text();
     const tempTextarea = $('<textarea>');
     $('.promotion-page').append(tempTextarea);
     tempTextarea.val(textCopy).select();
 
-    try{
+    try {
       var successful = document.execCommand('copy');
       var msg = successful ? '성공' : '실패';
-      if(successful){
+      if (successful) {
         activeClass('#textCopySuccessPopup');
-        console.log(msg)
       }
-    } catch(err){
+    } catch (err) {
       alert('이 브라우저에서는 복사 기능을 지원하지 않습니다.');
     }
     tempTextarea.remove();
@@ -1035,23 +1031,23 @@ const cardDateCheck = /^(0[1-9]|1[0-2])\/\d{2}$/;
 // 정규식
 
 const signupRules = [
-    {
-      selector: '#userFirstname',
-      errorSelector: "label[for='userFirstname']+mark",
-      validate: (val) => val.length >= 2 && firstNameCheck.test(val),
-    },{
-      selector: '#userLastname',
-      errorSelector: "label[for='userLastname']+mark",
-      validate: (val) => val.length >= 2 && lastNameCheck.test(val),
-    },{
-      selector: '#userEmail',
-      errorSelector: "label[for='userEmail']+mark",
-      validate: (val) => emailCheck.test(val),
-    },{
-      selector: '#userPassword',
-      errorSelector: "#pwVisible+mark",
-      validate: (val) => val.length >= 5 && numbEngCheck.test(val),
-    },
+  {
+    selector: '#userFirstname',
+    errorSelector: "label[for='userFirstname']+mark",
+    validate: (val) => val.length >= 2 && firstNameCheck.test(val),
+  }, {
+    selector: '#userLastname',
+    errorSelector: "label[for='userLastname']+mark",
+    validate: (val) => val.length >= 2 && lastNameCheck.test(val),
+  }, {
+    selector: '#userEmail',
+    errorSelector: "label[for='userEmail']+mark",
+    validate: (val) => emailCheck.test(val),
+  }, {
+    selector: '#userPassword',
+    errorSelector: "#pwVisible+mark",
+    validate: (val) => val.length >= 5 && numbEngCheck.test(val),
+  },
 ];
 
 const signinRulse = [
@@ -1059,7 +1055,7 @@ const signinRulse = [
     selector: '#userEmail',
     errorSelector: "label[for='userEmail']+mark",
     validate: (val) => emailCheck.test(val),
-  },{
+  }, {
     selector: '#userPassword',
     errorSelector: "#pwVisible+mark",
     validate: (val) => val.length >= 5 && numbEngCheck.test(val),
@@ -1071,26 +1067,26 @@ const addressRules = [
     selector: '#userNewFirstname',
     errorSelector: "label[for='userNewFirstname']+mark",
     validate: (val) => val.length >= 2 && firstNameCheck.test(val),
-  },{
+  }, {
     selector: '#userNewLastname',
     errorSelector: "label[for='userNewLastname']+mark",
     validate: (val) => val.length >= 2 && lastNameCheck.test(val),
-  },{
+  }, {
     selector: '#userAddress',
     errorSelector: "label[for='userAddress']+mark",
     validate: (val) => val.trim() !== "" && val.length >= 2,
-  },{
-      selector: '#userCity',
-      errorSelector: "label[for='userCity']+mark",
-      validate: (val) => val.trim() !== "" && val.length >= 2,
-  },{
-      selector: '#userCode',
-      errorSelector: "label[for='userCode']+mark",
-      validate: (val) => val.trim() !== "" && val.length >= 2,
-  },{
-      selector: '#userPhone',
-      errorSelector: "button[data-popName='phoneHelp']+mark",
-      validate: (val) => val.trim() !== "" && val.length >= 2 && phoneCheck.test(val),
+  }, {
+    selector: '#userCity',
+    errorSelector: "label[for='userCity']+mark",
+    validate: (val) => val.trim() !== "" && val.length >= 2,
+  }, {
+    selector: '#userCode',
+    errorSelector: "label[for='userCode']+mark",
+    validate: (val) => val.trim() !== "" && val.length >= 2,
+  }, {
+    selector: '#userPhone',
+    errorSelector: "button[data-popName='phoneHelp']+mark",
+    validate: (val) => val.trim() !== "" && val.length >= 2 && phoneCheck.test(val),
   },
 ];
 
@@ -1099,26 +1095,26 @@ const addressEditRules = [
     selector: '#userFirstname',
     errorSelector: "label[for='userFirstname']+mark",
     validate: (val) => val.length >= 2 && firstNameCheck.test(val),
-  },{
+  }, {
     selector: '#userLastname',
     errorSelector: "label[for='userLastname']+mark",
     validate: (val) => val.length >= 2 && lastNameCheck.test(val),
-  },{
+  }, {
     selector: '#userAddress',
     errorSelector: "label[for='userAddress']+mark",
     validate: (val) => val.trim() !== "" && val.length >= 2,
-  },{
-      selector: '#userCity',
-      errorSelector: "label[for='userCity']+mark",
-      validate: (val) => val.trim() !== "" && val.length >= 2,
-  },{
-      selector: '#userCode',
-      errorSelector: "label[for='userCode']+mark",
-      validate: (val) => val.trim() !== "" && val.length >= 2,
-  },{
-      selector: '#userPhone',
-      errorSelector: "button[data-popName='phoneHelp']+mark",
-      validate: (val) => val.trim() !== "" && val.length >= 2 && phoneCheck.test(val),
+  }, {
+    selector: '#userCity',
+    errorSelector: "label[for='userCity']+mark",
+    validate: (val) => val.trim() !== "" && val.length >= 2,
+  }, {
+    selector: '#userCode',
+    errorSelector: "label[for='userCode']+mark",
+    validate: (val) => val.trim() !== "" && val.length >= 2,
+  }, {
+    selector: '#userPhone',
+    errorSelector: "button[data-popName='phoneHelp']+mark",
+    validate: (val) => val.trim() !== "" && val.length >= 2 && phoneCheck.test(val),
   },
 ]
 
@@ -1142,7 +1138,7 @@ const summaryRuled = [
   {
     selector: '#sumText',
     errorSelector: '.cart-order-summary__invalid-code-popup',
-    validate: (val) => val.trim()!== "" && val.length >= 2 && sumCheck.test(val),
+    validate: (val) => val.trim() !== "" && val.length >= 2 && sumCheck.test(val),
   }
 ]
 
@@ -1150,19 +1146,19 @@ const cardRuled = [
   {
     selector: "#userCardNumber",
     errorSelector: "label[for='userCardNumber']+mark",
-    validate: (val) => val.trim()!== "" && val.length >= 16,
-  },{
+    validate: (val) => val.trim() !== "" && val.length >= 16,
+  }, {
     selector: "#userCardName",
     errorSelector: "label[for='userCardName']+mark",
-    validate: (val) => val.trim()!== "" && val.length >= 2,
-  },{
+    validate: (val) => val.trim() !== "" && val.length >= 2,
+  }, {
     selector: "#userCardDate",
     errorSelector: "label[for='userCardDate']+mark",
-    validate: (val) => val.trim()!== "" && val.length >= 5 && cardDateCheck.test(val),
-  },{
+    validate: (val) => val.trim() !== "" && val.length >= 5 && cardDateCheck.test(val),
+  }, {
     selector: "#userCardcode",
     errorSelector: "label[for='userCardcode']+mark",
-    validate: (val) => val.trim()!== "" && val.length >= 3,
+    validate: (val) => val.trim() !== "" && val.length >= 3,
   },
 ]
 
@@ -1170,7 +1166,7 @@ const pwCheckRuled = [
   {
     selector: "#userPassword",
     errorSelector: "label[for='userPassword']+mark",
-    validate: (val) => val.trim()!== "" && val.length >= 5 && numbEngCheck.test(val),
+    validate: (val) => val.trim() !== "" && val.length >= 5 && numbEngCheck.test(val),
   },
 ]
 
@@ -1180,7 +1176,7 @@ const pwCheckRuled = [
  * @param {Array} rules - 검사 규칙 객체의 배열
  * @returns {boolean} - 폼이 유효하면 true, 아니면 false 
  */
-function validateForm(rules){
+function validateForm(rules) {
   let isFormValid = true;
 
   rules.forEach(rule => removeActiveClass(rule.errorSelector));
@@ -1188,7 +1184,7 @@ function validateForm(rules){
     const $field = $(rule.selector);
     const value = $field.val().trim();
 
-    if(!rule.validate(value)){
+    if (!rule.validate(value)) {
       activeClass(rule.errorSelector);
       isFormValid = false;
     }
@@ -1196,35 +1192,35 @@ function validateForm(rules){
   return isFormValid;
 }
 
-function addStorageVal(){
-  if($('.account-layout').length > 0){
+function addStorageVal() {
+  if ($('.account-layout').length > 0) {
     const savedEmail = localStorage.getItem('userEmail');
     const savedFirstName = localStorage.getItem('userFirstname');
     const savedLastName = localStorage.getItem('userLastname');
 
-    if(savedEmail){
+    if (savedEmail) {
       $('#userEmail').val(savedEmail);
       $('.userEmailText').text(savedEmail);
     }
-    if(savedFirstName){
+    if (savedFirstName) {
       $('#userFirstname').val(savedFirstName);
     }
-    if(savedLastName){
+    if (savedLastName) {
       $('#userLastname').val(savedLastName);
     }
   }
 }
 
 function signinValCheck() {
-  $('.sign-in-form__submit-button').on('click', function(e){
+  $('.sign-in-form__submit-button').on('click', function (e) {
     e.preventDefault();
     const isFormValid = validateForm(signinRulse);
     const inputEmail = $('#userEmail').val();
     const savedEmail = localStorage.getItem('userEmail');
-    if(!isFormValid){
+    if (!isFormValid) {
       return;
     }
-    if(!savedEmail || inputEmail !== savedEmail){
+    if (!savedEmail || inputEmail !== savedEmail) {
       activeClass('.email-not-found-message');
       return;
     }
@@ -1232,7 +1228,7 @@ function signinValCheck() {
     $('#signInForm').submit();
   });
 
-  $('.sign-in-form__guest-button').on('click', function(e){
+  $('.sign-in-form__guest-button').on('click', function (e) {
     e.preventDefault();
     const guestEmail = 'guest@test.com';
     const guestFirstName = 'Guest';
@@ -1245,15 +1241,15 @@ function signinValCheck() {
   });
 }
 
-function signupValCheck(){
-  $(".sign-up-form__submit-button").on("click", function(){
+function signupValCheck() {
+  $(".sign-up-form__submit-button").on("click", function () {
     const isFormValid = validateForm(signupRules);
-    if(isFormValid){
+    if (isFormValid) {
       activeClass('#signupPopup');
     }
   });
 
-  $('.sign-up-button').on('click', function(){
+  $('.sign-up-button').on('click', function () {
     const userFirstname = $('#userFirstname').val();
     const userLastName = $('#userLastname').val();
     const userEmail = $('#userEmail').val();
@@ -1264,12 +1260,12 @@ function signupValCheck(){
   });
 }
 
-function cartInfoSubmit(target){
+function cartInfoSubmit(target) {
   $(target).on("submit", function (e) {
     const combinedRules = [...emailRules, ...addressRules]
     const isFormValid = validateForm(combinedRules);
 
-    if(!isFormValid){
+    if (!isFormValid) {
       e.preventDefault();
     }
   });
@@ -1288,9 +1284,9 @@ function orderBlank() {
     let cardValid = true;
     let billingAddressValid = true;
 
-    if($("#creditCard").prop("checked")){
+    if ($("#creditCard").prop("checked")) {
       cardValid = validateForm(cardRuled);
-      if($("#differentAddress").prop("checked")){
+      if ($("#differentAddress").prop("checked")) {
         billingAddressValid = validateForm(addressRules);
       }
     }
@@ -1312,10 +1308,10 @@ function orderBlank() {
       $this.attr("target", "_blank");
       this.submit();
     }
-    else if($("#creditCard").prop("checked") && cardValid && billingAddressValid){
-        $this.attr("action", "orderComplete.html");
-        $this.attr("target", "_self");
-        this.submit();
+    else if ($("#creditCard").prop("checked") && cardValid && billingAddressValid) {
+      $this.attr("action", "orderComplete.html");
+      $this.attr("target", "_self");
+      this.submit();
     }
   });
 }
@@ -1327,10 +1323,10 @@ function phoneHyphen() {
 
     let hyphenVal = "";
     if (inputVal.length > 6) {
-      hyphenVal = `(${inputVal.substring(0, 3)})${inputVal.substring(3,6)}-${inputVal.substring(6)}`;
-    }else if (inputVal.length > 3) {
+      hyphenVal = `(${inputVal.substring(0, 3)})${inputVal.substring(3, 6)}-${inputVal.substring(6)}`;
+    } else if (inputVal.length > 3) {
       hyphenVal = `(${inputVal.substring(0, 3)})${inputVal.substring(3)}`;
-    }else if(inputVal.length > 0) {
+    } else if (inputVal.length > 0) {
       hyphenVal = `(${inputVal}`;
     }
 
@@ -1349,7 +1345,7 @@ function cardSlash() {
     var formattedVal = "";
     if (inputVal.length > 2) {
       formattedVal = `${inputVal.substring(0, 2)}/${inputVal.substring(2)}`;
-    }else{
+    } else {
       formattedVal = inputVal;
     }
 
@@ -1358,12 +1354,12 @@ function cardSlash() {
 }
 
 function validateEmailForm() {
-  $(".newsletter-form__form").on("submit", function(e){
+  $(".newsletter-form__form").on("submit", function (e) {
     e.preventDefault();
 
     const isFormValid = validateForm(newsEmailRuled);
-    if(isFormValid){
-      setTimeout(function(){
+    if (isFormValid) {
+      setTimeout(function () {
         activeClass(".emailAlert");
         removeActiveClass("#emailInvalidPopup");
       }, 300)
@@ -1381,7 +1377,7 @@ function summaryDiscount() {
     if (isFormValid) {
       $("#discountApply").text("Apply Free Shipping Code");
       $("#sumText").val("");
-    } 
+    }
   });
 }
 // cart summary
@@ -1393,7 +1389,7 @@ function passwordType() {
     const currentType = $passwordInput.attr("type");
 
     $(this).toggleClass("js-active");
-    
+
     if (currentType === "password") {
       $("#userPassword").attr("type", "text");
     } else {
@@ -1409,9 +1405,9 @@ function forgotEmailCheck() {
     const isFormValid = validateForm(emailRules);
     const inputEmail = $('#userEmail').val();
     const userEmail = localStorage.getItem('userEmail');
-    if(!isFormValid || inputEmail !== userEmail){
+    if (!isFormValid || inputEmail !== userEmail) {
       activeClass("#forgotPwForm .form-group__error-message");
-    }else{
+    } else {
       this.submit();
     }
   });
@@ -1422,7 +1418,7 @@ function forgotEmailCheck() {
 function passwordCheck() {
   $("button[data-popName='deleteComplete']").click(function () {
     const isFormValid = validateForm(pwCheckRuled);
-    if (isFormValid){
+    if (isFormValid) {
       removeActiveClass("#deleteAlertPopup");
       activeClass("#deleteCompletePopup");
     }
@@ -1440,25 +1436,25 @@ function asideHover() {
   const navList = $('.category-nav__list');
   let originalActive = null;
 
-  navList.on('mouseenter', ".category-nav__item", function(){
+  navList.on('mouseenter', ".category-nav__item", function () {
     const sublist = $(this).find('.category-nav__sublist');
-    
+
     originalActive = navList.find('.category-nav__link.active');
     $('.category-nav__link').removeClass("active");
 
-    if(sublist.length > 0){
+    if (sublist.length > 0) {
       const realHeight = sublist[0].scrollHeight;
       sublist.css('height', realHeight + 'px');
     }
   })
 
-  navList.on('mouseleave', ".category-nav__item", function(){
+  navList.on('mouseleave', ".category-nav__item", function () {
     const sublist = $(this).find('.category-nav__sublist');
 
     navList.find('category-nav__link').removeClass('active');
     originalActive.addClass("active");
 
-    if(sublist.length > 0){
+    if (sublist.length > 0) {
       sublist.css('height', '0px');
     }
   })
@@ -1468,8 +1464,7 @@ function asideHover() {
 
 
 function mnavControl() {
-  $(document).off('click#mnav').on('click', '.mui', function(){
-    console.log(this);
+  $(document).on('click', '#mnav', function () {
     $(this).toggleClass("js-active");
     $('.main-nav').toggleClass("js-active");
   })
@@ -1491,11 +1486,11 @@ function asideScroll() {
 
   const $sideBars = $(".product-listing-layout__sidebar, .account-layout__sidebar")
 
-  $(window).on("scroll", function(){
-    if(!ticking){
-      window.requestAnimationFrame(function(){
+  $(window).on("scroll", function () {
+    if (!ticking) {
+      window.requestAnimationFrame(function () {
         const scrollPosition = $(window).scrollTop();
-        
+
         if (Math.abs(scrollPosition - lastScrollY) > 5) {
           const isScrollDown = scrollPosition < lastScrollY;
           $sideBars.toggleClass("hidden", isScrollDown);
@@ -1513,16 +1508,16 @@ function asideScroll() {
 function imgListClick() {
   $(document).off('click.imgLink', '.instagram-feed__item, .product-card, .hero-slider__slide');
 
-  $(document).on('click.imgLink', '.instagram-feed__item, .product-card, .hero-slider__slide', function(event){
-    if($(event.target).closest('button').length){
+  $(document).on('click.imgLink', '.instagram-feed__item, .product-card, .hero-slider__slide', function (event) {
+    if ($(event.target).closest('button').length) {
       return;
     }
 
     const link = $(this).find('a').first().attr('href');
     if (link) {
-      if($(this).hasClass('instagram-feed__item')){
+      if ($(this).hasClass('instagram-feed__item')) {
         window.open(link, '_blank');
-      }else{
+      } else {
         window.location.href = link;
       }
     }
