@@ -114,12 +114,12 @@
         background-repeat: no-repeat; background-position: center;
     }
     .hero-slider .btnConMain .next_btn_main{
-        background-image: url('../images/btn_next.svg');
+        background-image: url('../../images/btn_next.svg');
         right: -16px;
     }
     .hero-slider .btnConMain .prev_btn_main{
         left: -16px;
-        background-image: url('../images/btn_prev.svg');
+        background-image: url('../../images/btn_prev.svg');
     }
     .hero-slider .btnConMain button a{
         display: block; width: 36px; height: 36px;
