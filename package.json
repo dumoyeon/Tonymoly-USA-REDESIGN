@@ -1,6 +1,14 @@
 {
+  "scripts": {
+    "watch:css": "postcss src/css/*.css --use autoprefixer --dir dist/css --watch"
+  },
   "devDependencies": {
-    "autoprefixer": "^10.4.21",
+    "autoprefixer": "^10.4.22",
+    "postcss": "^8.5.6",
     "postcss-cli": "^11.0.1"
-  }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ]
 }

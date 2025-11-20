@@ -60,45 +60,52 @@ $(document).ready(function () {
     handleResponsiveFunctions();
   });
 
-  if ($(".rewardContainer").length > 0) {
-    customSlider(
-      ".sliderImgBox",
-      "bx-wrapper",
-      800,
-      260,
-      true,
-      7,
-      1,
-      2,
-      true,
-      ".product-carousel__pager--reward",
-      null,
-      null,
-      true,
-      true
-    );
-  }
-  if ($("main.indexContainer").length > 0) {
-    customSlider(
-      ".sliderMain",
-      "bx-wrapper",
-      800,
-      0,
-      true,
-      1,
-      1,
-      1,
-      true,
-      null,
-      ".prev_btn_main",
-      ".next_btn_main",
-      false,
-      true
-    );
-    carouselCon();
-    carouselCon2();
-  }
-});
+  $(window).on('load', function () {
+    if ($(".rewardContainer").length > 0) {
+      customSlider(
+        ".sliderImgBox",
+        "bx-wrapper",
+        800,
+        260,
+        false,
+        7,
+        1,
+        2,
+        true,
+        ".product-carousel__pager--reward",
+        null,
+        null,
+        true,
+        true,
+        false,
+        "ease-in-out"
+      );
+    }
+    if ($("main.indexContainer").length > 0) {
+      customSlider(
+        ".sliderMain",
+        "bx-wrapper",
+        500,
+        null,
+        false,
+        4,
+        1,
+        1,
+        true,
+        null,
+        ".prev_btn_main",
+        ".next_btn_main",
+        false,
+        true,
+        false,
+        "ease-in-out"
+      );
+      carouselCon();
+      carouselCon2();
+    }
+  });
+})
+
 
 let currentState = ''
 let tabletState = ''
@@ -149,7 +156,9 @@ function customSlider(
   prevName,
   nextName,
   HeightAdapt,
-  responsiveOn
+  responsiveOn,
+  useCssVal,
+  easingMotion,
 ) {
   $(slideName).bxSlider({
     wrapperClass: sliderWrapper,
@@ -165,6 +174,8 @@ function customSlider(
     nextSelector: nextName,
     adaptiveHeight: HeightAdapt,
     responsive: responsiveOn,
+    useCss: useCssVal,
+    easing: easingMotion,
   });
 }
 
