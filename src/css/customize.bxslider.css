@@ -80,7 +80,7 @@
 
 @media screen and (min-width:768px) and (max-width: 1439px){
     .hero-slider .bx-controls{
-        width: 40%; max-width: 680px; left: 10%; bottom: 24px;
+        width: 90%; margin: 0 auto; bottom: 40px;
     }
     .hero-slider .bx-controls .bx-pager{
         width: 240px; bottom: 0;
@@ -105,7 +105,7 @@
 }
 @media screen and (min-width:1440px){
     .hero-slider .btnConMain{
-        max-width: 1400px; margin: 0 auto; position: relative;
+        max-width: 1200px; margin: 0 auto; position: relative;
         padding: 0; z-index: 1; top: 250px;
     }
     .hero-slider .btnConMain button{
@@ -130,6 +130,9 @@
     }
     .hero-slider .bx-controls .bx-pager{
         width: 240px;
+    }
+    .hero-slider .bx-controls .bx-pager a{
+        transition: all linear 0.2s;
     }
     /* banner slider */
     .carouselBox [class*='Wrapper'],

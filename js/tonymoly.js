@@ -59,12 +59,10 @@ $(document).ready(function () {
   $(window).on("resize", function () {
     handleResponsiveFunctions();
   });
-
   $(window).on('load', function () {
     if ($(".rewardContainer").length > 0) {
       customSlider(
         ".sliderImgBox",
-        "bx-wrapper",
         800,
         260,
         false,
@@ -76,19 +74,15 @@ $(document).ready(function () {
         null,
         null,
         true,
-        true,
-        false,
-        "ease-in-out"
       );
     }
     if ($("main.indexContainer").length > 0) {
       customSlider(
         ".sliderMain",
-        "bx-wrapper",
         500,
-        null,
+        0,
         false,
-        4,
+        1,
         1,
         1,
         true,
@@ -96,9 +90,6 @@ $(document).ready(function () {
         ".prev_btn_main",
         ".next_btn_main",
         false,
-        true,
-        false,
-        "ease-in-out"
       );
       carouselCon();
       carouselCon2();
@@ -144,7 +135,6 @@ function handleResponsiveFunctions() {
 
 function customSlider(
   slideName,
-  sliderWrapper,
   sliderSpeed,
   sliderWidth,
   shrinkItem,
@@ -156,12 +146,9 @@ function customSlider(
   prevName,
   nextName,
   HeightAdapt,
-  responsiveOn,
-  useCssVal,
-  easingMotion,
 ) {
   $(slideName).bxSlider({
-    wrapperClass: sliderWrapper,
+    wrapperClass: "bx-wrapper",
     speed: sliderSpeed,
     slideWidth: sliderWidth,
     shrinkItems: shrinkItem,
@@ -173,9 +160,11 @@ function customSlider(
     prevSelector: prevName,
     nextSelector: nextName,
     adaptiveHeight: HeightAdapt,
-    responsive: responsiveOn,
-    useCss: useCssVal,
-    easing: easingMotion,
+    responsive: true,
+    useCSS: false,
+    easing: "swing",
+    oneToOneTouch: false,
+    preventDefaultSwipeX: true
   });
 }
 

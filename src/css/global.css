@@ -245,7 +245,7 @@ body>a[href='#top']{
 }
 /* mobile */
 
-@media screen and (max-width:1438px){
+@media screen and (max-width:1439px){
     [class*='Container']:not(.indexContainer, .product-listing-layout, .storyContainer, .rewardContainer, .promotionContainer ,[class^='detail'],.account-layout,.auth-page-layout){
         margin-top: var(--spY96);
     }

@@ -313,7 +313,7 @@ div.trackPopup ul li:not(:last-child){
     border-color: var(--Gray11);
 }
 
-.hero-slider__img .img,
+.hero-slider__img img,
 .product-gallery__thumbnails li img,
 .product-gallery__main-image,
 .product-info__variant-list li a>img
@@ -381,8 +381,12 @@ div.trackPopup ul li:not(:last-child){
 body{
     overflow-x: hidden;
 }
+.hero-slider__slide{
+        display: flex; justify-content: center;
+}
 .hero-slider__slide-content{
-    position: absolute; z-index: 10; top: 0; width: 100%;
+    position: absolute; z-index: 10; top: 0;
+    width: 100%; display: flex; height: 100%; align-items: center;
 }
 .info-bar{
     background: linear-gradient(to right, #faba8b 0%,#fa938c 100%);
@@ -1374,9 +1378,6 @@ div.trackPopup dl{
     }
     .hero-slider__slide-content div{
         padding: 0 16px;
-    }
-    .hero-slider__slide-title{
-        margin: 20% 0 1% 0;
     }
     .product-carousel__tabs{
         display: flex; flex-wrap: nowrap;
@@ -2459,11 +2460,11 @@ div.trackPopup dl{
     .fun-content__img{
         max-width: 620px; margin: 0 auto;
     }
+    .hero-slider__slide-content {
+        width: 90%;
+    }
     .hero-slider__slide-content>div{
         width: 80%;
-    }
-    .hero-slider__slide-title{
-        margin: 10% 0 1% 0;
     }
     .hero-slider__slide-content p{
         width: 72.22%;
@@ -2730,6 +2731,9 @@ div.trackPopup dl{
     .order-summary__title{
         margin-bottom: var(--spY20);
     }
+    .hero-slider__slide-content{
+        max-width: 1280px;
+    }
     .hero-slider__slide-content div p,
     .account-nav{
         margin-bottom: var(--spY60);
@@ -2738,17 +2742,13 @@ div.trackPopup dl{
     .story-banner__content{
         max-width: 1920px;
     }
-    .hero-slider__slide-content>div,
     .info-section,
     .key-ingredients__list,
     .usage-guide{
         max-width: 1280px;
     }
-    .hero-slider__slide-title{
-        margin: 200px 0 var(--spY23);
-    }
     .hero-slider__slide-content p{
-        width: 37.14%;
+        width: 90%;
     }
     .hero-slider__slide-content a{
         max-width: 148px;
